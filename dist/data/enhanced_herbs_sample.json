@@ -1,0 +1,351 @@
+[
+  {
+    "id": "huangqi",
+    "name": "黄芪",
+    "englishName": "Astragalus Root",
+    "pinyin": "Huáng Qí",
+    "functions": ["补气固表", "利尿托毒", "排脓", "敛疮生肌"],
+    "nature": "温",
+    "taste": ["甘"],
+    "origin": ["内蒙古", "山西", "甘肃", "黑龙江"],
+    "category": "补虚药",
+    "indications": ["气虚乏力", "中气下陷", "久泻脱肛", "便血崩漏", "表虚自汗", "气虚水肿", "痈疽难溃", "久溃不敛", "血虚萎黄", "内热消渴", "慢性肾炎蛋白尿", "糖尿病"],
+    "images": ["黄芪.jpg"],
+    "primaryImage": "黄芪.jpg",
+    "meridians": ["脾经", "肺经"],
+    "dosage": "9-30g",
+    "contraindications": ["表实邪盛", "气滞湿阻", "食积停滞", "痈疽初起或溃后热毒尚盛等实证"],
+    "processing": ["生用", "蜜炙"],
+    "compounds": ["黄芪甲苷", "黄芪多糖", "异黄酮类"],
+    "description": "豆科植物蒙古黄芪或膜荚黄芪的干燥根。春秋二季采挖，除去须根和根头，晒干。",
+    
+    "pharmacopoeiaInfo": {
+      "code": "0201001",
+      "latinName": "Astragali Radix",
+      "aliases": ["北芪", "绵芪", "箭芪"],
+      "grade": "first",
+      "standardYear": 2020,
+      "officialSource": "豆科植物蒙古黄芪Astragalus membranaceus(Fisch.)Bge.var.mongholicus(Bge.)Hsiao或膜荚黄芪Astragalus membranaceus(Fisch.)Bge.的干燥根"
+    },
+    
+    "chemicalComponents": [
+      {
+        "name": "黄芪甲苷",
+        "category": "三萜皂苷类",
+        "content": "0.04-0.1%",
+        "function": "免疫调节、心血管保护",
+        "importance": "primary"
+      },
+      {
+        "name": "黄芪多糖",
+        "category": "多糖类",
+        "content": "8-15%",
+        "function": "免疫增强、抗肿瘤",
+        "importance": "primary"
+      },
+      {
+        "name": "异黄酮类化合物",
+        "category": "黄酮类",
+        "content": "0.02-0.05%",
+        "function": "抗氧化、抗炎",
+        "importance": "secondary"
+      },
+      {
+        "name": "氨基酸",
+        "category": "蛋白质类",
+        "content": "多种",
+        "function": "营养补充",
+        "importance": "secondary"
+      }
+    ],
+    
+    "pharmacologicalActions": [
+      {
+        "action": "免疫调节作用",
+        "mechanism": "激活T淋巴细胞、增强巨噬细胞功能、促进抗体生成",
+        "evidence": "大量临床和实验研究证实",
+        "clinicalRelevance": "用于免疫功能低下、反复感染患者",
+        "studies": ["黄芪多糖对免疫功能的调节作用研究", "黄芪甲苷免疫调节机制研究"]
+      },
+      {
+        "action": "心血管保护作用",
+        "mechanism": "改善心肌收缩力、保护血管内皮、抗动脉硬化",
+        "evidence": "多项临床试验证实",
+        "clinicalRelevance": "用于心力衰竭、冠心病等心血管疾病",
+        "studies": ["黄芪注射液治疗心力衰竭的疗效观察", "黄芪对冠心病患者心功能的影响"]
+      },
+      {
+        "action": "抗疲劳作用",
+        "mechanism": "提高机体代谢能力、增强抗应激能力",
+        "evidence": "实验研究证实",
+        "clinicalRelevance": "用于慢性疲劳综合征",
+        "studies": ["黄芪抗疲劳作用机制研究"]
+      }
+    ],
+    
+    "qualityControl": {
+      "identificationMethods": ["显微鉴别", "薄层色谱法", "高效液相色谱法"],
+      "contentDetermination": ["黄芪甲苷含量测定（HPLC法）", "总多糖含量测定"],
+      "qualityIndicators": [
+        {
+          "parameter": "黄芪甲苷",
+          "specification": "不得少于0.040%",
+          "method": "高效液相色谱法",
+          "importance": "critical"
+        },
+        {
+          "parameter": "水分",
+          "specification": "不得过12.0%",
+          "method": "水分测定法",
+          "importance": "major"
+        },
+        {
+          "parameter": "总灰分",
+          "specification": "不得过5.0%",
+          "method": "灰分测定法",
+          "importance": "major"
+        }
+      ],
+      "storageConditions": "置通风干燥处，防蛀",
+      "shelfLife": "3年"
+    },
+    
+    "clinicalGuide": {
+      "indications": [
+        {
+          "condition": "脾胃气虚",
+          "evidenceLevel": "A级",
+          "recommendations": "配伍党参、白术等",
+          "dosage": "15-30g"
+        },
+        {
+          "condition": "表虚自汗",
+          "evidenceLevel": "A级", 
+          "recommendations": "配伍白术、防风",
+          "dosage": "15-30g"
+        }
+      ],
+      "contraindications": ["表实邪盛", "气滞湿阻", "食积停滞"],
+      "dosageAndAdministration": {
+        "oralDose": "9-30g",
+        "externalUse": "适量",
+        "preparationMethods": ["煎汤", "研末", "浸酒"],
+        "administrationTiming": "饭前或饭后1小时",
+        "courseDuration": "2-4周为一疗程"
+      },
+      "adverseReactions": ["过敏反应（少见）", "胃肠道不适"],
+      "interactions": [
+        {
+          "drug": "环磷酰胺",
+          "type": "synergistic",
+          "mechanism": "增强免疫调节作用",
+          "clinicalSignificance": "可能增强化疗药物的抗肿瘤效果",
+          "management": "密切监测疗效和不良反应"
+        }
+      ],
+      "specialPopulations": [
+        {
+          "population": "孕妇",
+          "recommendations": "慎用",
+          "precautions": ["可能影响胎儿发育"]
+        },
+        {
+          "population": "儿童",
+          "recommendations": "减量使用",
+          "precautions": ["用量为成人的1/3-1/2"]
+        }
+      ]
+    },
+    
+    "resourceInfo": {
+      "authenticRegions": [
+        {
+          "region": "内蒙古",
+          "quality": "质量最佳，药效成分含量高",
+          "reason": "气候干燥，日照充足，土壤条件适宜",
+          "annualProduction": "约8000吨",
+          "mainSupplyMonths": ["9月", "10月", "11月"]
+        },
+        {
+          "region": "山西",
+          "quality": "质量优良",
+          "reason": "海拔适中，气候条件良好",
+          "annualProduction": "约3000吨",
+          "mainSupplyMonths": ["9月", "10月"]
+        }
+      ],
+      "gapBases": [
+        {
+          "name": "内蒙古呼和浩特黄芪GAP基地",
+          "location": "内蒙古呼和浩特市",
+          "area": "5000亩",
+          "certification": "国家GAP认证",
+          "contact": "0471-xxxxxxx"
+        }
+      ],
+      "cultivationTech": {
+        "growingConditions": ["耐寒耐旱", "喜阳光", "适应性强"],
+        "plantingTime": "春季3-4月",
+        "harvestTime": "秋季9-10月，生长3-4年采收",
+        "yieldPerMu": "300-500公斤",
+        "techniques": ["选地整地", "种子处理", "田间管理", "病虫害防治"]
+      },
+      "processingMethods": [
+        {
+          "method": "生黄芪",
+          "purpose": "保持原有性味",
+          "procedure": ["除去杂质", "润透", "切厚片", "干燥"],
+          "qualityChanges": "保持原有成分",
+          "clinicalApplication": "补气固表、利尿托毒"
+        },
+        {
+          "method": "蜜炙黄芪",
+          "purpose": "增强补中益气功效",
+          "procedure": ["黄芪片加炼蜜炒制", "至不粘手为度"],
+          "qualityChanges": "增加补益作用",
+          "clinicalApplication": "主要用于补中益气"
+        }
+      ],
+      "marketInfo": {
+        "currentPrice": "25-35元/公斤",
+        "priceRange": "20-50元/公斤",
+        "marketTrend": "价格相对稳定，优质品种价格较高",
+        "mainMarkets": ["安国", "亳州", "陇西", "成都"],
+        "seasonalPattern": "秋季新货上市价格相对较低"
+      }
+    },
+    
+    "modernResearch": {
+      "researchAchievements": [
+        "黄芪多糖的免疫调节机制研究",
+        "黄芪甲苷的心血管保护作用",
+        "黄芪抗肿瘤活性成分筛选"
+      ],
+      "patents": [
+        {
+          "title": "一种黄芪多糖的提取方法",
+          "patentNumber": "CN123456789A",
+          "inventor": "张某某",
+          "applicationDate": "2020-01-15",
+          "description": "改进的黄芪多糖提取工艺"
+        }
+      ],
+      "internationalRecognition": "被收录于美国药典、欧洲药典等多个国际标准",
+      "standardizationLevel": "标准化程度高，质量控制体系完善",
+      "clinicalTrials": [
+        {
+          "title": "黄芪注射液治疗心力衰竭的随机对照试验",
+          "phase": "III期",
+          "status": "已完成",
+          "participants": 200,
+          "primaryOutcome": "心功能改善",
+          "sponsor": "某某医院"
+        }
+      ],
+      "futureProspects": [
+        "开发新的黄芪活性成分",
+        "研究黄芪的抗衰老作用",
+        "黄芪在肿瘤治疗中的应用"
+      ]
+    },
+    
+    "compatibilityInfo": {
+      "commonCombinations": [
+        {
+          "herbs": ["黄芪", "当归"],
+          "ratio": "5:1",
+          "function": "补气生血",
+          "indications": ["血虚", "气血两虚"],
+          "source": "当归补血汤"
+        },
+        {
+          "herbs": ["黄芪", "党参", "白术", "甘草"],
+          "ratio": "3:3:3:1",
+          "function": "益气健脾",
+          "indications": ["脾胃气虚", "食少便溏"],
+          "source": "四君子汤加黄芪"
+        }
+      ],
+      "incompatibleHerbs": ["防己", "恶白鲜皮"],
+      "synergisticEffects": [
+        "与党参配伍增强补气作用",
+        "与当归配伍补气生血",
+        "与白术配伍健脾益气"
+      ],
+      "dosageAdjustments": [
+        "与补益药配伍时可适当增量",
+        "与攻下药配伍时应减量使用"
+      ]
+    }
+  },
+  {
+    "id": "gancao",
+    "name": "甘草",
+    "englishName": "Glycyrrhiza Root",
+    "pinyin": "Gān Cǎo",
+    "functions": ["补脾益气", "清热解毒", "祛痰止咳", "缓急止痛", "调和诸药"],
+    "nature": "平",
+    "taste": ["甘"],
+    "origin": ["内蒙古", "新疆", "甘肃", "宁夏"],
+    "category": "补虚药",
+    "indications": ["脾胃虚弱", "倦怠乏力", "心悸气短", "咳嗽痰多", "脘腹、四肢挛急疼痛", "痈肿疮毒", "缓解药物毒性"],
+    "images": ["甘草.jpg"],
+    "primaryImage": "甘草.jpg",
+    "meridians": ["心经", "肺经", "脾经", "胃经"],
+    "dosage": "2-10g",
+    "contraindications": ["不宜与京大戟、芫花、甘遂、海藻同用"],
+    "processing": ["生用", "蜜炙"],
+    "compounds": ["甘草酸", "甘草次酸", "异甘草素"],
+    "description": "豆科植物甘草、胀果甘草或光果甘草的干燥根和根茎。春、秋二季采挖，除去须根，晒干。",
+    
+    "pharmacopoeiaInfo": {
+      "code": "0201002",
+      "latinName": "Glycyrrhizae Radix et Rhizoma",
+      "aliases": ["国老", "甜草", "美草"],
+      "grade": "first",
+      "standardYear": 2020,
+      "officialSource": "豆科植物甘草Glycyrrhiza uralensis Fisch.、胀果甘草Glycyrrhiza inflata Bat.或光果甘草Glycyrrhiza glabra L.的干燥根和根茎"
+    },
+    
+    "chemicalComponents": [
+      {
+        "name": "甘草酸",
+        "category": "三萜皂苷类",
+        "content": "2-14%",
+        "function": "抗炎、抗病毒、保肝",
+        "importance": "primary"
+      },
+      {
+        "name": "甘草次酸",
+        "category": "三萜类",
+        "content": "0.5-2%",
+        "function": "抗炎、抗溃疡",
+        "importance": "primary"
+      },
+      {
+        "name": "异甘草素",
+        "category": "黄酮类",
+        "content": "0.5-1%",
+        "function": "抗氧化、抗菌",
+        "importance": "secondary"
+      }
+    ],
+    
+    "pharmacologicalActions": [
+      {
+        "action": "抗炎作用",
+        "mechanism": "抑制磷脂酶A2，减少炎症介质释放",
+        "evidence": "大量体内外实验证实",
+        "clinicalRelevance": "用于各种炎症性疾病",
+        "studies": ["甘草酸抗炎机制研究"]
+      },
+      {
+        "action": "保肝作用",
+        "mechanism": "稳定肝细胞膜，促进肝细胞再生",
+        "evidence": "临床试验证实",
+        "clinicalRelevance": "用于慢性肝炎治疗",
+        "studies": ["甘草酸治疗慢性肝炎临床研究"]
+      }
+    ]
+  }
+]

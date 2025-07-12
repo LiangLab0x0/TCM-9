@@ -1,0 +1,1424 @@
+[
+  {
+    "id": "herb_1",
+    "name": "人参",
+    "englishName": "Ginseng",
+    "pinyin": "Renshen",
+    "functions": [
+      "大补元气",
+      "复脉固脱",
+      "补脾益肺",
+      "生津养血",
+      "安神益智"
+    ],
+    "nature": "微温",
+    "taste": [
+      "甘",
+      "微苦"
+    ],
+    "origin": [
+      "吉林",
+      "辽宁",
+      "黑龙江"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "体虚欲脱",
+      "肢冷脉微",
+      "脾虚食少",
+      "肺虚喘咳",
+      "津伤口渴",
+      "内热消渴",
+      "气血亏虚",
+      "久病虚羸",
+      "惊悸失眠",
+      "阳痿宫冷"
+    ],
+    "images": [
+      "人参.jpg"
+    ],
+    "primaryImage": "人参.jpg"
+  },
+  {
+    "id": "herb_2",
+    "name": "黄芪",
+    "englishName": "Astragalus",
+    "pinyin": "Huangqi",
+    "functions": [
+      "补气升阳",
+      "固表止汗",
+      "利水消肿",
+      "生津养血",
+      "行滞通痹",
+      "托毒排脓",
+      "敛疮生肌"
+    ],
+    "nature": "微温",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "山西",
+      "内蒙古",
+      "甘肃",
+      "黑龙江"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "气虚乏力",
+      "食少便溏",
+      "中气下陷",
+      "久泻脱肛",
+      "便血崩漏",
+      "表虚自汗",
+      "气虚水肿",
+      "内热消渴",
+      "血虚萎黄",
+      "半身不遂",
+      "痹痛麻木",
+      "痈疽难溃",
+      "久溃不敛"
+    ],
+    "images": [
+      "黄芪.jpg"
+    ],
+    "primaryImage": "黄芪.jpg"
+  },
+  {
+    "id": "herb_3",
+    "name": "当归",
+    "englishName": "Angelica sinensis",
+    "pinyin": "Danggui",
+    "functions": [
+      "补血活血",
+      "调经止痛",
+      "润肠通便"
+    ],
+    "nature": "温",
+    "taste": [
+      "甘",
+      "辛"
+    ],
+    "origin": [
+      "甘肃",
+      "云南",
+      "四川",
+      "陕西",
+      "湖北"
+    ],
+    "category": "补血药",
+    "indications": [
+      "血虚萎黄",
+      "眩晕心悸",
+      "月经不调",
+      "经闭痛经",
+      "虚寒腹痛",
+      "瘀血作痛",
+      "跌扑损伤",
+      "痈疽疮疡",
+      "肠燥便秘"
+    ],
+    "images": [
+      "当归.jpg"
+    ],
+    "primaryImage": "当归.jpg"
+  },
+  {
+    "id": "herb_4",
+    "name": "党参",
+    "englishName": "Codonopsis",
+    "pinyin": "Dangshen",
+    "functions": [
+      "补中益气",
+      "健脾益肺",
+      "养血生津"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "山西",
+      "陕西",
+      "甘肃",
+      "四川"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "脾肺虚弱",
+      "气短心悸",
+      "食少便溏",
+      "虚喘咳嗽",
+      "内热消渴",
+      "气血两亏"
+    ],
+    "images": [
+      "党参.jpg"
+    ],
+    "primaryImage": "党参.jpg"
+  },
+  {
+    "id": "herb_5",
+    "name": "白术",
+    "englishName": "Atractylodes macrocephala",
+    "pinyin": "Baizhu",
+    "functions": [
+      "健脾益气",
+      "燥湿利水",
+      "止汗",
+      "安胎"
+    ],
+    "nature": "温",
+    "taste": [
+      "苦",
+      "甘"
+    ],
+    "origin": [
+      "浙江",
+      "安徽",
+      "湖北",
+      "湖南"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "脾虚食少",
+      "腹胀泄泻",
+      "痰饮眩悸",
+      "水肿",
+      "自汗",
+      "胎动不安"
+    ],
+    "images": [
+      "白术.jpg"
+    ],
+    "primaryImage": "白术.jpg"
+  },
+  {
+    "id": "herb_6",
+    "name": "茯苓",
+    "englishName": "Poria",
+    "pinyin": "Fuling",
+    "functions": [
+      "利水渗湿",
+      "健脾",
+      "宁心"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘",
+      "淡"
+    ],
+    "origin": [
+      "云南",
+      "安徽",
+      "湖北",
+      "河南"
+    ],
+    "category": "利水渗湿药",
+    "indications": [
+      "水肿尿少",
+      "痰饮眩悸",
+      "脾虚食少",
+      "便溏泄泻",
+      "心神不安",
+      "惊悸失眠"
+    ],
+    "images": [
+      "茯苓.jpg"
+    ],
+    "primaryImage": "茯苓.jpg"
+  },
+  {
+    "id": "herb_7",
+    "name": "甘草",
+    "englishName": "Licorice",
+    "pinyin": "Gancao",
+    "functions": [
+      "补脾益气",
+      "清热解毒",
+      "祛痰止咳",
+      "缓急止痛",
+      "调和诸药"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "内蒙古",
+      "新疆",
+      "甘肃"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "脾胃虚弱",
+      "倦怠乏力",
+      "心悸气短",
+      "咳嗽痰多",
+      "脘腹四肢挛急疼痛",
+      "痈肿疮毒",
+      "缓解药物毒性烈性"
+    ],
+    "images": [
+      "甘草.jpg"
+    ],
+    "primaryImage": "甘草.jpg"
+  },
+  {
+    "id": "herb_8",
+    "name": "枸杞子",
+    "englishName": "Lycium",
+    "pinyin": "Gouqizi",
+    "functions": [
+      "滋补肝肾",
+      "益精明目"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "宁夏",
+      "内蒙古",
+      "新疆",
+      "河北"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "肝肾阴亏",
+      "腰膝酸软",
+      "头晕目眩",
+      "目昏多泪",
+      "虚劳咳嗽",
+      "消渴",
+      "遗精"
+    ],
+    "images": [
+      "枸杞子.jpg"
+    ],
+    "primaryImage": "枸杞子.jpg"
+  },
+  {
+    "id": "herb_9",
+    "name": "熟地黄",
+    "englishName": "Rehmannia",
+    "pinyin": "Shudihuang",
+    "functions": [
+      "补血滋阴",
+      "益精填髓"
+    ],
+    "nature": "微温",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "河南",
+      "山西",
+      "河北",
+      "山东"
+    ],
+    "category": "补血药",
+    "indications": [
+      "血虚萎黄",
+      "心悸怔忡",
+      "月经不调",
+      "崩漏",
+      "肝肾阴虚",
+      "腰膝酸软",
+      "骨蒸潮热",
+      "盗汗",
+      "遗精",
+      "消渴",
+      "须发早白",
+      "精血两亏"
+    ],
+    "images": [
+      "熟地黄.jpg"
+    ],
+    "primaryImage": "熟地黄.jpg"
+  },
+  {
+    "id": "herb_10",
+    "name": "山药",
+    "englishName": "Dioscorea",
+    "pinyin": "Shanyao",
+    "functions": [
+      "补脾养胃",
+      "生津益肺",
+      "补肾涩精"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "河南",
+      "山西",
+      "河北",
+      "山东"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "脾虚食少",
+      "久泻不止",
+      "肺虚喘咳",
+      "肾虚遗精",
+      "带下",
+      "尿频",
+      "虚热消渴"
+    ],
+    "images": [
+      "山药.jpg"
+    ],
+    "primaryImage": "山药.jpg"
+  },
+  {
+    "id": "herb_11",
+    "name": "三七",
+    "englishName": "Notoginseng",
+    "pinyin": "Sanqi",
+    "functions": [
+      "散瘀止血",
+      "消肿定痛"
+    ],
+    "nature": "温",
+    "taste": [
+      "甘",
+      "微苦"
+    ],
+    "origin": [
+      "云南",
+      "广西"
+    ],
+    "category": "止血药",
+    "indications": [
+      "咯血",
+      "吐血",
+      "衄血",
+      "便血",
+      "崩漏",
+      "外伤出血",
+      "胸腹刺痛",
+      "跌扑肿痛"
+    ],
+    "images": [
+      "三七.jpg"
+    ],
+    "primaryImage": "三七.jpg"
+  },
+  {
+    "id": "herb_12",
+    "name": "川芎",
+    "englishName": "Ligusticum chuanxiong",
+    "pinyin": "Chuanxiong",
+    "functions": [
+      "活血行气",
+      "祛风止痛"
+    ],
+    "nature": "温",
+    "taste": [
+      "辛"
+    ],
+    "origin": [
+      "四川",
+      "云南",
+      "贵州"
+    ],
+    "category": "活血化瘀药",
+    "indications": [
+      "月经不调",
+      "经闭痛经",
+      "产后瘀滞腹痛",
+      "胸胁刺痛",
+      "跌扑肿痛",
+      "头痛",
+      "风湿痹痛"
+    ],
+    "images": [
+      "川芎.jpg"
+    ],
+    "primaryImage": "川芎.jpg"
+  },
+  {
+    "id": "herb_13",
+    "name": "红花",
+    "englishName": "Safflower",
+    "pinyin": "Honghua",
+    "functions": [
+      "活血通经",
+      "散瘀止痛"
+    ],
+    "nature": "温",
+    "taste": [
+      "辛"
+    ],
+    "origin": [
+      "新疆",
+      "云南",
+      "四川",
+      "河南"
+    ],
+    "category": "活血化瘀药",
+    "indications": [
+      "经闭",
+      "痛经",
+      "恶露不行",
+      "胸痹心痛",
+      "瘀滞腹痛",
+      "胸胁刺痛",
+      "跌扑损伤",
+      "疮疡肿痛"
+    ],
+    "images": [
+      "红花.jpg"
+    ],
+    "primaryImage": "红花.jpg"
+  },
+  {
+    "id": "herb_14",
+    "name": "丹参",
+    "englishName": "Salvia miltiorrhiza",
+    "pinyin": "Danshen",
+    "functions": [
+      "活血祛瘀",
+      "通经止痛",
+      "清心除烦",
+      "凉血消痈"
+    ],
+    "nature": "微寒",
+    "taste": [
+      "苦"
+    ],
+    "origin": [
+      "四川",
+      "安徽",
+      "河南",
+      "山东"
+    ],
+    "category": "活血化瘀药",
+    "indications": [
+      "胸痹心痛",
+      "脘腹胁痛",
+      "瘕瘕积聚",
+      "热痹疼痛",
+      "心烦不眠",
+      "月经不调",
+      "痛经",
+      "疮疡肿痛"
+    ],
+    "images": [
+      "丹参.jpg"
+    ],
+    "primaryImage": "丹参.jpg"
+  },
+  {
+    "id": "herb_15",
+    "name": "白芍",
+    "englishName": "White Peony",
+    "pinyin": "Baishao",
+    "functions": [
+      "养血调经",
+      "敛阴止汗",
+      "柔肝止痛",
+      "平抑肝阳"
+    ],
+    "nature": "微寒",
+    "taste": [
+      "苦",
+      "酸"
+    ],
+    "origin": [
+      "安徽",
+      "四川",
+      "浙江",
+      "山东"
+    ],
+    "category": "补血药",
+    "indications": [
+      "血虚萎黄",
+      "月经不调",
+      "自汗盗汗",
+      "胁痛腹痛",
+      "四肢挛急疼痛",
+      "头痛眩晕"
+    ],
+    "images": [
+      "白芍.jpg"
+    ],
+    "primaryImage": "白芍.jpg"
+  },
+  {
+    "id": "herb_16",
+    "name": "麦冬",
+    "englishName": "Ophiopogon",
+    "pinyin": "Maidong",
+    "functions": [
+      "养阴生津",
+      "润肺清心"
+    ],
+    "nature": "微寒",
+    "taste": [
+      "甘",
+      "微苦"
+    ],
+    "origin": [
+      "四川",
+      "浙江",
+      "江苏"
+    ],
+    "category": "补阴药",
+    "indications": [
+      "肺燥干咳",
+      "虚劳咳嗽",
+      "津伤口渴",
+      "心烦失眠",
+      "内热消渴",
+      "肠燥便秘",
+      "咽白喉"
+    ],
+    "images": [
+      "麦冬.webp"
+    ],
+    "primaryImage": "麦冬.webp"
+  },
+  {
+    "id": "herb_17",
+    "name": "天冬",
+    "englishName": "Asparagus",
+    "pinyin": "Tiandong",
+    "functions": [
+      "养阴润燥",
+      "清肺生津"
+    ],
+    "nature": "寒",
+    "taste": [
+      "甘",
+      "苦"
+    ],
+    "origin": [
+      "贵州",
+      "四川",
+      "广西",
+      "云南"
+    ],
+    "category": "补阴药",
+    "indications": [
+      "肺燥干咳",
+      "虚劳咳嗽",
+      "津伤口渴",
+      "心烦失眠",
+      "内热消渴",
+      "肠燥便秘"
+    ],
+    "images": [
+      "天冬.jpg"
+    ],
+    "primaryImage": "天冬.jpg"
+  },
+  {
+    "id": "herb_18",
+    "name": "百合",
+    "englishName": "Lily Bulb",
+    "pinyin": "Baihe",
+    "functions": [
+      "养阴润肺",
+      "清心安神"
+    ],
+    "nature": "微寒",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "湖南",
+      "江苏",
+      "浙江",
+      "安徽"
+    ],
+    "category": "补阴药",
+    "indications": [
+      "阴虚燥咳",
+      "劳嗽咯血",
+      "虚烦惊悸",
+      "失眠多梦",
+      "精神恍惚"
+    ],
+    "images": [
+      "百合.jpg"
+    ],
+    "primaryImage": "百合.jpg"
+  },
+  {
+    "id": "herb_19",
+    "name": "石斛",
+    "englishName": "Dendrobium",
+    "pinyin": "Shihu",
+    "functions": [
+      "益胃生津",
+      "滋阴清热"
+    ],
+    "nature": "微寒",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "安徽",
+      "浙江",
+      "云南",
+      "广西"
+    ],
+    "category": "补阴药",
+    "indications": [
+      "热病津伤",
+      "口干烦渴",
+      "胃阴不足",
+      "食少干呕",
+      "病后虚热不退",
+      "阴虚火旺",
+      "骨蒸劳热",
+      "目暗不明",
+      "筋骨痿软"
+    ],
+    "images": [
+      "石斛.jpg"
+    ],
+    "primaryImage": "石斛.jpg"
+  },
+  {
+    "id": "herb_20",
+    "name": "桑椹",
+    "englishName": "Mulberry",
+    "pinyin": "Sangshen",
+    "functions": [
+      "滋阴补血",
+      "生津润燥"
+    ],
+    "nature": "寒",
+    "taste": [
+      "甘",
+      "酸"
+    ],
+    "origin": [
+      "江苏",
+      "浙江",
+      "湖南",
+      "四川"
+    ],
+    "category": "补阴药",
+    "indications": [
+      "肝肾阴虚",
+      "眩晕耳鸣",
+      "心悸失眠",
+      "须发早白",
+      "津伤口渴",
+      "内热消渴",
+      "肠燥便秘"
+    ],
+    "images": [
+      "桑椹.webp"
+    ],
+    "primaryImage": "桑椹.webp"
+  },
+  {
+    "id": "herb_21",
+    "name": "西洋参",
+    "englishName": "American Ginseng",
+    "pinyin": "Xiyangshen",
+    "functions": [
+      "补气养阴",
+      "清热生津"
+    ],
+    "nature": "凉",
+    "taste": [
+      "甘",
+      "微苦"
+    ],
+    "origin": [
+      "美国",
+      "加拿大",
+      "中国东北"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "气虚阴亏",
+      "虚热烦倦",
+      "咳喘痰血",
+      "内热消渴",
+      "口燥咽干"
+    ],
+    "images": [
+      "西洋参.jpg"
+    ],
+    "primaryImage": "西洋参.jpg"
+  },
+  {
+    "id": "herb_22",
+    "name": "灵芝",
+    "englishName": "Ganoderma",
+    "pinyin": "Lingzhi",
+    "functions": [
+      "补气安神",
+      "止咳平喘"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [
+      "浙江",
+      "江西",
+      "湖南",
+      "四川"
+    ],
+    "category": "补虚药",
+    "indications": [
+      "心神不宁",
+      "失眠心悸",
+      "肺虚咳喘",
+      "虚劳短气",
+      "不思饮食"
+    ],
+    "images": [
+      "灵芝.jpg"
+    ],
+    "primaryImage": "灵芝.jpg"
+  },
+  {
+    "id": "herb_70",
+    "name": "埃利斯多孔菌",
+    "englishName": "Ellisi Porous Agaric",
+    "pinyin": "AI LI SI DUO KONG JUN",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃利斯多孔菌.png"
+    ],
+    "primaryImage": "埃利斯多孔菌.png"
+  },
+  {
+    "id": "herb_61",
+    "name": "埃及假虎刺",
+    "englishName": "Egyptian Carissa",
+    "pinyin": "AI JI JIA HU CI",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃及假虎刺.jpg"
+    ],
+    "primaryImage": "埃及假虎刺.jpg"
+  },
+  {
+    "id": "herb_62",
+    "name": "埃及千里光",
+    "englishName": "Egyptian Groundsel",
+    "pinyin": "AI JI QIAN LI GUANG",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃及千里光_4.jpg",
+      "埃及千里光_0.jpg",
+      "埃及千里光_3.jpg",
+      "埃及千里光_1.jpg",
+      "埃及千里光_2.jpg"
+    ],
+    "primaryImage": "埃及千里光_4.jpg"
+  },
+  {
+    "id": "herb_60",
+    "name": "埃及大翅蓟",
+    "englishName": "Egyptian Cottonthistle",
+    "pinyin": "AI JI DA CHI JI",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃及大翅蓟.jpg"
+    ],
+    "primaryImage": "埃及大翅蓟.jpg"
+  },
+  {
+    "id": "herb_66",
+    "name": "埃及种植鸢尾",
+    "englishName": "Egypt Planted Iris",
+    "pinyin": "AI JI ZHONG ZHI YUAN WEI",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃及种植鸢尾.jpeg"
+    ],
+    "primaryImage": "埃及种植鸢尾.jpeg"
+  },
+  {
+    "id": "herb_59",
+    "name": "埃及车轴草",
+    "englishName": "Egyptian Clover",
+    "pinyin": "AI JI CHE ZHOU CAO",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃及车轴草.jpg"
+    ],
+    "primaryImage": "埃及车轴草.jpg"
+  },
+  {
+    "id": "herb_63",
+    "name": "埃及鼠尾草",
+    "englishName": "Egyptian Sage",
+    "pinyin": "AI JI SHU WEI CAO",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃及鼠尾草.jpg"
+    ],
+    "primaryImage": "埃及鼠尾草.jpg"
+  },
+  {
+    "id": "herb_74",
+    "name": "埃塞俄比亚羽扇豆",
+    "englishName": "Narrowleaf Lupin",
+    "pinyin": "AI SAI E BI YA YU SHAN DOU",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "埃塞俄比亚羽扇豆.jpg"
+    ],
+    "primaryImage": "埃塞俄比亚羽扇豆.jpg"
+  },
+  {
+    "id": "herb_110",
+    "name": "安乃近",
+    "englishName": "Analgin",
+    "pinyin": "AN NAI JIN",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安乃近.png"
+    ],
+    "primaryImage": "安乃近.png"
+  },
+  {
+    "id": "herb_93",
+    "name": "安哥拉八角枫",
+    "englishName": "Angola Alangium",
+    "pinyin": "AN GE LA BA JIAO FENG",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安哥拉八角枫.jpg"
+    ],
+    "primaryImage": "安哥拉八角枫.jpg"
+  },
+  {
+    "id": "herb_96",
+    "name": "安哥拉紫檀",
+    "englishName": "NA",
+    "pinyin": "AN GE LA ZI TAN",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安哥拉紫檀.jpg"
+    ],
+    "primaryImage": "安哥拉紫檀.jpg"
+  },
+  {
+    "id": "herb_95",
+    "name": "安哥拉黄瓜",
+    "englishName": "Angola Cucumber",
+    "pinyin": "AN GE LA HUANG GUA",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安哥拉黄瓜.jpg"
+    ],
+    "primaryImage": "安哥拉黄瓜.jpg"
+  },
+  {
+    "id": "herb_104",
+    "name": "安徽松木",
+    "englishName": "NA",
+    "pinyin": "AN HUI SONG MU",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安徽松木.jpg"
+    ],
+    "primaryImage": "安徽松木.jpg"
+  },
+  {
+    "id": "herb_102",
+    "name": "安徽贝母",
+    "englishName": "Anhui Fritillary",
+    "pinyin": "AN HUI BEI MU",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安徽贝母.jpg"
+    ],
+    "primaryImage": "安徽贝母.jpg"
+  },
+  {
+    "id": "herb_105",
+    "name": "安徽银莲花",
+    "englishName": "Anhui Anemone",
+    "pinyin": "AN HUI YIN LIAN HUA",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安徽银莲花.jpg"
+    ],
+    "primaryImage": "安徽银莲花.jpg"
+  },
+  {
+    "id": "herb_108",
+    "name": "安罗",
+    "englishName": "Suberous Greenstar",
+    "pinyin": "AN LUO",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "安罗.png"
+    ],
+    "primaryImage": "安罗.png"
+  },
+  {
+    "id": "herb_113",
+    "name": "按叶",
+    "englishName": "Eucalyptus Leaf",
+    "pinyin": "AN YE",
+    "functions": [
+      "To soothe wind and resolve exterior",
+      "clear heat and resolve toxin",
+      "rectify qi and transform phlegm",
+      "kill worms and relieve itch."
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "Common cold",
+      "ardent fever with headache",
+      "lung heat cough asthma",
+      "pertussis",
+      "diarrhea",
+      "dysentery",
+      "ancylostomiasis",
+      "filariasis",
+      "wind-damp pain",
+      "swelling toxin of welling abscess and sore",
+      "eczema",
+      "scab and lichen",
+      "burns and scalds",
+      "bleeding due to external injury."
+    ],
+    "images": [
+      "按叶.jpg"
+    ],
+    "primaryImage": "按叶.jpg"
+  },
+  {
+    "id": "herb_114",
+    "name": "按油",
+    "englishName": "Eucalyptus Oil",
+    "pinyin": "AN YOU",
+    "functions": [
+      "Skin irritant. Used in nerval pain."
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "Skin irritant. Used in nerval pain."
+    ],
+    "images": [
+      "按油.bmp"
+    ],
+    "primaryImage": "按油.bmp"
+  },
+  {
+    "id": "herb_117",
+    "name": "暗棕炭团菌",
+    "englishName": "NA",
+    "pinyin": "AN ZONG TAN TUAN JUN",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "暗棕炭团菌.jpg"
+    ],
+    "primaryImage": "暗棕炭团菌.jpg"
+  },
+  {
+    "id": "herb_100",
+    "name": "暗红委陵菜",
+    "englishName": "Darksanguine Cinquefoil",
+    "pinyin": "AN HONG WEI LING CAI",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "暗红委陵菜.jpg"
+    ],
+    "primaryImage": "暗红委陵菜.jpg"
+  },
+  {
+    "id": "herb_115",
+    "name": "暗紫贝母",
+    "englishName": "Unibract Fritillary",
+    "pinyin": "AN ZI BEI MU",
+    "functions": [
+      "See Fritillaria cirrhosa ."
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "See Fritillaria cirrhosa ."
+    ],
+    "images": [
+      "暗紫贝母.jpeg"
+    ],
+    "primaryImage": "暗紫贝母.jpeg"
+  },
+  {
+    "id": "herb_106",
+    "name": "氨基比林",
+    "englishName": "Aminopyrine",
+    "pinyin": "AN JI BI LIN",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "氨基比林.jpg"
+    ],
+    "primaryImage": "氨基比林.jpg"
+  },
+  {
+    "id": "herb_119",
+    "name": "澳大利亚千金藤",
+    "englishName": "Australia Stephania",
+    "pinyin": "AO DA LI YA QIAN JIN TENG",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "澳大利亚千金藤.jpg"
+    ],
+    "primaryImage": "澳大利亚千金藤.jpg"
+  },
+  {
+    "id": "herb_120",
+    "name": "澳大利亚桑",
+    "englishName": "Japanese Mulberry",
+    "pinyin": "AO DA LI YA SANG",
+    "functions": [
+      "See Morus alba."
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "See Morus alba."
+    ],
+    "images": [
+      "澳大利亚桑.jpg"
+    ],
+    "primaryImage": "澳大利亚桑.jpg"
+  },
+  {
+    "id": "herb_118",
+    "name": "澳大利亚红豆杉",
+    "englishName": "Australia Yew",
+    "pinyin": "AO DA LI YA HONG DOU SHAN",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "澳大利亚红豆杉.jpg"
+    ],
+    "primaryImage": "澳大利亚红豆杉.jpg"
+  },
+  {
+    "id": "herb_85",
+    "name": "爱娃筋骨草",
+    "englishName": "Iva Bugle",
+    "pinyin": "AI WA JIN GU CAO",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "爱娃筋骨草.jpg"
+    ],
+    "primaryImage": "爱娃筋骨草.jpg"
+  },
+  {
+    "id": "herb_87",
+    "name": "矮向日葵",
+    "englishName": "Dwarf Sunflower",
+    "pinyin": "AI XIANG RI KUI",
+    "functions": [
+      "NA"
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "NA"
+    ],
+    "images": [
+      "矮向日葵.jpg"
+    ],
+    "primaryImage": "矮向日葵.jpg"
+  },
+  {
+    "id": "herb_58",
+    "name": "矮地茶",
+    "englishName": "Japanese Ardisia Herb",
+    "pinyin": "AI DI CHA",
+    "functions": [
+      "1. To eliminate phlegm and relieving cough.2. To promote diuresis to deprive dampness. 3. To activate blood circulation and stop bleeding."
+    ],
+    "nature": "平",
+    "taste": [
+      "甘"
+    ],
+    "origin": [],
+    "category": "其他",
+    "indications": [
+      "1. Bergenin",
+      "an active comonent",
+      "is an expectorant. 2. Its volatile oil or flavone can relieve bronchospasm induced by histamine in vitro. 3. Its decoction inhibits the growth of Pneumococcus",
+      "Staphylococcus aureus and influenza virus in vitro."
+    ],
+    "images": [
+      "矮地茶.jpg"
+    ],
+    "primaryImage": "矮地茶.jpg"
+  }
+]
