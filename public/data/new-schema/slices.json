@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "slice_1",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_1",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "人参生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_2",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_2",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "黄芪生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_3",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_3",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "当归生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_4",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_4",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "党参生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_5",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_5",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "白术生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_6",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_6",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "茯苓生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_7",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_7",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "甘草生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_8",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_8",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "枸杞子生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_9",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_9",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "熟地黄生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_10",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "materialId": "herb_10",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "山药生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_11",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_11",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "三七生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_12",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_12",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "川芎生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_13",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_13",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "红花生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_14",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_14",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "丹参生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_15",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_15",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "白芍生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_16",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_16",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "麦冬生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_17",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_17",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "天冬生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_18",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_18",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "百合生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_19",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_19",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "石斛生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_20",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_20",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "桑椹生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_21",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_21",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "西洋参生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_22",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_22",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "灵芝生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_23",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_70",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃利斯多孔菌生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_24",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_61",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃及假虎刺生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_25",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_62",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃及千里光生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_26",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_60",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃及大翅蓟生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_27",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_66",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃及种植鸢尾生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_28",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_59",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃及车轴草生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_29",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_63",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃及鼠尾草生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_30",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_74",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "埃塞俄比亚羽扇豆生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_31",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_110",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安乃近生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_32",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_93",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安哥拉八角枫生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_33",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_96",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安哥拉紫檀生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_34",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_95",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安哥拉黄瓜生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_35",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_104",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安徽松木生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_36",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_102",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安徽贝母生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_37",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_105",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安徽银莲花生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_38",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_108",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "安罗生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_39",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_113",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "按叶生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_40",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_114",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "按油生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_41",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_117",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "暗棕炭团菌生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_42",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_100",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "暗红委陵菜生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_43",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_115",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "暗紫贝母生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_44",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_106",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "氨基比林生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_45",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_119",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "澳大利亚千金藤生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_46",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_120",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "澳大利亚桑生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_47",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_118",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "澳大利亚红豆杉生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_48",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_85",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "爱娃筋骨草生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_49",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_87",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "矮向日葵生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  },
+  {
+    "id": "slice_50",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "materialId": "herb_58",
+    "processing": {
+      "method": "净制",
+      "category": "净制",
+      "note": "矮地茶生品"
+    },
+    "qc": [],
+    "storage": {
+      "temperature": "常温",
+      "humidity": "≤60%",
+      "lightCondition": "避光",
+      "shelfLife": 24,
+      "container": "密闭容器"
+    }
+  }
+]

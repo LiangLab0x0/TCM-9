@@ -1,0 +1,12 @@
+dist
+build
+coverage
+public
+.next
+.cache
+node_modules
+*.min.js
+*.min.css
+pnpm-lock.yaml
+.DS_Store
+*.log

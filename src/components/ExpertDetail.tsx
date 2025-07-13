@@ -1,22 +1,30 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ArrowLeft, User, Award, BookOpen, Users, Calendar, 
-  MapPin, GraduationCap, Star, FileText
-} from 'lucide-react';
-import { TCMExpert } from '../types';
-import { useAppStore } from '../store';
+import React from 'react'
+import { motion } from 'framer-motion'
+import {
+  ArrowLeft,
+  User,
+  Award,
+  BookOpen,
+  Users,
+  Calendar,
+  MapPin,
+  GraduationCap,
+  Star,
+  FileText,
+} from 'lucide-react'
+import type { TCMExpert } from '../types'
+import { useAppStore } from '../store'
 
 interface ExpertDetailProps {
-  expert: TCMExpert;
+  expert: TCMExpert
 }
 
 const ExpertDetail: React.FC<ExpertDetailProps> = ({ expert }) => {
-  const { setCurrentView } = useAppStore();
+  const { setCurrentView } = useAppStore()
 
   const handleBack = () => {
-    setCurrentView('experts');
-  };
+    setCurrentView('experts')
+  }
 
   return (
     <motion.div
@@ -135,9 +143,7 @@ const ExpertDetail: React.FC<ExpertDetailProps> = ({ expert }) => {
                 <User className="w-6 h-6 text-blue-600" />
                 <h2 className="text-xl font-bold text-gray-800">个人简介</h2>
               </div>
-              <p className="text-gray-700 leading-relaxed text-justify">
-                {expert.biography}
-              </p>
+              <p className="text-gray-700 leading-relaxed text-justify">{expert.biography}</p>
             </motion.div>
 
             {/* 主要成就 */}
@@ -197,8 +203,11 @@ const ExpertDetail: React.FC<ExpertDetailProps> = ({ expert }) => {
                           <div className="flex items-center gap-4 text-sm text-gray-500">
                             <span>{publication.year} 年</span>
                             <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">
-                              {publication.type === 'book' ? '著作' : 
-                               publication.type === 'paper' ? '论文' : '标准'}
+                              {publication.type === 'book'
+                                ? '著作'
+                                : publication.type === 'paper'
+                                  ? '论文'
+                                  : '标准'}
                             </span>
                           </div>
                         </div>
@@ -271,17 +280,20 @@ const ExpertDetail: React.FC<ExpertDetailProps> = ({ expert }) => {
                           <p className="text-sm text-indigo-600 mb-1">{student.batch}</p>
                           <p className="text-sm text-gray-600 mb-1">{student.currentPosition}</p>
                           <p className="text-xs text-gray-500">{student.institution}</p>
-                          
+
                           {student.specialization && student.specialization.length > 0 && (
                             <div className="mt-2 flex flex-wrap gap-1">
                               {student.specialization.slice(0, 2).map((spec, i) => (
-                                <span key={i} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                                <span
+                                  key={i}
+                                  className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                                >
                                   {spec}
                                 </span>
                               ))}
                             </div>
                           )}
-                          
+
                           {student.achievements && student.achievements.length > 0 && (
                             <div className="mt-2">
                               <p className="text-xs text-gray-600">{student.achievements[0]}</p>
@@ -298,7 +310,7 @@ const ExpertDetail: React.FC<ExpertDetailProps> = ({ expert }) => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default ExpertDetail;
+export default ExpertDetail

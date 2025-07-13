@@ -1,56 +1,56 @@
-import React, { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Filter, X, TrendingUp } from 'lucide-react';
-import { useAppStore } from '../store';
+import React, { useMemo, useState } from 'react'
+import { motion } from 'framer-motion'
+import { MapPin, Filter, X, TrendingUp } from 'lucide-react'
+import { useAppStore } from '../store'
 
 const SimpleOriginMap: React.FC = () => {
-  const { herbs, updateSearchFilters, setCurrentView } = useAppStore();
-  const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
+  const { herbs, updateSearchFilters, setCurrentView } = useAppStore()
+  const [selectedProvince, setSelectedProvince] = useState<string | null>(null)
 
   // 处理省份数据
   const provinceData = useMemo(() => {
-    const provinceMap = new Map<string, { count: number; herbs: string[] }>();
-    
-    herbs.forEach(herb => {
+    const provinceMap = new Map<string, { count: number; herbs: string[] }>()
+
+    herbs.forEach((herb) => {
       if (herb.origin) {
-        herb.origin.forEach(province => {
+        herb.origin.forEach((province) => {
           if (!provinceMap.has(province)) {
-            provinceMap.set(province, { count: 0, herbs: [] });
+            provinceMap.set(province, { count: 0, herbs: [] })
           }
-          const data = provinceMap.get(province)!;
-          data.count += 1;
-          data.herbs.push(herb.name);
-        });
+          const data = provinceMap.get(province)!
+          data.count += 1
+          data.herbs.push(herb.name)
+        })
       }
-    });
+    })
 
     return Array.from(provinceMap.entries())
       .map(([province, data]) => ({ province, ...data }))
-      .sort((a, b) => b.count - a.count);
-  }, [herbs]);
+      .sort((a, b) => b.count - a.count)
+  }, [herbs])
 
   // 获取颜色强度
   const getColorIntensity = (count: number, maxCount: number): string => {
-    const ratio = count / maxCount;
-    if (ratio > 0.8) return 'bg-blue-600';
-    if (ratio > 0.6) return 'bg-blue-500';
-    if (ratio > 0.4) return 'bg-blue-400';
-    if (ratio > 0.2) return 'bg-blue-300';
-    return 'bg-blue-200';
-  };
+    const ratio = count / maxCount
+    if (ratio > 0.8) return 'bg-blue-600'
+    if (ratio > 0.6) return 'bg-blue-500'
+    if (ratio > 0.4) return 'bg-blue-400'
+    if (ratio > 0.2) return 'bg-blue-300'
+    return 'bg-blue-200'
+  }
 
-  const maxCount = Math.max(...provinceData.map(p => p.count));
+  const maxCount = Math.max(...provinceData.map((p) => p.count))
 
   const handleProvinceClick = (province: string) => {
-    setSelectedProvince(province);
-    updateSearchFilters({ origin: province });
-    setCurrentView('gallery');
-  };
+    setSelectedProvince(province)
+    updateSearchFilters({ origin: province })
+    setCurrentView('gallery')
+  }
 
   const clearSelection = () => {
-    setSelectedProvince(null);
-    updateSearchFilters({ origin: '' });
-  };
+    setSelectedProvince(null)
+    updateSearchFilters({ origin: '' })
+  }
 
   return (
     <motion.div
@@ -74,11 +74,9 @@ const SimpleOriginMap: React.FC = () => {
           >
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-blue-600" />
-              <span className="text-blue-800 font-medium">
-                已选择：{selectedProvince}
-              </span>
+              <span className="text-blue-800 font-medium">已选择：{selectedProvince}</span>
               <span className="text-blue-600">
-                ({provinceData.find(p => p.province === selectedProvince)?.count || 0} 种药材)
+                ({provinceData.find((p) => p.province === selectedProvince)?.count || 0} 种药材)
               </span>
             </div>
             <motion.button
@@ -122,18 +120,19 @@ const SimpleOriginMap: React.FC = () => {
                       relative p-3 rounded-xl cursor-pointer transition-all duration-200
                       ${getColorIntensity(item.count, maxCount)} text-white text-center
                       hover:shadow-lg border-2 
-                      ${selectedProvince === item.province 
-                        ? 'border-yellow-400 ring-2 ring-yellow-200' 
-                        : 'border-transparent'
+                      ${
+                        selectedProvince === item.province
+                          ? 'border-yellow-400 ring-2 ring-yellow-200'
+                          : 'border-transparent'
                       }
                     `}
                   >
                     <div className="font-medium text-sm mb-1">{item.province}</div>
                     <div className="text-xs opacity-90">{item.count} 种</div>
-                    
+
                     {/* 进度条 */}
                     <div className="mt-2 w-full bg-white bg-opacity-30 rounded-full h-1">
-                      <div 
+                      <div
                         className="bg-white h-1 rounded-full transition-all duration-300"
                         style={{ width: `${(item.count / maxCount) * 100}%` }}
                       />
@@ -185,36 +184,38 @@ const SimpleOriginMap: React.FC = () => {
                     onClick={() => handleProvinceClick(province.province)}
                     className={`
                       p-3 rounded-lg cursor-pointer transition-all duration-200
-                      ${selectedProvince === province.province
-                        ? 'bg-blue-100 border-2 border-blue-300'
-                        : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
+                      ${
+                        selectedProvince === province.province
+                          ? 'bg-blue-100 border-2 border-blue-300'
+                          : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
                       }
                     `}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className={`
+                        <span
+                          className={`
                           w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold
-                          ${index < 3 
-                            ? 'bg-yellow-400 text-yellow-900' 
-                            : 'bg-gray-300 text-gray-700'
+                          ${
+                            index < 3
+                              ? 'bg-yellow-400 text-yellow-900'
+                              : 'bg-gray-300 text-gray-700'
                           }
-                        `}>
+                        `}
+                        >
                           {index + 1}
                         </span>
                         <span className="font-medium text-gray-800">{province.province}</span>
                       </div>
-                      <span className="text-sm font-bold text-blue-600">
-                        {province.count} 种
-                      </span>
+                      <span className="text-sm font-bold text-blue-600">{province.count} 种</span>
                     </div>
-                    
+
                     {/* 进度条 */}
                     <div className="mt-2 w-full bg-gray-200 rounded-full h-2">
-                      <div 
+                      <div
                         className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-                        style={{ 
-                          width: `${(province.count / maxCount) * 100}%` 
+                        style={{
+                          width: `${(province.count / maxCount) * 100}%`,
                         }}
                       />
                     </div>
@@ -249,7 +250,10 @@ const SimpleOriginMap: React.FC = () => {
                 <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
                   <span className="text-purple-700 font-medium">平均产量</span>
                   <span className="text-purple-900 font-bold">
-                    {Math.round(provinceData.reduce((sum, p) => sum + p.count, 0) / provinceData.length)} 种
+                    {Math.round(
+                      provinceData.reduce((sum, p) => sum + p.count, 0) / provinceData.length
+                    )}{' '}
+                    种
                   </span>
                 </div>
               </div>
@@ -288,7 +292,7 @@ const SimpleOriginMap: React.FC = () => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default SimpleOriginMap;
+export default SimpleOriginMap

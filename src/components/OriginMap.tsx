@@ -1,53 +1,55 @@
-import React, { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
-import ReactECharts from 'echarts-for-react';
-import { MapPin, Filter, X } from 'lucide-react';
-import { useAppStore } from '../store';
-import { ProvinceMapData } from '../types';
+import React, { useMemo, useState } from 'react'
+import { motion } from 'framer-motion'
+import ReactECharts from 'echarts-for-react'
+import { MapPin, Filter, X } from 'lucide-react'
+import { useAppStore } from '../store'
+import type { ProvinceMapData } from '../types'
 
 const OriginMap: React.FC = () => {
-  const { herbs, updateSearchFilters, setCurrentView } = useAppStore();
-  const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
-  const [hoveredProvince, setHoveredProvince] = useState<string | null>(null);
+  const { herbs, updateSearchFilters, setCurrentView } = useAppStore()
+  const [selectedProvince, setSelectedProvince] = useState<string | null>(null)
+  const [hoveredProvince, setHoveredProvince] = useState<string | null>(null)
 
   // 处理省份数据
   const provinceData = useMemo(() => {
-    const provinceMap = new Map<string, { count: number; herbs: string[] }>();
-    
-    herbs.forEach(herb => {
-      if (herb.origin) {
-        herb.origin.forEach(province => {
-          if (!provinceMap.has(province)) {
-            provinceMap.set(province, { count: 0, herbs: [] });
-          }
-          const data = provinceMap.get(province)!;
-          data.count += 1;
-          data.herbs.push(herb.name);
-        });
-      }
-    });
+    const provinceMap = new Map<string, { count: number; herbs: string[] }>()
 
-    const maxCount = Math.max(...Array.from(provinceMap.values()).map(v => v.count));
-    
-    return Array.from(provinceMap.entries()).map(([province, data]): ProvinceMapData => ({
-      name: province,
-      value: data.count,
-      herbs: data.herbs,
-      itemStyle: {
-        areaColor: getProvinceColor(data.count, maxCount)
+    herbs.forEach((herb) => {
+      if (herb.origin) {
+        herb.origin.forEach((province) => {
+          if (!provinceMap.has(province)) {
+            provinceMap.set(province, { count: 0, herbs: [] })
+          }
+          const data = provinceMap.get(province)!
+          data.count += 1
+          data.herbs.push(herb.name)
+        })
       }
-    }));
-  }, [herbs]);
+    })
+
+    const maxCount = Math.max(...Array.from(provinceMap.values()).map((v) => v.count))
+
+    return Array.from(provinceMap.entries()).map(
+      ([province, data]): ProvinceMapData => ({
+        name: province,
+        value: data.count,
+        herbs: data.herbs,
+        itemStyle: {
+          areaColor: getProvinceColor(data.count, maxCount),
+        },
+      })
+    )
+  }, [herbs])
 
   // 根据药材数量获取颜色
   const getProvinceColor = (count: number, maxCount: number): string => {
-    const ratio = count / maxCount;
-    if (ratio > 0.8) return '#1e40af'; // 深蓝
-    if (ratio > 0.6) return '#3b82f6'; // 蓝色
-    if (ratio > 0.4) return '#60a5fa'; // 浅蓝
-    if (ratio > 0.2) return '#93c5fd'; // 很浅蓝
-    return '#dbeafe'; // 极浅蓝
-  };
+    const ratio = count / maxCount
+    if (ratio > 0.8) return '#1e40af' // 深蓝
+    if (ratio > 0.6) return '#3b82f6' // 蓝色
+    if (ratio > 0.4) return '#60a5fa' // 浅蓝
+    if (ratio > 0.2) return '#93c5fd' // 很浅蓝
+    return '#dbeafe' // 极浅蓝
+  }
 
   // ECharts配置
   const option = {
@@ -57,47 +59,51 @@ const OriginMap: React.FC = () => {
       textStyle: {
         color: '#374151',
         fontSize: 20,
-        fontWeight: 'bold'
-      }
+        fontWeight: 'bold',
+      },
     },
     tooltip: {
       trigger: 'item',
       formatter: (params: any) => {
-        const provinceInfo = provinceData.find(p => p.name === params.name);
-        if (!provinceInfo) return '';
-        
+        const provinceInfo = provinceData.find((p) => p.name === params.name)
+        if (!provinceInfo) return ''
+
         return `
           <div style="padding: 8px;">
             <strong>${params.name}</strong><br/>
             药材种类: ${provinceInfo.value} 种<br/>
             <div style="max-height: 120px; overflow-y: auto; margin-top: 8px;">
-              ${provinceInfo.herbs.slice(0, 10).map(herb => 
-                `<span style="display: inline-block; background: #f3f4f6; margin: 2px; padding: 2px 6px; border-radius: 4px; font-size: 12px;">${herb}</span>`
-              ).join('')}
+              ${provinceInfo.herbs
+                .slice(0, 10)
+                .map(
+                  (herb) =>
+                    `<span style="display: inline-block; background: #f3f4f6; margin: 2px; padding: 2px 6px; border-radius: 4px; font-size: 12px;">${herb}</span>`
+                )
+                .join('')}
               ${provinceInfo.herbs.length > 10 ? `<div style="margin-top: 4px; color: #6b7280; font-size: 12px;">+${provinceInfo.herbs.length - 10} 更多...</div>` : ''}
             </div>
           </div>
-        `;
+        `
       },
       backgroundColor: 'rgba(255, 255, 255, 0.95)',
       borderColor: '#e5e7eb',
       borderWidth: 1,
       textStyle: {
-        color: '#374151'
-      }
+        color: '#374151',
+      },
     },
     visualMap: {
       min: 0,
-      max: Math.max(...provinceData.map(p => p.value)),
+      max: Math.max(...provinceData.map((p) => p.value)),
       text: ['高', '低'],
       realtime: false,
       calculable: true,
       inRange: {
-        color: ['#dbeafe', '#1e40af']
+        color: ['#dbeafe', '#1e40af'],
       },
       textStyle: {
-        color: '#374151'
-      }
+        color: '#374151',
+      },
     },
     series: [
       {
@@ -110,52 +116,50 @@ const OriginMap: React.FC = () => {
           itemStyle: {
             areaColor: '#fbbf24',
             borderWidth: 2,
-            borderColor: '#f59e0b'
+            borderColor: '#f59e0b',
           },
           label: {
             show: true,
             color: '#374151',
-            fontWeight: 'bold'
-          }
+            fontWeight: 'bold',
+          },
         },
         select: {
           itemStyle: {
             areaColor: '#dc2626',
             borderWidth: 2,
-            borderColor: '#b91c1c'
-          }
-        }
-      }
-    ]
-  };
+            borderColor: '#b91c1c',
+          },
+        },
+      },
+    ],
+  }
 
   // 地图事件处理
   const onEvents = {
-    'click': (params: any) => {
-      const provinceName = params.name;
-      setSelectedProvince(provinceName);
+    click: (params: any) => {
+      const provinceName = params.name
+      setSelectedProvince(provinceName)
       // 过滤该省份的药材
-      updateSearchFilters({ origin: provinceName });
-      setCurrentView('gallery');
+      updateSearchFilters({ origin: provinceName })
+      setCurrentView('gallery')
     },
-    'mouseover': (params: any) => {
-      setHoveredProvince(params.name);
+    mouseover: (params: any) => {
+      setHoveredProvince(params.name)
     },
-    'mouseout': () => {
-      setHoveredProvince(null);
-    }
-  };
+    mouseout: () => {
+      setHoveredProvince(null)
+    },
+  }
 
   // 清除省份选择
   const clearSelection = () => {
-    setSelectedProvince(null);
-    updateSearchFilters({ origin: '' });
-  };
+    setSelectedProvince(null)
+    updateSearchFilters({ origin: '' })
+  }
 
   // 省份统计排序
-  const sortedProvinces = [...provinceData]
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 10);
+  const sortedProvinces = [...provinceData].sort((a, b) => b.value - a.value).slice(0, 10)
 
   return (
     <motion.div
@@ -179,11 +183,9 @@ const OriginMap: React.FC = () => {
           >
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-blue-600" />
-              <span className="text-blue-800 font-medium">
-                已选择：{selectedProvince}
-              </span>
+              <span className="text-blue-800 font-medium">已选择：{selectedProvince}</span>
               <span className="text-blue-600">
-                ({provinceData.find(p => p.name === selectedProvince)?.value || 0} 种药材)
+                ({provinceData.find((p) => p.name === selectedProvince)?.value || 0} 种药材)
               </span>
             </div>
             <motion.button
@@ -238,42 +240,44 @@ const OriginMap: React.FC = () => {
                     transition={{ delay: 0.4 + index * 0.05 }}
                     whileHover={{ scale: 1.02 }}
                     onClick={() => {
-                      setSelectedProvince(province.name);
-                      updateSearchFilters({ origin: province.name });
-                      setCurrentView('gallery');
+                      setSelectedProvince(province.name)
+                      updateSearchFilters({ origin: province.name })
+                      setCurrentView('gallery')
                     }}
                     className={`
                       p-3 rounded-lg cursor-pointer transition-all duration-200
-                      ${selectedProvince === province.name
-                        ? 'bg-blue-100 border-2 border-blue-300'
-                        : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
+                      ${
+                        selectedProvince === province.name
+                          ? 'bg-blue-100 border-2 border-blue-300'
+                          : 'bg-gray-50 hover:bg-gray-100 border-2 border-transparent'
                       }
                     `}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className={`
+                        <span
+                          className={`
                           w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold
-                          ${index < 3 
-                            ? 'bg-yellow-400 text-yellow-900' 
-                            : 'bg-gray-300 text-gray-700'
+                          ${
+                            index < 3
+                              ? 'bg-yellow-400 text-yellow-900'
+                              : 'bg-gray-300 text-gray-700'
                           }
-                        `}>
+                        `}
+                        >
                           {index + 1}
                         </span>
                         <span className="font-medium text-gray-800">{province.name}</span>
                       </div>
-                      <span className="text-sm font-bold text-blue-600">
-                        {province.value} 种
-                      </span>
+                      <span className="text-sm font-bold text-blue-600">{province.value} 种</span>
                     </div>
-                    
+
                     {/* 进度条 */}
                     <div className="mt-2 w-full bg-gray-200 rounded-full h-2">
-                      <div 
+                      <div
                         className="bg-blue-500 h-2 rounded-full transition-all duration-300"
-                        style={{ 
-                          width: `${(province.value / Math.max(...sortedProvinces.map(p => p.value))) * 100}%` 
+                        style={{
+                          width: `${(province.value / Math.max(...sortedProvinces.map((p) => p.value))) * 100}%`,
                         }}
                       />
                     </div>
@@ -327,7 +331,7 @@ const OriginMap: React.FC = () => {
               >
                 <h3 className="font-bold text-yellow-800 mb-2">{hoveredProvince}</h3>
                 <p className="text-yellow-700 text-sm">
-                  {provinceData.find(p => p.name === hoveredProvince)?.value || 0} 种药材
+                  {provinceData.find((p) => p.name === hoveredProvince)?.value || 0} 种药材
                 </p>
               </motion.div>
             )}
@@ -335,7 +339,7 @@ const OriginMap: React.FC = () => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default OriginMap;
+export default OriginMap

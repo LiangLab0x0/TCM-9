@@ -1,0 +1,161 @@
+[
+  {
+    "id": "formula_1",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "name": "黄芩汤",
+    "pinyin": "Huangqin Tang",
+    "category": "清热剂",
+    "source": "《伤寒论》",
+    "components": [
+      {
+        "sliceId": "slice_15",
+        "weight": {
+          "value": 12,
+          "unit": "g"
+        },
+        "role": "君",
+        "function": "清热燥湿，厚肠止痢"
+      },
+      {
+        "sliceId": "slice_7",
+        "weight": {
+          "value": 6,
+          "unit": "g"
+        },
+        "role": "臣",
+        "function": "缓急止痛，调和诸药"
+      }
+    ],
+    "usage": {
+      "preparationMethod": "水煎",
+      "dosageForm": "汤剂",
+      "administration": "每日1剂，分2次服用"
+    },
+    "functions": [
+      "清热止痢",
+      "和中止痛"
+    ],
+    "indications": [
+      "热痢腹痛",
+      "口苦心烦",
+      "舌红苔黄",
+      "脉数"
+    ],
+    "contraindications": [
+      "虚寒泄泻者忌用"
+    ],
+    "explanation": {
+      "principle": "清热止痢，和中止痛",
+      "keyPoints": ["清热", "止痢", "和中"],
+      "modifications": [
+        {
+          "condition": "腹痛甚者",
+          "additions": [
+            {
+              "sliceId": "slice_wood_incense",
+              "weight": 6,
+              "reason": "行气止痛"
+            },
+            {
+              "sliceId": "slice_corydalis",
+              "weight": 9,
+              "reason": "活血止痛"
+            }
+          ]
+        },
+        {
+          "condition": "热盛者",
+          "additions": [
+            {
+              "sliceId": "slice_coptis",
+              "weight": 6,
+              "reason": "清热燥湿"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "formula_2",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "name": "丹参饮",
+    "pinyin": "Danshen Yin",
+    "category": "理血剂",
+    "source": "《时方歌括》",
+    "components": [
+      {
+        "sliceId": "slice_14",
+        "weight": {
+          "value": 30,
+          "unit": "g"
+        },
+        "role": "君",
+        "function": "活血化瘀，凉血消痈"
+      },
+      {
+        "sliceId": "slice_11",
+        "weight": {
+          "value": 6,
+          "unit": "g"
+        },
+        "role": "臣",
+        "function": "化瘀止血，活血定痛"
+      }
+    ],
+    "usage": {
+      "preparationMethod": "水煎",
+      "dosageForm": "汤剂",
+      "administration": "每日1剂，分2-3次服用"
+    },
+    "functions": [
+      "活血化瘀",
+      "行气止痛"
+    ],
+    "indications": [
+      "心胃诸痛",
+      "胸闷刺痛",
+      "痛有定处",
+      "舌质紫暗"
+    ],
+    "contraindications": [
+      "孕妇慎用",
+      "出血证慎用"
+    ],
+    "explanation": {
+      "principle": "活血化瘀，行气止痛",
+      "keyPoints": ["活血", "化瘀", "止痛"],
+      "modifications": [
+        {
+          "condition": "气滞甚者",
+          "additions": [
+            {
+              "sliceId": "slice_cyperi",
+              "weight": 9,
+              "reason": "疏肝理气"
+            },
+            {
+              "sliceId": "slice_curcuma",
+              "weight": 9,
+              "reason": "行气解郁"
+            }
+          ]
+        },
+        {
+          "condition": "痛甚者",
+          "additions": [
+            {
+              "sliceId": "slice_corydalis",
+              "weight": 12,
+              "reason": "活血止痛"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

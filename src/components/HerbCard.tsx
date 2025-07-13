@@ -1,39 +1,35 @@
-import React from 'react';
-import { Plus, Minus, MapPin, BookOpen } from 'lucide-react';
-import { Herb, getNatureTheme, getProfessionalLevel } from '../types';
-import { useAppStore } from '../store';
+import React from 'react'
+import { Plus, Minus, MapPin, BookOpen } from 'lucide-react'
+import type { Herb } from '../types'
+import { getNatureTheme, getProfessionalLevel } from '../types'
+import { useAppStore } from '../store'
 
 interface HerbCardProps {
-  herb: Herb;
-  isCompact?: boolean;
+  herb: Herb
+  isCompact?: boolean
 }
 
 const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
-  const {
-    compareList,
-    addToCompare,
-    removeFromCompare,
-    setSelectedHerb,
-    setCurrentView
-  } = useAppStore();
+  const { compareList, addToCompare, removeFromCompare, setSelectedHerb, setCurrentView } =
+    useAppStore()
 
-  const theme = getNatureTheme(herb.nature);
-  const professional = getProfessionalLevel(herb);
-  const isInCompare = compareList.some(h => h.id === herb.id);
+  const theme = getNatureTheme(herb.nature)
+  const professional = getProfessionalLevel(herb)
+  const isInCompare = compareList.some((h) => h.id === herb.id)
 
   const handleCardClick = () => {
-    setSelectedHerb(herb);
-    setCurrentView('detail');
-  };
+    setSelectedHerb(herb)
+    setCurrentView('detail')
+  }
 
   const handleToggleCompare = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation()
     if (isInCompare) {
-      removeFromCompare(herb.id);
+      removeFromCompare(herb.id)
     } else {
-      addToCompare(herb);
+      addToCompare(herb)
     }
-  };
+  }
 
   return (
     <div
@@ -45,7 +41,9 @@ const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
       onClick={handleCardClick}
     >
       {/* 专业等级角标 */}
-      <div className={`absolute top-2 left-2 z-10 px-3 py-1 rounded-lg text-xs font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}>
+      <div
+        className={`absolute top-2 left-2 z-10 px-3 py-1 rounded-lg text-xs font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}
+      >
         {professional.level}
       </div>
 
@@ -68,20 +66,24 @@ const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
           alt={herb.name}
           className="w-full h-full object-cover object-center"
           onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = '/images/placeholder-herb.jpg';
+            const target = e.target as HTMLImageElement
+            target.src = '/images/placeholder-herb.jpg'
           }}
         />
-        
+
         {/* 图片遮罩渐变 */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-20" />
-        
+
         {/* 属性标签 */}
         <div className="absolute bottom-2 left-2 flex gap-1">
-          <span className={`px-2 py-1 rounded-md text-xs font-medium bg-white bg-opacity-95 ${theme.accent} shadow-sm`}>
+          <span
+            className={`px-2 py-1 rounded-md text-xs font-medium bg-white bg-opacity-95 ${theme.accent} shadow-sm`}
+          >
             {herb.nature}
           </span>
-          <span className={`px-2 py-1 rounded-md text-xs font-medium bg-white bg-opacity-95 ${theme.accent} shadow-sm`}>
+          <span
+            className={`px-2 py-1 rounded-md text-xs font-medium bg-white bg-opacity-95 ${theme.accent} shadow-sm`}
+          >
             {herb.category}
           </span>
         </div>
@@ -93,15 +95,15 @@ const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
           <div className="flex-1">
             <h3 className="text-lg font-bold text-gray-800 truncate">{herb.name}</h3>
             <p className="text-sm text-gray-600">{herb.pinyin}</p>
-            {herb.englishName && (
-              <p className="text-xs text-gray-500 italic">{herb.englishName}</p>
-            )}
+            {herb.englishName && <p className="text-xs text-gray-500 italic">{herb.englishName}</p>}
           </div>
           <div className="flex items-center gap-1">
             <button
               onClick={handleToggleCompare}
               className={`p-2 rounded transition-colors ${
-                isInCompare ? 'text-blue-600 bg-blue-50' : 'text-gray-500 hover:text-blue-600 hover:bg-blue-50'
+                isInCompare
+                  ? 'text-blue-600 bg-blue-50'
+                  : 'text-gray-500 hover:text-blue-600 hover:bg-blue-50'
               }`}
               title={isInCompare ? '移出对比' : '加入对比'}
             >
@@ -109,14 +111,17 @@ const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
             </button>
           </div>
         </div>
-        
+
         {!isCompact && (
           <>
             {/* 药味标签 */}
             <div className="space-y-2">
               <div className="flex flex-wrap gap-1">
                 {herb.taste.slice(0, 3).map((taste, index) => (
-                  <span key={index} className={`px-2 py-1 ${theme.secondary} ${theme.accent} text-xs rounded-md font-medium`}>
+                  <span
+                    key={index}
+                    className={`px-2 py-1 ${theme.secondary} ${theme.accent} text-xs rounded-md font-medium`}
+                  >
                     {taste}
                   </span>
                 ))}
@@ -127,7 +132,7 @@ const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
                 )}
               </div>
             </div>
-            
+
             {/* 主要功效 */}
             <div className="space-y-1">
               <p className="text-xs text-gray-500 font-medium">主要功效</p>
@@ -169,7 +174,7 @@ const HerbCard: React.FC<HerbCardProps> = ({ herb, isCompact = false }) => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HerbCard;
+export default HerbCard

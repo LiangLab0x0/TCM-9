@@ -1,0 +1,253 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "北京", "cp": [116.4074, 39.9042] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[115.4, 39.4], [117.4, 39.4], [117.4, 40.4], [115.4, 40.4], [115.4, 39.4]]]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": { "name": "天津", "cp": [117.2, 39.13] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[116.7, 38.6], [117.7, 38.6], [117.7, 39.6], [116.7, 39.6], [116.7, 38.6]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "河北", "cp": [114.5022, 38.0428] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113.0, 36.0], [119.0, 36.0], [119.0, 42.0], [113.0, 42.0], [113.0, 36.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "山西", "cp": [112.5625, 37.8734] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[110.0, 35.0], [114.0, 35.0], [114.0, 40.5], [110.0, 40.5], [110.0, 35.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "内蒙古", "cp": [111.7656, 40.8175] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[97.0, 38.0], [126.0, 38.0], [126.0, 49.0], [97.0, 49.0], [97.0, 38.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "辽宁", "cp": [123.4315, 41.8057] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[119.0, 39.0], [125.0, 39.0], [125.0, 43.0], [119.0, 43.0], [119.0, 39.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "吉林", "cp": [125.3235, 43.8171] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[122.0, 41.0], [131.0, 41.0], [131.0, 46.0], [122.0, 46.0], [122.0, 41.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "黑龙江", "cp": [126.6424, 45.7576] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[121.0, 43.0], [135.0, 43.0], [135.0, 53.0], [121.0, 53.0], [121.0, 43.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "上海", "cp": [121.4737, 31.2304] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[120.9, 30.7], [122.0, 30.7], [122.0, 31.7], [120.9, 31.7], [120.9, 30.7]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "江苏", "cp": [118.7969, 32.0603] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[116.0, 30.5], [122.0, 30.5], [122.0, 35.0], [116.0, 35.0], [116.0, 30.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "浙江", "cp": [120.1551, 30.2741] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[118.0, 27.0], [123.0, 27.0], [123.0, 31.0], [118.0, 31.0], [118.0, 27.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "安徽", "cp": [117.283, 31.8612] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.5, 29.5], [119.5, 29.5], [119.5, 34.5], [114.5, 34.5], [114.5, 29.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "福建", "cp": [119.3063, 26.0744] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[116.0, 23.5], [120.5, 23.5], [120.5, 28.0], [116.0, 28.0], [116.0, 23.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "江西", "cp": [115.9093, 28.6768] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[113.5, 24.5], [118.5, 24.5], [118.5, 30.0], [113.5, 30.0], [113.5, 24.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "山东", "cp": [116.9975, 36.6683] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[114.5, 34.5], [122.5, 34.5], [122.5, 38.0], [114.5, 38.0], [114.5, 34.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "河南", "cp": [113.6253, 34.7466] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[110.0, 31.5], [116.5, 31.5], [116.5, 36.5], [110.0, 36.5], [110.0, 31.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "湖北", "cp": [114.2986, 30.5844] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[108.5, 29.0], [116.0, 29.0], [116.0, 33.0], [108.5, 33.0], [108.5, 29.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "湖南", "cp": [112.9388, 28.228] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[108.5, 24.5], [114.0, 24.5], [114.0, 30.0], [108.5, 30.0], [108.5, 24.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "广东", "cp": [113.2644, 23.1291] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[109.5, 20.0], [117.0, 20.0], [117.0, 25.5], [109.5, 25.5], [109.5, 20.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "广西", "cp": [108.3275, 22.8155] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[104.0, 20.5], [112.0, 20.5], [112.0, 26.5], [104.0, 26.5], [104.0, 20.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "海南", "cp": [110.3488, 20.0174] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[108.5, 18.0], [111.0, 18.0], [111.0, 20.5], [108.5, 20.5], [108.5, 18.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "重庆", "cp": [106.5516, 29.563] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[105.0, 28.0], [110.0, 28.0], [110.0, 32.0], [105.0, 32.0], [105.0, 28.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "四川", "cp": [104.0758, 30.6519] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[97.0, 26.0], [108.5, 26.0], [108.5, 34.0], [97.0, 34.0], [97.0, 26.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "贵州", "cp": [106.7073, 26.5979] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[103.5, 24.5], [109.5, 24.5], [109.5, 29.0], [103.5, 29.0], [103.5, 24.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "云南", "cp": [102.7104, 25.0453] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[97.5, 21.0], [106.0, 21.0], [106.0, 29.0], [97.5, 29.0], [97.5, 21.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "西藏", "cp": [91.117, 29.6475] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[78.0, 26.0], [99.0, 26.0], [99.0, 36.0], [78.0, 36.0], [78.0, 26.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "陕西", "cp": [108.954, 34.2658] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[105.5, 31.5], [111.0, 31.5], [111.0, 39.5], [105.5, 39.5], [105.5, 31.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "甘肃", "cp": [103.834, 36.0594] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[92.0, 32.0], [108.5, 32.0], [108.5, 42.5], [92.0, 42.5], [92.0, 32.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "青海", "cp": [101.7782, 36.6171] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[89.5, 31.5], [103.0, 31.5], [103.0, 39.0], [89.5, 39.0], [89.5, 31.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "宁夏", "cp": [106.2789, 38.4663] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[104.0, 35.5], [107.5, 35.5], [107.5, 39.5], [104.0, 39.5], [104.0, 35.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "新疆", "cp": [87.6278, 43.7927] },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[73.0, 35.0], [96.0, 35.0], [96.0, 49.0], [73.0, 49.0], [73.0, 35.0]]]
+      }
+    }
+  ]
+}

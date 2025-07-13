@@ -1,0 +1,4498 @@
+[
+  {
+    "id": "mat_1",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "人参",
+      "pinyin": "Renshen",
+      "latin": "人参 L.",
+      "english": "Ginseng",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘",
+      "苦"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "吉林产区",
+        "province": "吉林",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 43.8378,
+          "lng": 125.3235
+        },
+        "annualProduction": 321,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "辽宁产区",
+        "province": "辽宁",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 41.8057,
+          "lng": 123.4315
+        },
+        "annualProduction": 566,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "黑龙江产区",
+        "province": "黑龙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 45.7576,
+          "lng": 126.6424
+        },
+        "annualProduction": 688,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "大补元气",
+      "复脉固脱",
+      "补脾益肺",
+      "生津养血",
+      "安神益智"
+    ],
+    "indications": [
+      "大补元气",
+      "复脉固脱",
+      "补脾益肺",
+      "生津养血",
+      "安神益智"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "人参",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_1_large.webp",
+      "gallery": [
+        "/images/herbs/herb_1_thumb.webp",
+        "/images/herbs/herb_1_medium.webp",
+        "/images/herbs/herb_1_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "sun_baohui"
+      ]
+    }
+  },
+  {
+    "id": "mat_2",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "黄芪",
+      "pinyin": "Huangqi",
+      "latin": "黄芪 L.",
+      "english": "Astragalus",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "山西产区",
+        "province": "山西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 891,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "内蒙古产区",
+        "province": "内蒙古",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 40.8175,
+          "lng": 111.7656
+        },
+        "annualProduction": 710,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "甘肃产区",
+        "province": "甘肃",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.0594,
+          "lng": 103.834
+        },
+        "annualProduction": 515,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "黑龙江产区",
+        "province": "黑龙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 45.7576,
+          "lng": 126.6424
+        },
+        "annualProduction": 755,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "补气升阳",
+      "固表止汗",
+      "利水消肿",
+      "生津养血",
+      "行滞通痹",
+      "托毒排脓",
+      "敛疮生肌"
+    ],
+    "indications": [
+      "补气升阳",
+      "固表止汗",
+      "利水消肿",
+      "生津养血",
+      "行滞通痹",
+      "托毒排脓",
+      "敛疮生肌"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "黄芪",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_2_large.webp",
+      "gallery": [
+        "/images/herbs/herb_2_thumb.webp",
+        "/images/herbs/herb_2_medium.webp",
+        "/images/herbs/herb_2_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "sun_baohui"
+      ]
+    }
+  },
+  {
+    "id": "mat_3",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "当归",
+      "pinyin": "Danggui",
+      "latin": "当归 L.",
+      "english": "Angelica sinensis",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "甘肃产区",
+        "province": "甘肃",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.0594,
+          "lng": 103.834
+        },
+        "annualProduction": 882,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 819,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 1052,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "陕西产区",
+        "province": "陕西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.2658,
+          "lng": 108.954
+        },
+        "annualProduction": 379,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "湖北产区",
+        "province": "湖北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.5844,
+          "lng": 114.2986
+        },
+        "annualProduction": 914,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补血药",
+    "functions": [
+      "补血活血",
+      "调经止痛",
+      "润肠通便"
+    ],
+    "indications": [
+      "补血活血",
+      "调经止痛",
+      "润肠通便"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "当归",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_3_large.webp",
+      "gallery": [
+        "/images/herbs/herb_3_thumb.webp",
+        "/images/herbs/herb_3_medium.webp",
+        "/images/herbs/herb_3_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "sun_baohui"
+      ]
+    }
+  },
+  {
+    "id": "mat_4",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "党参",
+      "pinyin": "Dangshen",
+      "latin": "党参 L.",
+      "english": "Codonopsis",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "山西产区",
+        "province": "山西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 681,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "陕西产区",
+        "province": "陕西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.2658,
+          "lng": 108.954
+        },
+        "annualProduction": 507,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "甘肃产区",
+        "province": "甘肃",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.0594,
+          "lng": 103.834
+        },
+        "annualProduction": 188,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 1042,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "补中益气",
+      "健脾益肺",
+      "养血生津"
+    ],
+    "indications": [
+      "补中益气",
+      "健脾益肺",
+      "养血生津"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "党参",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_4_large.webp",
+      "gallery": [
+        "/images/herbs/herb_4_thumb.webp",
+        "/images/herbs/herb_4_medium.webp",
+        "/images/herbs/herb_4_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "niu_xiaolian"
+      ]
+    }
+  },
+  {
+    "id": "mat_5",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "白术",
+      "pinyin": "Baizhu",
+      "latin": "白术 L.",
+      "english": "Atractylodes macrocephala",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "苦",
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 739,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "安徽产区",
+        "province": "安徽",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 31.8612,
+          "lng": 117.283
+        },
+        "annualProduction": 205,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "湖北产区",
+        "province": "湖北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.5844,
+          "lng": 114.2986
+        },
+        "annualProduction": 409,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "湖南产区",
+        "province": "湖南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 28.228,
+          "lng": 112.9388
+        },
+        "annualProduction": 785,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "健脾益气",
+      "燥湿利水",
+      "止汗",
+      "安胎"
+    ],
+    "indications": [
+      "健脾益气",
+      "燥湿利水",
+      "止汗",
+      "安胎"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "白术",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_5_large.webp",
+      "gallery": [
+        "/images/herbs/herb_5_thumb.webp",
+        "/images/herbs/herb_5_medium.webp",
+        "/images/herbs/herb_5_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "niu_xiaolian"
+      ]
+    }
+  },
+  {
+    "id": "mat_6",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "茯苓",
+      "pinyin": "Fuling",
+      "latin": "茯苓 L.",
+      "english": "Poria",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘",
+      "淡"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 295,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "安徽产区",
+        "province": "安徽",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 31.8612,
+          "lng": 117.283
+        },
+        "annualProduction": 367,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "湖北产区",
+        "province": "湖北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.5844,
+          "lng": 114.2986
+        },
+        "annualProduction": 480,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "河南产区",
+        "province": "河南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.7466,
+          "lng": 113.6253
+        },
+        "annualProduction": 829,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "利水渗湿药",
+    "functions": [
+      "利水渗湿",
+      "健脾",
+      "宁心"
+    ],
+    "indications": [
+      "利水渗湿",
+      "健脾",
+      "宁心"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "茯苓",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_6_large.webp",
+      "gallery": [
+        "/images/herbs/herb_6_thumb.webp",
+        "/images/herbs/herb_6_medium.webp",
+        "/images/herbs/herb_6_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "niu_xiaolian"
+      ]
+    }
+  },
+  {
+    "id": "mat_7",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "甘草",
+      "pinyin": "Gancao",
+      "latin": "甘草 L.",
+      "english": "Licorice",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "内蒙古产区",
+        "province": "内蒙古",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 40.8175,
+          "lng": 111.7656
+        },
+        "annualProduction": 1027,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "新疆产区",
+        "province": "新疆",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 43.7927,
+          "lng": 87.6278
+        },
+        "annualProduction": 338,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "甘肃产区",
+        "province": "甘肃",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.0594,
+          "lng": 103.834
+        },
+        "annualProduction": 202,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "补脾益气",
+      "清热解毒",
+      "祛痰止咳",
+      "缓急止痛",
+      "调和诸药"
+    ],
+    "indications": [
+      "补脾益气",
+      "清热解毒",
+      "祛痰止咳",
+      "缓急止痛",
+      "调和诸药"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "甘草",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_7_large.webp",
+      "gallery": [
+        "/images/herbs/herb_7_thumb.webp",
+        "/images/herbs/herb_7_medium.webp",
+        "/images/herbs/herb_7_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "niu_xiaolian",
+        "duan_jiping"
+      ]
+    }
+  },
+  {
+    "id": "mat_8",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "枸杞子",
+      "pinyin": "Gouqizi",
+      "latin": "枸杞子 L.",
+      "english": "Lycium",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "宁夏产区",
+        "province": "宁夏",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 195,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "内蒙古产区",
+        "province": "内蒙古",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 40.8175,
+          "lng": 111.7656
+        },
+        "annualProduction": 859,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "新疆产区",
+        "province": "新疆",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 43.7927,
+          "lng": 87.6278
+        },
+        "annualProduction": 445,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "河北产区",
+        "province": "河北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 38.0428,
+          "lng": 114.5149
+        },
+        "annualProduction": 1064,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "滋补肝肾",
+      "益精明目"
+    ],
+    "indications": [
+      "滋补肝肾",
+      "益精明目"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "枸杞子",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_8_large.webp",
+      "gallery": [
+        "/images/herbs/herb_8_thumb.webp",
+        "/images/herbs/herb_8_medium.webp",
+        "/images/herbs/herb_8_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "duan_jiping"
+      ]
+    }
+  },
+  {
+    "id": "mat_9",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "熟地黄",
+      "pinyin": "Shudihuang",
+      "latin": "熟地黄 L.",
+      "english": "Rehmannia",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "河南产区",
+        "province": "河南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.7466,
+          "lng": 113.6253
+        },
+        "annualProduction": 1065,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "山西产区",
+        "province": "山西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 888,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "河北产区",
+        "province": "河北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 38.0428,
+          "lng": 114.5149
+        },
+        "annualProduction": 610,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "山东产区",
+        "province": "山东",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.6683,
+          "lng": 116.9975
+        },
+        "annualProduction": 110,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补血药",
+    "functions": [
+      "补血滋阴",
+      "益精填髓"
+    ],
+    "indications": [
+      "补血滋阴",
+      "益精填髓"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "熟地黄",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_9_large.webp",
+      "gallery": [
+        "/images/herbs/herb_9_thumb.webp",
+        "/images/herbs/herb_9_medium.webp",
+        "/images/herbs/herb_9_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "duan_jiping"
+      ]
+    }
+  },
+  {
+    "id": "mat_10",
+    "createdAt": "2025-07-13T01:46:14.602Z",
+    "updatedAt": "2025-07-13T01:46:14.602Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "山药",
+      "pinyin": "Shanyao",
+      "latin": "山药 L.",
+      "english": "Dioscorea",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "河南产区",
+        "province": "河南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.7466,
+          "lng": 113.6253
+        },
+        "annualProduction": 521,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "山西产区",
+        "province": "山西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 141,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "河北产区",
+        "province": "河北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 38.0428,
+          "lng": 114.5149
+        },
+        "annualProduction": 783,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "山东产区",
+        "province": "山东",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.6683,
+          "lng": 116.9975
+        },
+        "annualProduction": 695,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "补脾养胃",
+      "生津益肺",
+      "补肾涩精"
+    ],
+    "indications": [
+      "补脾养胃",
+      "生津益肺",
+      "补肾涩精"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "山药",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_10_large.webp",
+      "gallery": [
+        "/images/herbs/herb_10_thumb.webp",
+        "/images/herbs/herb_10_medium.webp",
+        "/images/herbs/herb_10_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "duan_jiping"
+      ]
+    }
+  },
+  {
+    "id": "mat_11",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "三七",
+      "pinyin": "Sanqi",
+      "latin": "三七 L.",
+      "english": "Notoginseng",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘",
+      "苦"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 405,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "广西产区",
+        "province": "广西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 22.8155,
+          "lng": 108.3275
+        },
+        "annualProduction": 577,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "止血药",
+    "functions": [
+      "散瘀止血",
+      "消肿定痛"
+    ],
+    "indications": [
+      "散瘀止血",
+      "消肿定痛"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "三七",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_11_large.webp",
+      "gallery": [
+        "/images/herbs/herb_11_thumb.webp",
+        "/images/herbs/herb_11_medium.webp",
+        "/images/herbs/herb_11_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": [
+        "duan_jiping"
+      ]
+    }
+  },
+  {
+    "id": "mat_12",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "川芎",
+      "pinyin": "Chuanxiong",
+      "latin": "川芎 L.",
+      "english": "Ligusticum chuanxiong",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 213,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 936,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "贵州产区",
+        "province": "贵州",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 26.5979,
+          "lng": 106.7073
+        },
+        "annualProduction": 411,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "活血化瘀药",
+    "functions": [
+      "活血行气",
+      "祛风止痛"
+    ],
+    "indications": [
+      "活血行气",
+      "祛风止痛"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "川芎",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_12_large.webp",
+      "gallery": [
+        "/images/herbs/herb_12_thumb.webp",
+        "/images/herbs/herb_12_medium.webp",
+        "/images/herbs/herb_12_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_13",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "红花",
+      "pinyin": "Honghua",
+      "latin": "红花 L.",
+      "english": "Safflower",
+      "aliases": []
+    },
+    "qi": "温",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "新疆产区",
+        "province": "新疆",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 43.7927,
+          "lng": 87.6278
+        },
+        "annualProduction": 422,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 577,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 888,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "河南产区",
+        "province": "河南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.7466,
+          "lng": 113.6253
+        },
+        "annualProduction": 702,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "活血化瘀药",
+    "functions": [
+      "活血通经",
+      "散瘀止痛"
+    ],
+    "indications": [
+      "活血通经",
+      "散瘀止痛"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "红花",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_13_large.webp",
+      "gallery": [
+        "/images/herbs/herb_13_thumb.webp",
+        "/images/herbs/herb_13_medium.webp",
+        "/images/herbs/herb_13_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_14",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "丹参",
+      "pinyin": "Danshen",
+      "latin": "丹参 L.",
+      "english": "Salvia miltiorrhiza",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "苦"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 298,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "安徽产区",
+        "province": "安徽",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 31.8612,
+          "lng": 117.283
+        },
+        "annualProduction": 880,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "河南产区",
+        "province": "河南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 34.7466,
+          "lng": 113.6253
+        },
+        "annualProduction": 516,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "山东产区",
+        "province": "山东",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.6683,
+          "lng": 116.9975
+        },
+        "annualProduction": 811,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "活血化瘀药",
+    "functions": [
+      "活血祛瘀",
+      "通经止痛",
+      "清心除烦",
+      "凉血消痈"
+    ],
+    "indications": [
+      "活血祛瘀",
+      "通经止痛",
+      "清心除烦",
+      "凉血消痈"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "丹参",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_14_large.webp",
+      "gallery": [
+        "/images/herbs/herb_14_thumb.webp",
+        "/images/herbs/herb_14_medium.webp",
+        "/images/herbs/herb_14_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_15",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "白芍",
+      "pinyin": "Baishao",
+      "latin": "白芍 L.",
+      "english": "White Peony",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "苦",
+      "酸"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "安徽产区",
+        "province": "安徽",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 31.8612,
+          "lng": 117.283
+        },
+        "annualProduction": 123,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 986,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 707,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "山东产区",
+        "province": "山东",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 36.6683,
+          "lng": 116.9975
+        },
+        "annualProduction": 823,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补血药",
+    "functions": [
+      "养血调经",
+      "敛阴止汗",
+      "柔肝止痛",
+      "平抑肝阳"
+    ],
+    "indications": [
+      "养血调经",
+      "敛阴止汗",
+      "柔肝止痛",
+      "平抑肝阳"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "白芍",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_15_large.webp",
+      "gallery": [
+        "/images/herbs/herb_15_thumb.webp",
+        "/images/herbs/herb_15_medium.webp",
+        "/images/herbs/herb_15_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_16",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "麦冬",
+      "pinyin": "Maidong",
+      "latin": "麦冬 L.",
+      "english": "Ophiopogon",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "甘",
+      "苦"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 583,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 165,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "江苏产区",
+        "province": "江苏",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 32.0603,
+          "lng": 118.7969
+        },
+        "annualProduction": 1062,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补阴药",
+    "functions": [
+      "养阴生津",
+      "润肺清心"
+    ],
+    "indications": [
+      "养阴生津",
+      "润肺清心"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "麦冬",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_16_large.webp",
+      "gallery": [
+        "/images/herbs/herb_16_thumb.webp",
+        "/images/herbs/herb_16_medium.webp",
+        "/images/herbs/herb_16_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_17",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "天冬",
+      "pinyin": "Tiandong",
+      "latin": "天冬 L.",
+      "english": "Asparagus",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "甘",
+      "苦"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "贵州产区",
+        "province": "贵州",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 26.5979,
+          "lng": 106.7073
+        },
+        "annualProduction": 845,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 635,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "广西产区",
+        "province": "广西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 22.8155,
+          "lng": 108.3275
+        },
+        "annualProduction": 1072,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 891,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补阴药",
+    "functions": [
+      "养阴润燥",
+      "清肺生津"
+    ],
+    "indications": [
+      "养阴润燥",
+      "清肺生津"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "天冬",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_17_large.webp",
+      "gallery": [
+        "/images/herbs/herb_17_thumb.webp",
+        "/images/herbs/herb_17_medium.webp",
+        "/images/herbs/herb_17_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_18",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "百合",
+      "pinyin": "Baihe",
+      "latin": "百合 L.",
+      "english": "Lily Bulb",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "湖南产区",
+        "province": "湖南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 28.228,
+          "lng": 112.9388
+        },
+        "annualProduction": 424,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "江苏产区",
+        "province": "江苏",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 32.0603,
+          "lng": 118.7969
+        },
+        "annualProduction": 811,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 729,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "安徽产区",
+        "province": "安徽",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 31.8612,
+          "lng": 117.283
+        },
+        "annualProduction": 129,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补阴药",
+    "functions": [
+      "养阴润肺",
+      "清心安神"
+    ],
+    "indications": [
+      "养阴润肺",
+      "清心安神"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "百合",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_18_large.webp",
+      "gallery": [
+        "/images/herbs/herb_18_thumb.webp",
+        "/images/herbs/herb_18_medium.webp",
+        "/images/herbs/herb_18_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_19",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "石斛",
+      "pinyin": "Shihu",
+      "latin": "石斛 L.",
+      "english": "Dendrobium",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "安徽产区",
+        "province": "安徽",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 31.8612,
+          "lng": 117.283
+        },
+        "annualProduction": 200,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 898,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "云南产区",
+        "province": "云南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 25.0453,
+          "lng": 102.7104
+        },
+        "annualProduction": 394,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "广西产区",
+        "province": "广西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 22.8155,
+          "lng": 108.3275
+        },
+        "annualProduction": 374,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补阴药",
+    "functions": [
+      "益胃生津",
+      "滋阴清热"
+    ],
+    "indications": [
+      "益胃生津",
+      "滋阴清热"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "石斛",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_19_large.webp",
+      "gallery": [
+        "/images/herbs/herb_19_thumb.webp",
+        "/images/herbs/herb_19_medium.webp",
+        "/images/herbs/herb_19_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_20",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "桑椹",
+      "pinyin": "Sangshen",
+      "latin": "桑椹 L.",
+      "english": "Mulberry",
+      "aliases": []
+    },
+    "qi": "寒",
+    "flavor": [
+      "甘",
+      "酸"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "江苏产区",
+        "province": "江苏",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 32.0603,
+          "lng": 118.7969
+        },
+        "annualProduction": 213,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 1056,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "湖南产区",
+        "province": "湖南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 28.228,
+          "lng": 112.9388
+        },
+        "annualProduction": 938,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 507,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补阴药",
+    "functions": [
+      "滋阴补血",
+      "生津润燥"
+    ],
+    "indications": [
+      "滋阴补血",
+      "生津润燥"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "桑椹",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_20_large.webp",
+      "gallery": [
+        "/images/herbs/herb_20_thumb.webp",
+        "/images/herbs/herb_20_medium.webp",
+        "/images/herbs/herb_20_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_21",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "西洋参",
+      "pinyin": "Xiyangshen",
+      "latin": "西洋参 L.",
+      "english": "American Ginseng",
+      "aliases": []
+    },
+    "qi": "凉",
+    "flavor": [
+      "甘",
+      "苦"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "美国产区",
+        "province": "美国",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 420,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "加拿大产区",
+        "province": "加拿大",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 247,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "中国东北产区",
+        "province": "中国东北",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 756,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "补气养阴",
+      "清热生津"
+    ],
+    "indications": [
+      "补气养阴",
+      "清热生津"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "西洋参",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_21_large.webp",
+      "gallery": [
+        "/images/herbs/herb_21_thumb.webp",
+        "/images/herbs/herb_21_medium.webp",
+        "/images/herbs/herb_21_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_22",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "灵芝",
+      "pinyin": "Lingzhi",
+      "latin": "灵芝 L.",
+      "english": "Ganoderma",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "浙江产区",
+        "province": "浙江",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.2741,
+          "lng": 120.1551
+        },
+        "annualProduction": 1009,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ],
+        "notes": "道地产区"
+      },
+      {
+        "region": "江西产区",
+        "province": "江西",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 1063,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "湖南产区",
+        "province": "湖南",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 28.228,
+          "lng": 112.9388
+        },
+        "annualProduction": 557,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 794,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "补虚药",
+    "functions": [
+      "补气安神",
+      "止咳平喘"
+    ],
+    "indications": [
+      "补气安神",
+      "止咳平喘"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "灵芝",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_22_large.webp",
+      "gallery": [
+        "/images/herbs/herb_22_thumb.webp",
+        "/images/herbs/herb_22_medium.webp",
+        "/images/herbs/herb_22_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_70",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃利斯多孔菌",
+      "pinyin": "AI LI SI DUO KONG JUN",
+      "latin": "埃利斯多孔菌 L.",
+      "english": "Ellisi Porous Agaric",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃利斯多孔菌",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_70_large.webp",
+      "gallery": [
+        "/images/herbs/herb_70_thumb.webp",
+        "/images/herbs/herb_70_medium.webp",
+        "/images/herbs/herb_70_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_61",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃及假虎刺",
+      "pinyin": "AI JI JIA HU CI",
+      "latin": "埃及假虎刺 L.",
+      "english": "Egyptian Carissa",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃及假虎刺",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_61_large.webp",
+      "gallery": [
+        "/images/herbs/herb_61_thumb.webp",
+        "/images/herbs/herb_61_medium.webp",
+        "/images/herbs/herb_61_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_62",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃及千里光",
+      "pinyin": "AI JI QIAN LI GUANG",
+      "latin": "埃及千里光 L.",
+      "english": "Egyptian Groundsel",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃及千里光",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_62_large.webp",
+      "gallery": [
+        "/images/herbs/herb_62_thumb.webp",
+        "/images/herbs/herb_62_medium.webp",
+        "/images/herbs/herb_62_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_60",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃及大翅蓟",
+      "pinyin": "AI JI DA CHI JI",
+      "latin": "埃及大翅蓟 L.",
+      "english": "Egyptian Cottonthistle",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃及大翅蓟",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_60_large.webp",
+      "gallery": [
+        "/images/herbs/herb_60_thumb.webp",
+        "/images/herbs/herb_60_medium.webp",
+        "/images/herbs/herb_60_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_66",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃及种植鸢尾",
+      "pinyin": "AI JI ZHONG ZHI YUAN WEI",
+      "latin": "埃及种植鸢尾 L.",
+      "english": "Egypt Planted Iris",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃及种植鸢尾",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_66_large.webp",
+      "gallery": [
+        "/images/herbs/herb_66_thumb.webp",
+        "/images/herbs/herb_66_medium.webp",
+        "/images/herbs/herb_66_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_59",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃及车轴草",
+      "pinyin": "AI JI CHE ZHOU CAO",
+      "latin": "埃及车轴草 L.",
+      "english": "Egyptian Clover",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃及车轴草",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_59_large.webp",
+      "gallery": [
+        "/images/herbs/herb_59_thumb.webp",
+        "/images/herbs/herb_59_medium.webp",
+        "/images/herbs/herb_59_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_63",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃及鼠尾草",
+      "pinyin": "AI JI SHU WEI CAO",
+      "latin": "埃及鼠尾草 L.",
+      "english": "Egyptian Sage",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃及鼠尾草",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_63_large.webp",
+      "gallery": [
+        "/images/herbs/herb_63_thumb.webp",
+        "/images/herbs/herb_63_medium.webp",
+        "/images/herbs/herb_63_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_74",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "埃塞俄比亚羽扇豆",
+      "pinyin": "AI SAI E BI YA YU SHAN DOU",
+      "latin": "埃塞俄比亚羽扇豆 L.",
+      "english": "Narrowleaf Lupin",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "埃塞俄比亚羽扇豆",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_74_large.webp",
+      "gallery": [
+        "/images/herbs/herb_74_thumb.webp",
+        "/images/herbs/herb_74_medium.webp",
+        "/images/herbs/herb_74_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_110",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安乃近",
+      "pinyin": "AN NAI JIN",
+      "latin": "安乃近 L.",
+      "english": "Analgin",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安乃近",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_110_large.webp",
+      "gallery": [
+        "/images/herbs/herb_110_thumb.webp",
+        "/images/herbs/herb_110_medium.webp",
+        "/images/herbs/herb_110_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_93",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安哥拉八角枫",
+      "pinyin": "AN GE LA BA JIAO FENG",
+      "latin": "安哥拉八角枫 L.",
+      "english": "Angola Alangium",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安哥拉八角枫",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_93_large.webp",
+      "gallery": [
+        "/images/herbs/herb_93_thumb.webp",
+        "/images/herbs/herb_93_medium.webp",
+        "/images/herbs/herb_93_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_96",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安哥拉紫檀",
+      "pinyin": "AN GE LA ZI TAN",
+      "latin": "安哥拉紫檀 L.",
+      "english": "NA",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安哥拉紫檀",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_96_large.webp",
+      "gallery": [
+        "/images/herbs/herb_96_thumb.webp",
+        "/images/herbs/herb_96_medium.webp",
+        "/images/herbs/herb_96_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_95",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安哥拉黄瓜",
+      "pinyin": "AN GE LA HUANG GUA",
+      "latin": "安哥拉黄瓜 L.",
+      "english": "Angola Cucumber",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安哥拉黄瓜",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_95_large.webp",
+      "gallery": [
+        "/images/herbs/herb_95_thumb.webp",
+        "/images/herbs/herb_95_medium.webp",
+        "/images/herbs/herb_95_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_104",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安徽松木",
+      "pinyin": "AN HUI SONG MU",
+      "latin": "安徽松木 L.",
+      "english": "NA",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安徽松木",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_104_large.webp",
+      "gallery": [
+        "/images/herbs/herb_104_thumb.webp",
+        "/images/herbs/herb_104_medium.webp",
+        "/images/herbs/herb_104_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_102",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安徽贝母",
+      "pinyin": "AN HUI BEI MU",
+      "latin": "安徽贝母 L.",
+      "english": "Anhui Fritillary",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安徽贝母",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_102_large.webp",
+      "gallery": [
+        "/images/herbs/herb_102_thumb.webp",
+        "/images/herbs/herb_102_medium.webp",
+        "/images/herbs/herb_102_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_105",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安徽银莲花",
+      "pinyin": "AN HUI YIN LIAN HUA",
+      "latin": "安徽银莲花 L.",
+      "english": "Anhui Anemone",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安徽银莲花",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_105_large.webp",
+      "gallery": [
+        "/images/herbs/herb_105_thumb.webp",
+        "/images/herbs/herb_105_medium.webp",
+        "/images/herbs/herb_105_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_108",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "安罗",
+      "pinyin": "AN LUO",
+      "latin": "安罗 L.",
+      "english": "Suberous Greenstar",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "安罗",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_108_large.webp",
+      "gallery": [
+        "/images/herbs/herb_108_thumb.webp",
+        "/images/herbs/herb_108_medium.webp",
+        "/images/herbs/herb_108_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_113",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "按叶",
+      "pinyin": "AN YE",
+      "latin": "按叶 L.",
+      "english": "Eucalyptus Leaf",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "To soothe wind and resolve exterior",
+      "clear heat and resolve toxin",
+      "rectify qi and transform phlegm",
+      "kill worms and relieve itch."
+    ],
+    "indications": [
+      "To soothe wind and resolve exterior",
+      "clear heat and resolve toxin",
+      "rectify qi and transform phlegm",
+      "kill worms and relieve itch."
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "按叶",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_113_large.webp",
+      "gallery": [
+        "/images/herbs/herb_113_thumb.webp",
+        "/images/herbs/herb_113_medium.webp",
+        "/images/herbs/herb_113_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_114",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "按油",
+      "pinyin": "AN YOU",
+      "latin": "按油 L.",
+      "english": "Eucalyptus Oil",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "Skin irritant. Used in nerval pain."
+    ],
+    "indications": [
+      "Skin irritant. Used in nerval pain."
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "按油",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_114_large.webp",
+      "gallery": [
+        "/images/herbs/herb_114_thumb.webp",
+        "/images/herbs/herb_114_medium.webp",
+        "/images/herbs/herb_114_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_117",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "暗棕炭团菌",
+      "pinyin": "AN ZONG TAN TUAN JUN",
+      "latin": "暗棕炭团菌 L.",
+      "english": "NA",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "暗棕炭团菌",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_117_large.webp",
+      "gallery": [
+        "/images/herbs/herb_117_thumb.webp",
+        "/images/herbs/herb_117_medium.webp",
+        "/images/herbs/herb_117_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_100",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "暗红委陵菜",
+      "pinyin": "AN HONG WEI LING CAI",
+      "latin": "暗红委陵菜 L.",
+      "english": "Darksanguine Cinquefoil",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "暗红委陵菜",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_100_large.webp",
+      "gallery": [
+        "/images/herbs/herb_100_thumb.webp",
+        "/images/herbs/herb_100_medium.webp",
+        "/images/herbs/herb_100_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_115",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "暗紫贝母",
+      "pinyin": "AN ZI BEI MU",
+      "latin": "暗紫贝母 L.",
+      "english": "Unibract Fritillary",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "See Fritillaria cirrhosa ."
+    ],
+    "indications": [
+      "See Fritillaria cirrhosa ."
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "暗紫贝母",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_115_large.webp",
+      "gallery": [
+        "/images/herbs/herb_115_thumb.webp",
+        "/images/herbs/herb_115_medium.webp",
+        "/images/herbs/herb_115_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_106",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "氨基比林",
+      "pinyin": "AN JI BI LIN",
+      "latin": "氨基比林 L.",
+      "english": "Aminopyrine",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "氨基比林",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_106_large.webp",
+      "gallery": [
+        "/images/herbs/herb_106_thumb.webp",
+        "/images/herbs/herb_106_medium.webp",
+        "/images/herbs/herb_106_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_119",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "澳大利亚千金藤",
+      "pinyin": "AO DA LI YA QIAN JIN TENG",
+      "latin": "澳大利亚千金藤 L.",
+      "english": "Australia Stephania",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "澳大利亚千金藤",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_119_large.webp",
+      "gallery": [
+        "/images/herbs/herb_119_thumb.webp",
+        "/images/herbs/herb_119_medium.webp",
+        "/images/herbs/herb_119_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_120",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "澳大利亚桑",
+      "pinyin": "AO DA LI YA SANG",
+      "latin": "澳大利亚桑 L.",
+      "english": "Japanese Mulberry",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "See Morus alba."
+    ],
+    "indications": [
+      "See Morus alba."
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "澳大利亚桑",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_120_large.webp",
+      "gallery": [
+        "/images/herbs/herb_120_thumb.webp",
+        "/images/herbs/herb_120_medium.webp",
+        "/images/herbs/herb_120_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_118",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "澳大利亚红豆杉",
+      "pinyin": "AO DA LI YA HONG DOU SHAN",
+      "latin": "澳大利亚红豆杉 L.",
+      "english": "Australia Yew",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "澳大利亚红豆杉",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_118_large.webp",
+      "gallery": [
+        "/images/herbs/herb_118_thumb.webp",
+        "/images/herbs/herb_118_medium.webp",
+        "/images/herbs/herb_118_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_85",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "爱娃筋骨草",
+      "pinyin": "AI WA JIN GU CAO",
+      "latin": "爱娃筋骨草 L.",
+      "english": "Iva Bugle",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "爱娃筋骨草",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_85_large.webp",
+      "gallery": [
+        "/images/herbs/herb_85_thumb.webp",
+        "/images/herbs/herb_85_medium.webp",
+        "/images/herbs/herb_85_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_87",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "矮向日葵",
+      "pinyin": "AI XIANG RI KUI",
+      "latin": "矮向日葵 L.",
+      "english": "Dwarf Sunflower",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "NA"
+    ],
+    "indications": [
+      "NA"
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "矮向日葵",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_87_large.webp",
+      "gallery": [
+        "/images/herbs/herb_87_thumb.webp",
+        "/images/herbs/herb_87_medium.webp",
+        "/images/herbs/herb_87_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  },
+  {
+    "id": "mat_58",
+    "createdAt": "2025-07-13T01:46:14.603Z",
+    "updatedAt": "2025-07-13T01:46:14.603Z",
+    "version": "1.0.0",
+    "names": {
+      "cn": "矮地茶",
+      "pinyin": "AI DI CHA",
+      "latin": "矮地茶 L.",
+      "english": "Japanese Ardisia Herb",
+      "aliases": []
+    },
+    "qi": "平",
+    "flavor": [
+      "甘"
+    ],
+    "meridians": [
+      "脾",
+      "肺"
+    ],
+    "origin": [
+      {
+        "region": "四川产区",
+        "province": "四川",
+        "quality": "good",
+        "geoCoordinates": {
+          "lat": 30.6519,
+          "lng": 104.0758
+        },
+        "annualProduction": 500,
+        "bestHarvestMonths": [
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "category": "其他",
+    "functions": [
+      "1. To eliminate phlegm and relieving cough.2. To promote diuresis to deprive dampness. 3. To activate blood circulation and stop bleeding."
+    ],
+    "indications": [
+      "1. To eliminate phlegm and relieving cough.2. To promote diuresis to deprive dampness. 3. To activate blood circulation and stop bleeding."
+    ],
+    "contraindications": [],
+    "dosage": {
+      "min": 3,
+      "max": 15,
+      "common": 10,
+      "notes": "煎服"
+    },
+    "botanical": {
+      "family": "未知科",
+      "genus": "未知属",
+      "species": "矮地茶",
+      "part": "全草"
+    },
+    "images": {
+      "primary": "/images/herbs/herb_58_large.webp",
+      "gallery": [
+        "/images/herbs/herb_58_thumb.webp",
+        "/images/herbs/herb_58_medium.webp",
+        "/images/herbs/herb_58_large.webp"
+      ]
+    },
+    "metadata": {
+      "recommendedBy": []
+    }
+  }
+]
