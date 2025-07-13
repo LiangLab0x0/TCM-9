@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Layers, Map, Users, BookOpen } from 'lucide-react';
+import { Home, Layers, Map, Users, BookOpen, Network } from 'lucide-react';
 import { useAppStore } from '../store';
 
 const Navigation: React.FC = () => {
@@ -25,6 +25,12 @@ const Navigation: React.FC = () => {
       icon: Layers,
       description: '对比药材差异',
       badge: compareList.length > 0 ? compareList.length : undefined
+    },
+    {
+      id: 'graph' as const,
+      label: '知识图谱',
+      icon: Network,
+      description: '药材关系网络'
     },
     {
       id: 'experts' as const,

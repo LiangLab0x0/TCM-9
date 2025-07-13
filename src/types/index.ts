@@ -1,3 +1,6 @@
+// 导出新的类型系统
+export * from './tcm-core';
+
 // 药材类型定义 - 药典级增强版
 export interface Herb {
   id: string;

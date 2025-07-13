@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { useAppStore } from './store';
+import { useAppStore, initializeStore } from './store';
 import Navigation from './components/Navigation';
 import HerbGallery from './components/HerbGallery';
 import HerbDetail from './components/HerbDetail';
@@ -8,21 +8,19 @@ import HerbCompare from './components/HerbCompare';
 import ChinaMap from './components/ChinaMap';
 import ExpertsList from './components/ExpertsList';
 import ExpertDetail from './components/ExpertDetail';
+import GraphView from './components/GraphView';
 
 function App() {
   const { 
     currentView, 
     selectedHerb,
-    selectedExpert,
-    loadHerbs,
-    loadExperts
+    selectedExpert
   } = useAppStore();
 
   // 初始化加载数据
   useEffect(() => {
-    loadHerbs();
-    loadExperts();
-  }, [loadHerbs, loadExperts]);
+    initializeStore();
+  }, []);
 
   const renderContent = () => {
     switch (currentView) {
@@ -40,6 +38,9 @@ function App() {
       
       case 'expert-detail':
         return selectedExpert ? <ExpertDetail expert={selectedExpert} /> : <ExpertsList />;
+      
+      case 'graph':
+        return <GraphView />;
       
       case 'gallery':
       default:

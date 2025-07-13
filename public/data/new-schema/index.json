@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "createdAt": "2025-07-13T00:25:09.779Z",
+  "counts": {
+    "materials": 50,
+    "slices": 50,
+    "formulas": 0,
+    "granules": 0,
+    "medicines": 0
+  },
+  "files": [
+    "materials.json",
+    "slices.json",
+    "formulas.json",
+    "granules.json",
+    "medicines.json"
+  ]
+}

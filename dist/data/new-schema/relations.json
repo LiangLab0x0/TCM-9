@@ -1,0 +1,155 @@
+{
+  "materialToSlices": {
+    "herb_1": [
+      "slice_1"
+    ],
+    "herb_2": [
+      "slice_2"
+    ],
+    "herb_3": [
+      "slice_3"
+    ],
+    "herb_4": [
+      "slice_4"
+    ],
+    "herb_5": [
+      "slice_5"
+    ],
+    "herb_6": [
+      "slice_6"
+    ],
+    "herb_7": [
+      "slice_7"
+    ],
+    "herb_8": [
+      "slice_8"
+    ],
+    "herb_9": [
+      "slice_9"
+    ],
+    "herb_10": [
+      "slice_10"
+    ],
+    "herb_11": [
+      "slice_11"
+    ],
+    "herb_12": [
+      "slice_12"
+    ],
+    "herb_13": [
+      "slice_13"
+    ],
+    "herb_14": [
+      "slice_14"
+    ],
+    "herb_15": [
+      "slice_15"
+    ],
+    "herb_16": [
+      "slice_16"
+    ],
+    "herb_17": [
+      "slice_17"
+    ],
+    "herb_18": [
+      "slice_18"
+    ],
+    "herb_19": [
+      "slice_19"
+    ],
+    "herb_20": [
+      "slice_20"
+    ],
+    "herb_21": [
+      "slice_21"
+    ],
+    "herb_22": [
+      "slice_22"
+    ],
+    "herb_70": [
+      "slice_23"
+    ],
+    "herb_61": [
+      "slice_24"
+    ],
+    "herb_62": [
+      "slice_25"
+    ],
+    "herb_60": [
+      "slice_26"
+    ],
+    "herb_66": [
+      "slice_27"
+    ],
+    "herb_59": [
+      "slice_28"
+    ],
+    "herb_63": [
+      "slice_29"
+    ],
+    "herb_74": [
+      "slice_30"
+    ],
+    "herb_110": [
+      "slice_31"
+    ],
+    "herb_93": [
+      "slice_32"
+    ],
+    "herb_96": [
+      "slice_33"
+    ],
+    "herb_95": [
+      "slice_34"
+    ],
+    "herb_104": [
+      "slice_35"
+    ],
+    "herb_102": [
+      "slice_36"
+    ],
+    "herb_105": [
+      "slice_37"
+    ],
+    "herb_108": [
+      "slice_38"
+    ],
+    "herb_113": [
+      "slice_39"
+    ],
+    "herb_114": [
+      "slice_40"
+    ],
+    "herb_117": [
+      "slice_41"
+    ],
+    "herb_100": [
+      "slice_42"
+    ],
+    "herb_115": [
+      "slice_43"
+    ],
+    "herb_106": [
+      "slice_44"
+    ],
+    "herb_119": [
+      "slice_45"
+    ],
+    "herb_120": [
+      "slice_46"
+    ],
+    "herb_118": [
+      "slice_47"
+    ],
+    "herb_85": [
+      "slice_48"
+    ],
+    "herb_87": [
+      "slice_49"
+    ],
+    "herb_58": [
+      "slice_50"
+    ]
+  },
+  "sliceToFormulas": {}
+}
