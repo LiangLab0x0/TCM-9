@@ -1,0 +1,85 @@
+[
+  {
+    "id": "granule_form_1",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "prescriptionNo": "RX20250113001",
+    "hospital": "中医药大学附属医院",
+    "department": "脾胃科",
+    "doctor": "张医生",
+    "patient": {
+      "age": 45,
+      "gender": "男",
+      "diagnosis": "热痢，腹痛"
+    },
+    "ingredients": [
+      {
+        "ingredientId": "granule_ing_1",
+        "dosage": 1.2,
+        "instructions": "相当于白芍12g"
+      },
+      {
+        "ingredientId": "granule_ing_2",
+        "dosage": 0.4,
+        "instructions": "相当于甘草6g"
+      }
+    ],
+    "usage": {
+      "frequency": "每日2次",
+      "timing": "早晚饭后半小时",
+      "course": "7天",
+      "preparation": "温开水150ml冲服"
+    },
+    "compatibility": {
+      "synergies": [
+        "白芍与甘草配伍，缓急止痛效果增强"
+      ],
+      "cautions": [
+        "服药期间忌食生冷、辛辣刺激性食物"
+      ]
+    }
+  },
+  {
+    "id": "granule_form_2",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "prescriptionNo": "RX20250113002",
+    "hospital": "中医药大学附属医院",
+    "department": "心血管科",
+    "doctor": "李医生",
+    "patient": {
+      "age": 58,
+      "gender": "女",
+      "diagnosis": "冠心病，心绞痛"
+    },
+    "ingredients": [
+      {
+        "ingredientId": "granule_ing_2",
+        "dosage": 2,
+        "instructions": "相当于丹参30g"
+      },
+      {
+        "ingredientId": "granule_ing_1",
+        "dosage": 0.4,
+        "instructions": "相当于三七6g"
+      }
+    ],
+    "usage": {
+      "frequency": "每日3次",
+      "timing": "三餐后半小时",
+      "course": "14天",
+      "preparation": "温开水200ml冲服"
+    },
+    "compatibility": {
+      "synergies": [
+        "丹参与三七配伍，活血化瘀效果显著"
+      ],
+      "cautions": [
+        "服药期间监测凝血功能",
+        "如有出血倾向应停药就医"
+      ]
+    }
+  }
+]

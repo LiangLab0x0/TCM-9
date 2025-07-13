@@ -4,6 +4,7 @@
  * 
  * 使用方式：
  * pnpm tsx scripts/convert-herb-to-new-schema.ts
+ * pnpm tsx scripts/convert-herb-to-new-schema.ts --validate
  */
 
 import * as fs from 'fs';
@@ -16,6 +17,7 @@ import {
   Slice, 
   Formula, 
   GranuleIngredient,
+  GranuleFormula,
   PatentMedicine,
   AuthenticRegion,
   ChemicalComponent,
@@ -30,9 +32,19 @@ import {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// 解析命令行参数
+const args = process.argv.slice(2);
+const isValidateMode = args.includes('--validate');
+
 // 输入输出路径
 const INPUT_FILE = path.join(__dirname, '../public/data/herbs_with_images.json');
 const OUTPUT_DIR = path.join(__dirname, '../public/data/new-schema');
+
+// 如果是验证模式，执行验证逻辑
+if (isValidateMode) {
+  validateData();
+  process.exit(0);
+}
 
 // 确保输出目录存在
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -49,6 +61,7 @@ const materials: Material[] = [];
 const slices: Slice[] = [];
 const formulas: Formula[] = [];
 const granules: GranuleIngredient[] = [];
+const granuleFormulas: GranuleFormula[] = [];
 const medicines: PatentMedicine[] = [];
 
 // ID生成器
@@ -360,6 +373,9 @@ console.log('\n✅ 数据转换完成！');
 console.log(`  - 药材(Materials): ${materials.length} 个`);
 console.log(`  - 饮片(Slices): ${slices.length} 个`);
 console.log(`  - 方剂(Formulas): ${formulas.length} 个`);
+console.log(`  - 颗粒成分(GranuleIngredients): ${granules.length} 个`);
+console.log(`  - 颗粒处方(GranuleFormulas): ${granuleFormulas.length} 个`);
+console.log(`  - 中成药(PatentMedicines): ${medicines.length} 个`);
 
 // 保存数据
 console.log('\n💾 保存数据文件...');
@@ -374,6 +390,7 @@ saveJSON('materials.json', materials);
 saveJSON('slices.json', slices);
 saveJSON('formulas.json', formulas);
 saveJSON('granules.json', granules);
+saveJSON('granule-formulas.json', granuleFormulas);
 saveJSON('medicines.json', medicines);
 
 // 创建索引文件
@@ -385,6 +402,7 @@ const indexData = {
     slices: slices.length,
     formulas: formulas.length,
     granules: granules.length,
+    granuleFormulas: granuleFormulas.length,
     medicines: medicines.length
   },
   files: [
@@ -392,6 +410,7 @@ const indexData = {
     'slices.json',
     'formulas.json',
     'granules.json',
+    'granule-formulas.json',
     'medicines.json'
   ]
 };
@@ -437,8 +456,9 @@ const report = `# 数据迁移报告
 - 生成药材(Materials): ${materials.length}
 - 生成饮片(Slices): ${slices.length}
 - 生成方剂(Formulas): ${formulas.length}
-- 生成颗粒(Granules): ${granules.length}
-- 生成中成药(Medicines): ${medicines.length}
+- 生成颗粒成分(GranuleIngredients): ${granules.length}
+- 生成颗粒处方(GranuleFormulas): ${granuleFormulas.length}
+- 生成中成药(PatentMedicines): ${medicines.length}
 
 ## 文件列表
 
@@ -463,3 +483,382 @@ ${Object.entries(indexData.counts).map(([key, count]) => `- ${key}.json (${count
 
 fs.writeFileSync(path.join(OUTPUT_DIR, 'MIGRATION_REPORT.md'), report, 'utf-8');
 console.log('\n📋 迁移报告已生成: MIGRATION_REPORT.md');
+
+/**
+ * 验证数据完整性
+ */
+function validateData() {
+  console.log('\n🔍 开始验证数据...\n');
+  
+  const validationResults: {
+    entity: string;
+    count: number;
+    errors: string[];
+    warnings: string[];
+  }[] = [];
+  
+  // 验证文件是否存在
+  const requiredFiles = [
+    'materials.json',
+    'slices.json',
+    'formulas.json',
+    'granules.json',
+    'granule-formulas.json',
+    'medicines.json',
+    'index.json',
+    'relations.json'
+  ];
+  
+  const missingFiles = requiredFiles.filter(file => 
+    !fs.existsSync(path.join(OUTPUT_DIR, file))
+  );
+  
+  if (missingFiles.length > 0) {
+    console.error('❌ 缺少以下文件:');
+    missingFiles.forEach(file => console.error(`   - ${file}`));
+    process.exit(1);
+  }
+  
+  // 1. 验证 Materials
+  try {
+    const materials: Material[] = JSON.parse(
+      fs.readFileSync(path.join(OUTPUT_DIR, 'materials.json'), 'utf-8')
+    );
+    const result = validateMaterials(materials);
+    validationResults.push(result);
+  } catch (error) {
+    validationResults.push({
+      entity: 'Materials',
+      count: 0,
+      errors: [`无法读取文件: ${error}`],
+      warnings: []
+    });
+  }
+  
+  // 2. 验证 Slices
+  try {
+    const slices: Slice[] = JSON.parse(
+      fs.readFileSync(path.join(OUTPUT_DIR, 'slices.json'), 'utf-8')
+    );
+    const result = validateSlices(slices);
+    validationResults.push(result);
+  } catch (error) {
+    validationResults.push({
+      entity: 'Slices',
+      count: 0,
+      errors: [`无法读取文件: ${error}`],
+      warnings: []
+    });
+  }
+  
+  // 3. 验证 Formulas
+  try {
+    const formulas: Formula[] = JSON.parse(
+      fs.readFileSync(path.join(OUTPUT_DIR, 'formulas.json'), 'utf-8')
+    );
+    const result = validateFormulas(formulas);
+    validationResults.push(result);
+  } catch (error) {
+    validationResults.push({
+      entity: 'Formulas',
+      count: 0,
+      errors: [`无法读取文件: ${error}`],
+      warnings: []
+    });
+  }
+  
+  // 4. 验证 GranuleIngredients
+  try {
+    const granules: GranuleIngredient[] = JSON.parse(
+      fs.readFileSync(path.join(OUTPUT_DIR, 'granules.json'), 'utf-8')
+    );
+    const result = validateGranuleIngredients(granules);
+    validationResults.push(result);
+  } catch (error) {
+    validationResults.push({
+      entity: 'GranuleIngredients',
+      count: 0,
+      errors: [`无法读取文件: ${error}`],
+      warnings: []
+    });
+  }
+  
+  // 5. 验证 GranuleFormulas
+  try {
+    const granuleFormulas: GranuleFormula[] = JSON.parse(
+      fs.readFileSync(path.join(OUTPUT_DIR, 'granule-formulas.json'), 'utf-8')
+    );
+    const result = validateGranuleFormulas(granuleFormulas);
+    validationResults.push(result);
+  } catch (error) {
+    validationResults.push({
+      entity: 'GranuleFormulas',
+      count: 0,
+      errors: [`无法读取文件: ${error}`],
+      warnings: []
+    });
+  }
+  
+  // 6. 验证 PatentMedicines
+  try {
+    const medicines: PatentMedicine[] = JSON.parse(
+      fs.readFileSync(path.join(OUTPUT_DIR, 'medicines.json'), 'utf-8')
+    );
+    const result = validatePatentMedicines(medicines);
+    validationResults.push(result);
+  } catch (error) {
+    validationResults.push({
+      entity: 'PatentMedicines',
+      count: 0,
+      errors: [`无法读取文件: ${error}`],
+      warnings: []
+    });
+  }
+  
+  // 打印验证结果
+  console.log('📊 验证结果汇总:\n');
+  
+  let totalErrors = 0;
+  let totalWarnings = 0;
+  
+  validationResults.forEach(result => {
+    console.log(`\n${result.entity}:`);
+    console.log(`  ✓ 数量: ${result.count}`);
+    
+    if (result.errors.length > 0) {
+      console.log(`  ❌ 错误 (${result.errors.length}):`);
+      result.errors.slice(0, 5).forEach(err => console.log(`     - ${err}`));
+      if (result.errors.length > 5) {
+        console.log(`     ... 还有 ${result.errors.length - 5} 个错误`);
+      }
+      totalErrors += result.errors.length;
+    }
+    
+    if (result.warnings.length > 0) {
+      console.log(`  ⚠️  警告 (${result.warnings.length}):`);
+      result.warnings.slice(0, 5).forEach(warn => console.log(`     - ${warn}`));
+      if (result.warnings.length > 5) {
+        console.log(`     ... 还有 ${result.warnings.length - 5} 个警告`);
+      }
+      totalWarnings += result.warnings.length;
+    }
+    
+    if (result.errors.length === 0 && result.warnings.length === 0) {
+      console.log(`  ✅ 验证通过`);
+    }
+  });
+  
+  console.log('\n' + '='.repeat(50));
+  console.log(`总计: ${totalErrors} 个错误, ${totalWarnings} 个警告`);
+  
+  if (totalErrors > 0) {
+    console.log('\n❌ 验证失败，请检查错误信息');
+    process.exit(1);
+  } else if (totalWarnings > 0) {
+    console.log('\n⚠️  验证通过，但有警告需要注意');
+  } else {
+    console.log('\n✅ 所有验证通过！');
+  }
+}
+
+// 验证函数实现
+function validateMaterials(materials: Material[]): any {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  materials.forEach((material, index) => {
+    // 必填字段验证
+    if (!material.id) errors.push(`Material[${index}]: 缺少ID`);
+    if (!material.names?.cn) errors.push(`Material[${material.id}]: 缺少中文名称`);
+    if (!material.names?.pinyin) errors.push(`Material[${material.id}]: 缺少拼音`);
+    if (!material.qi) errors.push(`Material[${material.id}]: 缺少性(qi)`);
+    if (!material.flavor || material.flavor.length === 0) errors.push(`Material[${material.id}]: 缺少味(flavor)`);
+    
+    // 警告：建议填写的字段
+    if (!material.names?.latin) warnings.push(`Material[${material.id}]: 建议填写拉丁学名`);
+    if (!material.chemicalComponents || material.chemicalComponents.length === 0) {
+      warnings.push(`Material[${material.id}]: 建议添加化学成分信息`);
+    }
+    if (!material.qualityStandards || material.qualityStandards.length === 0) {
+      warnings.push(`Material[${material.id}]: 建议添加质量标准信息`);
+    }
+  });
+  
+  return {
+    entity: 'Materials',
+    count: materials.length,
+    errors,
+    warnings
+  };
+}
+
+function validateSlices(slices: Slice[]): any {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  slices.forEach((slice, index) => {
+    // 必填字段验证
+    if (!slice.id) errors.push(`Slice[${index}]: 缺少ID`);
+    if (!slice.materialId) errors.push(`Slice[${slice.id}]: 缺少关联药材ID`);
+    if (!slice.processing?.method) errors.push(`Slice[${slice.id}]: 缺少炮制方法`);
+    
+    // 警告：建议填写的字段
+    if (!slice.qc || slice.qc.length === 0) {
+      warnings.push(`Slice[${slice.id}]: 建议添加质控指标`);
+    }
+    if (!slice.storage) {
+      warnings.push(`Slice[${slice.id}]: 建议添加储存条件`);
+    }
+  });
+  
+  return {
+    entity: 'Slices',
+    count: slices.length,
+    errors,
+    warnings
+  };
+}
+
+function validateFormulas(formulas: Formula[]): any {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  formulas.forEach((formula, index) => {
+    // 必填字段验证
+    if (!formula.id) errors.push(`Formula[${index}]: 缺少ID`);
+    if (!formula.name) errors.push(`Formula[${formula.id}]: 缺少方剂名称`);
+    if (!formula.pinyin) errors.push(`Formula[${formula.id}]: 缺少拼音`);
+    if (!formula.source) errors.push(`Formula[${formula.id}]: 缺少出处`);
+    if (!formula.components || formula.components.length === 0) {
+      errors.push(`Formula[${formula.id}]: 缺少组成成分`);
+    }
+    
+    // 验证组成成分
+    formula.components?.forEach((comp, idx) => {
+      if (!comp.sliceId) errors.push(`Formula[${formula.id}].components[${idx}]: 缺少饮片ID`);
+      if (!comp.weight?.value) errors.push(`Formula[${formula.id}].components[${idx}]: 缺少用量`);
+      if (!comp.role) errors.push(`Formula[${formula.id}].components[${idx}]: 缺少君臣佐使`);
+    });
+    
+    // 警告：建议填写的字段
+    if (!formula.explanation) warnings.push(`Formula[${formula.id}]: 建议添加方解`);
+    if (!formula.modernApplications) warnings.push(`Formula[${formula.id}]: 建议添加现代应用`);
+  });
+  
+  return {
+    entity: 'Formulas',
+    count: formulas.length,
+    errors,
+    warnings
+  };
+}
+
+function validateGranuleIngredients(granules: GranuleIngredient[]): any {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  granules.forEach((granule, index) => {
+    // 必填字段验证
+    if (!granule.id) errors.push(`GranuleIngredient[${index}]: 缺少ID`);
+    if (!granule.sliceId) errors.push(`GranuleIngredient[${granule.id}]: 缺少关联饮片ID`);
+    
+    // 提取工艺验证
+    if (!granule.extraction) {
+      errors.push(`GranuleIngredient[${granule.id}]: 缺少提取工艺信息`);
+    } else {
+      if (!granule.extraction.solvent) errors.push(`GranuleIngredient[${granule.id}]: 缺少提取溶剂`);
+      if (!granule.extraction.ratio) errors.push(`GranuleIngredient[${granule.id}]: 缺少料液比`);
+    }
+    
+    // 质量标准验证
+    if (!granule.quality?.activeComponents || granule.quality.activeComponents.length === 0) {
+      warnings.push(`GranuleIngredient[${granule.id}]: 建议添加有效成分含量`);
+    }
+  });
+  
+  return {
+    entity: 'GranuleIngredients',
+    count: granules.length,
+    errors,
+    warnings
+  };
+}
+
+function validateGranuleFormulas(formulas: GranuleFormula[]): any {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  formulas.forEach((formula, index) => {
+    // 必填字段验证
+    if (!formula.id) errors.push(`GranuleFormula[${index}]: 缺少ID`);
+    if (!formula.prescriptionNo) errors.push(`GranuleFormula[${formula.id}]: 缺少处方号`);
+    if (!formula.hospital) errors.push(`GranuleFormula[${formula.id}]: 缺少医院`);
+    if (!formula.doctor) errors.push(`GranuleFormula[${formula.id}]: 缺少医生`);
+    
+    // 组成验证
+    if (!formula.ingredients || formula.ingredients.length === 0) {
+      errors.push(`GranuleFormula[${formula.id}]: 缺少颗粒组成`);
+    } else {
+      formula.ingredients.forEach((ing, idx) => {
+        if (!ing.ingredientId) errors.push(`GranuleFormula[${formula.id}].ingredients[${idx}]: 缺少颗粒ID`);
+        if (!ing.dosage) errors.push(`GranuleFormula[${formula.id}].ingredients[${idx}]: 缺少用量`);
+      });
+    }
+    
+    // 用法验证
+    if (!formula.usage) {
+      errors.push(`GranuleFormula[${formula.id}]: 缺少用法信息`);
+    }
+    
+    // 警告：建议填写的字段
+    if (!formula.compatibility) warnings.push(`GranuleFormula[${formula.id}]: 建议添加配伍分析`);
+  });
+  
+  return {
+    entity: 'GranuleFormulas',
+    count: formulas.length,
+    errors,
+    warnings
+  };
+}
+
+function validatePatentMedicines(medicines: PatentMedicine[]): any {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  medicines.forEach((medicine, index) => {
+    // 必填字段验证
+    if (!medicine.id) errors.push(`PatentMedicine[${index}]: 缺少ID`);
+    if (!medicine.name?.cn) errors.push(`PatentMedicine[${medicine.id}]: 缺少中文名称`);
+    if (!medicine.approval?.number) errors.push(`PatentMedicine[${medicine.id}]: 缺少批准文号`);
+    if (!medicine.manufacturer?.name) errors.push(`PatentMedicine[${medicine.id}]: 缺少生产厂家`);
+    
+    // 制剂信息验证
+    if (!medicine.formulation?.dosageForm) {
+      errors.push(`PatentMedicine[${medicine.id}]: 缺少剂型`);
+    }
+    
+    // 临床信息验证
+    if (!medicine.clinical?.functions || medicine.clinical.functions.length === 0) {
+      errors.push(`PatentMedicine[${medicine.id}]: 缺少功能主治`);
+    }
+    if (!medicine.clinical?.usage) {
+      errors.push(`PatentMedicine[${medicine.id}]: 缺少用法用量`);
+    }
+    
+    // 警告：建议填写的字段
+    if (!medicine.qualityStandards || medicine.qualityStandards.length === 0) {
+      warnings.push(`PatentMedicine[${medicine.id}]: 建议添加质量标准`);
+    }
+    if (!medicine.pricing) {
+      warnings.push(`PatentMedicine[${medicine.id}]: 建议添加价格信息`);
+    }
+  });
+  
+  return {
+    entity: 'PatentMedicines',
+    count: medicines.length,
+    errors,
+    warnings
+  };
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Book, Users, Weight } from 'lucide-react';
+import { Book, Users, Weight, Pill } from 'lucide-react';
 import { Formula, calculateFormulaWeight } from '../../types/tcm-core';
 import { useNewAppStore } from '../../store';
 
@@ -33,30 +33,46 @@ export const FormulaCard: React.FC<FormulaCardProps> = ({ formula }) => {
   
   return (
     <motion.div
-      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden border-2 border-indigo-200"
+      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
       whileHover={{ y: -5 }}
       onClick={handleClick}
     >
-      {/* 头部信息 */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-4 text-white">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-xl font-bold">{formula.name}</h3>
-          <button
-            onClick={handleCompareToggle}
-            className={`p-2 rounded-full transition-colors ${
-              isInCompare 
-                ? 'bg-white/20 text-white' 
-                : 'bg-white/10 hover:bg-white/20 text-white/70 hover:text-white'
-            }`}
-          >
-            <Users className="w-4 h-4" />
-          </button>
-        </div>
-        <p className="text-sm opacity-90">{formula.pinyin}</p>
+      {/* 图片区域 */}
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-50 to-purple-50">
+        {formula.thumbnail ? (
+          <img
+            src={formula.thumbnail}
+            alt={formula.name}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <Pill className="w-16 h-16 text-indigo-300" />
+          </div>
+        )}
+        
+        {/* 比较按钮 */}
+        <button
+          onClick={handleCompareToggle}
+          className={`absolute top-3 right-3 p-2 rounded-full transition-colors ${
+            isInCompare 
+              ? 'bg-indigo-600 text-white' 
+              : 'bg-white/80 hover:bg-white text-gray-700'
+          }`}
+        >
+          <Users className="w-4 h-4" />
+        </button>
       </div>
 
       {/* 内容区域 */}
       <div className="p-4">
+        {/* 标题 */}
+        <h3 className="text-lg font-bold text-gray-800 mb-1">{formula.name}</h3>
+        <p className="text-sm text-gray-500 mb-3">{formula.pinyin}</p>
+        
         {/* 出处和类别 */}
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center text-sm text-gray-600">

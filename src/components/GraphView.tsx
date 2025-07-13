@@ -337,7 +337,7 @@ export const GraphView: React.FC = () => {
               return nodeColors[type]?.bg || '#e5e7eb';
             }}
           />
-          <Background variant="dots" gap={12} size={1} />
+          <Background />
           
           {/* 控制面板 */}
           <Panel position="top-right" className="bg-white p-4 rounded-lg shadow-lg">

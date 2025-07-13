@@ -24,15 +24,21 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material }) => {
       onClick={handleClick}
     >
       {/* 图片区域 */}
-      <div className="relative h-48 overflow-hidden bg-gray-100">
-        <img
-          src={`/images/${material.images.primary}`}
-          alt={material.names.cn}
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.currentTarget.src = '/images/placeholder.jpg';
-          }}
-        />
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-green-50 to-emerald-50">
+        {material.images?.primary ? (
+          <img
+            src={`/images/${material.images.primary}`}
+            alt={material.names.cn}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <Leaf className="w-16 h-16 text-green-300" />
+          </div>
+        )}
         
         {/* 四气标签 */}
         <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium ${theme.bg} ${theme.text}`}>

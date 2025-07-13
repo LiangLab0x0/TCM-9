@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Flame, Clock, Droplets } from 'lucide-react';
+import { Flame, Clock, Droplets, Package } from 'lucide-react';
 import { Slice } from '../../types/tcm-core';
 import { useNewAppStore } from '../../store';
 
@@ -43,18 +43,31 @@ export const SliceCard: React.FC<SliceCardProps> = ({ slice }) => {
 
   return (
     <motion.div
-      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden border-2 border-gray-200"
+      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
       whileHover={{ y: -5 }}
       onClick={handleClick}
     >
-      {/* 头部信息 */}
-      <div className={`p-4 ${getProcessingColor()}`}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            {getProcessingIcon()}
-            <span className="font-medium">{slice.processing.method}</span>
+      {/* 图片区域 */}
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50">
+        {slice.thumbnail ? (
+          <img
+            src={slice.thumbnail}
+            alt={slice.name || '饮片'}
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <Package className="w-16 h-16 text-amber-300" />
           </div>
-          <span className="text-xs opacity-75">{slice.processing.category}</span>
+        )}
+        
+        {/* 加工方法标签 */}
+        <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium ${getProcessingColor()}`}>
+          {getProcessingIcon()}
+          <span className="ml-1">{slice.processing.method}</span>
         </div>
       </div>
 

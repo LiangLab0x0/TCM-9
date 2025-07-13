@@ -11,7 +11,7 @@ import ExpertDetail from './components/ExpertDetail';
 import GraphView from './components/GraphView';
 import { MaterialDetail } from './components/details/MaterialDetail';
 import { FormulaDetail } from './components/details/FormulaDetail';
-import { GalleryGrid } from './components/GalleryGrid';
+import { TCMGallery } from './components/TCMGallery';
 
 function App() {
   const { 
@@ -38,7 +38,7 @@ function App() {
           return <FormulaDetail formula={selectedFormula} />;
         }
         // 后续可以添加 SliceDetail, GranuleDetail 等
-        return <GalleryGrid />;
+        return <TCMGallery />;
       
       case 'compare':
         return <HerbCompare />;
@@ -57,7 +57,7 @@ function App() {
       
       case 'gallery':
       default:
-        return <GalleryGrid />;
+        return <TCMGallery />;
     }
   };
 

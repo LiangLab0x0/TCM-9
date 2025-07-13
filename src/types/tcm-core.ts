@@ -163,6 +163,8 @@ export interface QualityStandard {
  */
 export interface Slice extends BaseNode {
   materialId: string;          // 关联药材ID
+  name?: string;              // 饮片名称
+  thumbnail?: string;         // 缩略图
   
   // 炮制信息
   processing: {
@@ -232,6 +234,7 @@ export interface Formula extends BaseNode {
   pinyin: string;            // 拼音
   source: string;            // 出处
   category: string;          // 方剂分类
+  thumbnail?: string;         // 缩略图
   
   // 组成
   components: FormulaComponent[];

@@ -3,11 +3,13 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import { MaterialSlice, createMaterialSlice } from './slices/material';
 import { SliceSlice, createSliceSlice } from './slices/slice';
 import { FormulaSlice, createFormulaSlice } from './slices/formula';
+import { GranuleSlice, createGranuleSlice } from './slices/granule';
+import { MedicineSlice, createMedicineSlice } from './slices/medicine';
 import { UISlice, createUISlice } from './slices/ui';
 import { ExpertSlice, createExpertSlice } from './slices/expert';
 
 // 合并所有slice类型
-export type AppStore = MaterialSlice & SliceSlice & FormulaSlice & UISlice & ExpertSlice;
+export type AppStore = MaterialSlice & SliceSlice & FormulaSlice & GranuleSlice & MedicineSlice & UISlice & ExpertSlice;
 
 // 创建store
 export const useAppStore = create<AppStore>()(
@@ -16,6 +18,8 @@ export const useAppStore = create<AppStore>()(
       ...createMaterialSlice(...args),
       ...createSliceSlice(...args),
       ...createFormulaSlice(...args),
+      ...createGranuleSlice(...args),
+      ...createMedicineSlice(...args),
       ...createUISlice(...args),
       ...createExpertSlice(...args),
     }),
@@ -33,7 +37,7 @@ export const useAppStore = create<AppStore>()(
 
 // 初始化函数
 export const initializeStore = async () => {
-  const { loadMaterials, loadSlices, loadFormulas, loadExperts, setLoading, setError } = useAppStore.getState();
+  const { loadMaterials, loadSlices, loadFormulas, loadGranules, loadMedicines, loadExperts, setLoading, setError } = useAppStore.getState();
   
   setLoading(true);
   setError(null);
@@ -44,6 +48,8 @@ export const initializeStore = async () => {
       loadMaterials(),
       loadSlices(),
       loadFormulas(),
+      loadGranules(),
+      loadMedicines(),
       loadExperts(),
     ]);
   } catch (error) {

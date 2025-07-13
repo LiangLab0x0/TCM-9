@@ -1,6 +1,6 @@
 # 数据迁移报告
 
-生成时间: 2025/7/13 00:25:09
+生成时间: 2025/7/13 01:46:14
 
 ## 数据统计
 
@@ -8,8 +8,9 @@
 - 生成药材(Materials): 50
 - 生成饮片(Slices): 50
 - 生成方剂(Formulas): 0
-- 生成颗粒(Granules): 0
-- 生成中成药(Medicines): 0
+- 生成颗粒成分(GranuleIngredients): 0
+- 生成颗粒处方(GranuleFormulas): 0
+- 生成中成药(PatentMedicines): 0
 
 ## 文件列表
 
@@ -17,6 +18,7 @@
 - slices.json (50 条记录)
 - formulas.json (0 条记录)
 - granules.json (0 条记录)
+- granuleFormulas.json (0 条记录)
 - medicines.json (0 条记录)
 - index.json (索引文件)
 - relations.json (关系映射)

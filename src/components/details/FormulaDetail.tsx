@@ -124,7 +124,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
         }]
       }]
     };
-  }, [componentsWithDetails, formula.names.cn]);
+  }, [componentsWithDetails, formula.name]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -222,7 +222,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                               {comp.material?.names.pinyin}
                             </span>
                           </TableCell>
-                          <TableCell>{comp.slice?.names.cn || '-'}</TableCell>
+                          <TableCell>{comp.slice?.name || comp.material?.names.cn || '-'}</TableCell>
                           <TableCell className="text-right">
                             {comp.weight.value}{comp.weight.unit}
                           </TableCell>
@@ -289,24 +289,24 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                     </ul>
                   </div>
 
-                  {formula.symptoms && formula.symptoms.length > 0 && (
+                  {formula.syndromes && formula.syndromes.length > 0 && (
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">症状表现</h3>
+                      <h3 className="text-xl font-semibold mb-4">证候</h3>
                       <div className="flex flex-wrap gap-2">
-                        {formula.symptoms.map((symptom, index) => (
+                        {formula.syndromes.map((syndrome, index) => (
                           <Badge key={index} variant="secondary">
-                            {symptom}
+                            {syndrome}
                           </Badge>
                         ))}
                       </div>
                     </div>
                   )}
 
-                  {formula.contraindications && formula.contraindications.length > 0 && (
+                  {formula.modernApplications?.contraindications && formula.modernApplications.contraindications.length > 0 && (
                     <div>
-                      <h3 className="text-xl font-semibold mb-4 text-red-600">禁忌</h3>
+                      <h3 className="text-xl font-semibold mb-4 text-red-600">禁忌症</h3>
                       <ul className="space-y-2">
-                        {formula.contraindications.map((contra, index) => (
+                        {formula.modernApplications.contraindications.map((contra, index) => (
                           <li key={index} className="flex items-start">
                             <span className="text-red-500 mr-2">•</span>
                             <span className="text-gray-700">{contra}</span>
@@ -372,23 +372,23 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                     </div>
                   </div>
 
-                  {formula.usage.specialInstructions && (
+                  {formula.usage.course && (
                     <div>
-                      <h4 className="font-medium text-gray-700 mb-2">特殊说明</h4>
+                      <h4 className="font-medium text-gray-700 mb-2">疗程</h4>
                       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                        <p className="text-gray-700">{formula.usage.specialInstructions}</p>
+                        <p className="text-gray-700">{formula.usage.course}</p>
                       </div>
                     </div>
                   )}
 
-                  {formula.modernApplication && (
+                  {formula.modernApplications?.diseases && formula.modernApplications.diseases.length > 0 && (
                     <div>
                       <h4 className="font-medium text-gray-700 mb-2">现代应用</h4>
                       <ul className="space-y-2">
-                        {formula.modernApplication.map((app, index) => (
+                        {formula.modernApplications.diseases.map((disease, index) => (
                           <li key={index} className="flex items-start">
                             <span className="text-purple-500 mr-2">•</span>
-                            <span className="text-gray-700">{app}</span>
+                            <span className="text-gray-700">{disease}</span>
                           </li>
                         ))}
                       </ul>
@@ -406,40 +406,49 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                   方剂解析
                 </h3>
                 
-                {formula.analysis ? (
+                {formula.explanation ? (
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-medium text-gray-700 mb-3">病机分析</h4>
+                      <h4 className="font-medium text-gray-700 mb-3">组方原理</h4>
                       <p className="text-gray-600 leading-relaxed">
-                        {formula.analysis.pathogenesis}
+                        {formula.explanation.principle}
                       </p>
                     </div>
 
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-3">治法</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        {formula.analysis.therapeuticPrinciple}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-3">方义</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        {formula.analysis.formulaExplanation}
-                      </p>
-                    </div>
-
-                    {formula.analysis.keyPoints && formula.analysis.keyPoints.length > 0 && (
+                    {formula.explanation.keyPoints && formula.explanation.keyPoints.length > 0 && (
                       <div>
                         <h4 className="font-medium text-gray-700 mb-3">要点</h4>
                         <ul className="space-y-2">
-                          {formula.analysis.keyPoints.map((point, index) => (
+                          {formula.explanation.keyPoints.map((point, index) => (
                             <li key={index} className="flex items-start">
                               <span className="text-indigo-500 mr-2">•</span>
                               <span className="text-gray-700">{point}</span>
                             </li>
                           ))}
                         </ul>
+                      </div>
+                    )}
+
+                    {formula.explanation.modifications && formula.explanation.modifications.length > 0 && (
+                      <div>
+                        <h4 className="font-medium text-gray-700 mb-3">加减变化</h4>
+                        <div className="space-y-3">
+                          {formula.explanation.modifications.map((mod, index) => (
+                            <div key={index} className="border-l-2 border-gray-300 pl-4">
+                              <p className="font-medium text-gray-700">{mod.condition}</p>
+                              {mod.additions && mod.additions.length > 0 && (
+                                <p className="text-sm text-gray-600 mt-1">
+                                  加：{mod.additions.map(add => `${add.sliceId} ${add.weight}g`).join('、')}
+                                </p>
+                              )}
+                              {mod.removals && mod.removals.length > 0 && (
+                                <p className="text-sm text-gray-600 mt-1">
+                                  减：{mod.removals.map(rem => rem.sliceId).join('、')}
+                                </p>
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>

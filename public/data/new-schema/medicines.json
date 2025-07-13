@@ -1,1 +1,221 @@
-[]
+[
+  {
+    "id": "medicine_1",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "name": {
+      "cn": "复方丹参片",
+      "pinyin": "Fufang Danshen Pian",
+      "english": "Compound Danshen Tablets",
+      "tradeName": "白云山复方丹参片"
+    },
+    "approval": {
+      "number": "国药准字Z44023372",
+      "type": "国药准字",
+      "date": "2020-01-15",
+      "validUntil": "2025-01-14"
+    },
+    "manufacturer": {
+      "name": "广州白云山和记黄埔中药有限公司",
+      "license": "粤20160176",
+      "gmpCertificate": "GD20190568",
+      "contact": "020-87609688"
+    },
+    "formulaRef": "formula_2",
+    "composition": {
+      "herbs": [
+        {
+          "materialId": "herb_14",
+          "amount": "450g",
+          "processing": "酒炙"
+        },
+        {
+          "materialId": "herb_11",
+          "amount": "141g",
+          "processing": "生用"
+        },
+        {
+          "materialId": "herb_19",
+          "amount": "8g",
+          "processing": "生用"
+        }
+      ],
+      "excipients": [
+        "淀粉",
+        "糊精",
+        "滑石粉",
+        "硬脂酸镁",
+        "薄膜包衣预混剂"
+      ]
+    },
+    "formulation": {
+      "dosageForm": "薄膜衣片",
+      "specification": "每片重0.32g",
+      "appearance": "本品为薄膜衣片，除去包衣后显棕色至棕褐色；气芳香，味微苦",
+      "identification": [
+        "薄层色谱法鉴别丹参",
+        "薄层色谱法鉴别三七",
+        "气相色谱法鉴别冰片"
+      ]
+    },
+    "clinical": {
+      "functions": [
+        "活血化瘀",
+        "理气止痛"
+      ],
+      "usage": "口服，一次3片，一日3次",
+      "adverseReactions": [
+        "偶见胃肠道不适"
+      ],
+      "contraindications": [
+        "孕妇禁用"
+      ],
+      "precautions": [
+        "脾胃虚寒者慎用",
+        "不宜与藜芦同用"
+      ],
+      "interactions": [
+        "不宜与抗凝血药物同用"
+      ]
+    },
+    "qualityStandards": [
+      {
+        "item": "丹参酮ⅡA",
+        "specification": "每片含丹参酮ⅡA不得少于0.20mg",
+        "method": "高效液相色谱法"
+      },
+      {
+        "item": "三七皂苷R1",
+        "specification": "每片含三七皂苷R1不得少于0.17mg",
+        "method": "高效液相色谱法"
+      }
+    ],
+    "packaging": {
+      "materials": [
+        "铝塑包装",
+        "纸盒"
+      ],
+      "sizes": [
+        "60片/瓶",
+        "100片/瓶"
+      ],
+      "storage": "密封，置阴凉干燥处",
+      "shelfLife": "36个月"
+    },
+    "pricing": {
+      "retailPrice": 25.80,
+      "isReimbursable": true,
+      "reimbursementCategory": "甲类"
+    }
+  },
+  {
+    "id": "medicine_2",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "name": {
+      "cn": "生脉饮",
+      "pinyin": "Shengmai Yin",
+      "english": "Pulse-Activating Drink",
+      "tradeName": "同仁堂生脉饮"
+    },
+    "approval": {
+      "number": "国药准字Z11020361",
+      "type": "国药准字",
+      "date": "2019-05-20",
+      "validUntil": "2024-05-19"
+    },
+    "manufacturer": {
+      "name": "北京同仁堂股份有限公司同仁堂制药厂",
+      "license": "京20150013",
+      "gmpCertificate": "BJ20180235",
+      "contact": "010-67010110"
+    },
+    "formulaRef": null,
+    "composition": {
+      "herbs": [
+        {
+          "materialId": "herb_1",
+          "amount": "15g",
+          "processing": "红参"
+        },
+        {
+          "materialId": "herb_16",
+          "amount": "31g",
+          "processing": "生用"
+        },
+        {
+          "materialId": "herb_8",
+          "amount": "15g",
+          "processing": "生用"
+        }
+      ],
+      "excipients": [
+        "单糖浆",
+        "苯甲酸钠",
+        "纯化水"
+      ]
+    },
+    "formulation": {
+      "dosageForm": "口服液",
+      "specification": "每支装10ml",
+      "appearance": "本品为棕红色的澄清液体；味甜、微酸",
+      "identification": [
+        "薄层色谱法鉴别人参",
+        "薄层色谱法鉴别麦冬",
+        "薄层色谱法鉴别五味子"
+      ]
+    },
+    "clinical": {
+      "functions": [
+        "益气复脉",
+        "养阴生津"
+      ],
+      "usage": "口服，一次10ml，一日3次",
+      "adverseReactions": [
+        "个别患者服药后出现恶心、呕吐、腹泻"
+      ],
+      "contraindications": [
+        "感冒发热病人不宜服用"
+      ],
+      "precautions": [
+        "糖尿病患者慎用",
+        "高血压、心脏病、肝病、肾病等慢性病严重者应在医师指导下服用",
+        "儿童、孕妇、哺乳期妇女应在医师指导下服用"
+      ],
+      "interactions": [
+        "不宜与藜芦同用"
+      ]
+    },
+    "qualityStandards": [
+      {
+        "item": "人参皂苷Re",
+        "specification": "每支含人参皂苷Re不得少于0.10mg",
+        "method": "高效液相色谱法"
+      },
+      {
+        "item": "五味子醇甲",
+        "specification": "每支含五味子醇甲不得少于0.050mg",
+        "method": "高效液相色谱法"
+      }
+    ],
+    "packaging": {
+      "materials": [
+        "口服液玻璃瓶",
+        "纸盒"
+      ],
+      "sizes": [
+        "10ml×10支/盒",
+        "10ml×6支/盒"
+      ],
+      "storage": "密封，置阴凉处",
+      "shelfLife": "24个月"
+    },
+    "pricing": {
+      "retailPrice": 32.50,
+      "isReimbursable": true,
+      "reimbursementCategory": "乙类"
+    }
+  }
+]

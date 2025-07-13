@@ -6,6 +6,8 @@ import { GalleryGrid } from './GalleryGrid';
 import { MaterialCard } from './cards/MaterialCard';
 import { SliceCard } from './cards/SliceCard';
 import { FormulaCard } from './cards/FormulaCard';
+import { GranuleCard } from './cards/GranuleCard';
+import { MedicineCard } from './cards/MedicineCard';
 import { EntityType } from '../store/slices/ui';
 import SearchAndFilters from './SearchAndFilters';
 
@@ -24,6 +26,8 @@ export const TCMGallery: React.FC = () => {
     filteredMaterials,
     slices,
     formulas,
+    granules,
+    medicines,
     isLoading
   } = useNewAppStore();
 
@@ -31,15 +35,29 @@ export const TCMGallery: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [showFilters, setShowFilters] = useState(false);
-
-  // 实体类型选项
-  const entityTypes: { value: EntityType; label: string; count: number }[] = [
-    { value: 'material', label: '药材', count: materials.length },
-    { value: 'slice', label: '饮片', count: slices.length },
-    { value: 'formula', label: '方剂', count: formulas.length },
-    { value: 'granule', label: '配方颗粒', count: 0 },
-    { value: 'medicine', label: '中成药', count: 0 }
+  
+  // 实体类型选项 - 只显示有数据的类型
+  const allEntityTypes = [
+    { value: 'material' as EntityType, label: '药材', count: materials.length },
+    { value: 'slice' as EntityType, label: '饮片', count: slices.length },
+    { value: 'formula' as EntityType, label: '方剂', count: formulas.length },
+    { value: 'granule' as EntityType, label: '配方颗粒', count: granules.length },
+    { value: 'medicine' as EntityType, label: '中成药', count: medicines.length }
   ];
+  
+  // 过滤出有数据的实体类型
+  const entityTypes = allEntityTypes.filter(type => type.count > 0);
+  
+  // 确保当前选中的类型有数据，否则切换到第一个有数据的类型
+  useEffect(() => {
+    const currentTypeHasData = allEntityTypes.find(
+      type => type.value === currentEntityType && type.count > 0
+    );
+    
+    if (!currentTypeHasData && entityTypes.length > 0) {
+      setCurrentEntityType(entityTypes[0].value);
+    }
+  }, [materials.length, slices.length, formulas.length, granules.length, medicines.length, currentEntityType, setCurrentEntityType]);
 
   // 获取当前显示的数据
   const getCurrentItems = () => {
@@ -50,6 +68,10 @@ export const TCMGallery: React.FC = () => {
         return sortItems(slices);
       case 'formula':
         return sortItems(formulas);
+      case 'granule':
+        return sortItems(granules);
+      case 'medicine':
+        return sortItems(medicines);
       default:
         return [];
     }
@@ -110,6 +132,10 @@ export const TCMGallery: React.FC = () => {
         return <SliceCard slice={item} />;
       case 'formula':
         return <FormulaCard formula={item} />;
+      case 'granule':
+        return <GranuleCard granule={item} />;
+      case 'medicine':
+        return <MedicineCard medicine={item} />;
       default:
         return null;
     }
@@ -128,7 +154,7 @@ export const TCMGallery: React.FC = () => {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">中医药知识图谱</h1>
         
-        {/* 实体类型标签 */}
+        {/* 实体类型标签 - 只显示有数据的 */}
         <div className="flex flex-wrap gap-2 mb-6">
           {entityTypes.map(type => (
             <button
@@ -136,13 +162,12 @@ export const TCMGallery: React.FC = () => {
               onClick={() => setCurrentEntityType(type.value)}
               className={`px-4 py-2 rounded-full transition-all ${
                 currentEntityType === type.value
-                  ? 'bg-green-600 text-white'
+                  ? 'bg-green-600 text-white shadow-md'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
-              disabled={type.count === 0}
             >
               {type.label}
-              <span className="ml-2 text-sm">({type.count})</span>
+              <span className="ml-2 text-sm opacity-70">({type.count})</span>
             </button>
           ))}
         </div>

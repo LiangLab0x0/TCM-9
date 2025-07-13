@@ -1,0 +1,23 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Pill/Bottle Icon -->
+  <g transform="translate(200, 120)">
+    <!-- Bottle -->
+    <rect x="-25" y="-20" width="50" height="60" fill="#3b82f6" opacity="0.8" rx="5"/>
+    <!-- Bottle neck -->
+    <rect x="-15" y="-35" width="30" height="20" fill="#2563eb" rx="3"/>
+    <!-- Bottle cap -->
+    <rect x="-18" y="-40" width="36" height="8" fill="#1d4ed8" rx="2"/>
+    <!-- Label on bottle -->
+    <rect x="-20" y="0" width="40" height="25" fill="white" opacity="0.9" rx="2"/>
+    <!-- Cross symbol on label -->
+    <line x1="0" y1="5" x2="0" y2="20" stroke="#3b82f6" stroke-width="3"/>
+    <line x1="-7" y1="12.5" x2="7" y2="12.5" stroke="#3b82f6" stroke-width="3"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="220" font-family="Arial, sans-serif" font-size="28" font-weight="bold" 
+        text-anchor="middle" fill="#2563eb">Medicine</text>
+</svg>

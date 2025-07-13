@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": "granule_ing_1",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "sliceId": "slice_1",
+    "extraction": {
+      "solvent": "水",
+      "concentration": null,
+      "ratio": 10,
+      "temperature": 100,
+      "duration": 120,
+      "times": 2
+    },
+    "concentration": {
+      "method": "减压浓缩",
+      "density": 1.2
+    },
+    "drying": {
+      "method": "喷雾干燥",
+      "temperature": 180,
+      "moisture": 5
+    },
+    "granule": {
+      "extractRatio": 20,
+      "particleSize": "80-100目",
+      "solubility": "易溶于水",
+      "appearance": "棕黄色颗粒"
+    },
+    "quality": {
+      "activeComponents": [
+        {
+          "name": "人参皂苷Rg1+Re",
+          "content": 3.0,
+          "method": "HPLC法"
+        }
+      ],
+      "heavyMetals": [
+        {
+          "item": "铅",
+          "limit": 5
+        },
+        {
+          "item": "镉",
+          "limit": 1
+        }
+      ],
+      "microbial": [
+        {
+          "item": "细菌总数",
+          "limit": "≤1000 cfu/g"
+        },
+        {
+          "item": "霉菌和酵母菌总数",
+          "limit": "≤100 cfu/g"
+        }
+      ]
+    },
+    "equivalence": {
+      "rawHerbAmount": 10,
+      "dailyDose": "3-9g"
+    }
+  },
+  {
+    "id": "granule_ing_2",
+    "createdAt": "2025-07-13T02:00:00.000Z",
+    "updatedAt": "2025-07-13T02:00:00.000Z",
+    "version": "1.0.0",
+    "sliceId": "slice_14",
+    "extraction": {
+      "solvent": "水",
+      "concentration": null,
+      "ratio": 15,
+      "temperature": 100,
+      "duration": 90,
+      "times": 2
+    },
+    "concentration": {
+      "method": "减压浓缩",
+      "density": 1.25
+    },
+    "drying": {
+      "method": "喷雾干燥",
+      "temperature": 170,
+      "moisture": 4.5
+    },
+    "granule": {
+      "extractRatio": 15,
+      "particleSize": "80-100目",
+      "solubility": "易溶于水",
+      "appearance": "棕褐色颗粒"
+    },
+    "quality": {
+      "activeComponents": [
+        {
+          "name": "丹参酮ⅡA",
+          "content": 2.0,
+          "method": "HPLC法"
+        }
+      ],
+      "heavyMetals": [
+        {
+          "item": "铅",
+          "limit": 5
+        },
+        {
+          "item": "镉",
+          "limit": 1
+        }
+      ],
+      "microbial": [
+        {
+          "item": "细菌总数",
+          "limit": "≤1000 cfu/g"
+        },
+        {
+          "item": "霉菌和酵母菌总数",
+          "limit": "≤100 cfu/g"
+        }
+      ]
+    },
+    "equivalence": {
+      "rawHerbAmount": 15,
+      "dailyDose": "6-15g"
+    }
+  }
+]
