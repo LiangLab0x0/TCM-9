@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "node ./scripts/prepare-husky.cjs",
+    "postinstall": "pnpm run prepare || true",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
@@ -115,7 +116,7 @@
     ]
   },
   "engines": {
-    "node": ">=18.18 <23",
+    "node": ">=18 <23",
     "pnpm": ">=8 <11"
   }
 }
