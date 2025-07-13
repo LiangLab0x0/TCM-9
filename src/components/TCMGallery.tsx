@@ -63,17 +63,19 @@ export const TCMGallery: React.FC = () => {
       let comparison = 0;
       
       switch (sortBy) {
-        case 'name':
+        case 'name': {
           // 根据不同类型获取名称
           const aName = getName(a);
           const bName = getName(b);
           comparison = aName.localeCompare(bName, 'zh-CN');
           break;
-        case 'category':
+        }
+        case 'category': {
           const aCat = getCategory(a);
           const bCat = getCategory(b);
           comparison = aCat.localeCompare(bCat, 'zh-CN');
           break;
+        }
         case 'created':
           comparison = (a.createdAt || '').localeCompare(b.createdAt || '');
           break;

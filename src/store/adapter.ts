@@ -95,13 +95,8 @@ export const useAppStore = () => {
   const filteredHerbs = store.filteredMaterials.map(materialToHerb);
   const selectedHerb = store.selectedMaterial ? materialToHerb(store.selectedMaterial) : null;
   
-  // 适配比较列表（使用方剂比较）
-  const compareList = store.compareFormulas.map(f => {
-    // 找到第一个组分的材料作为代表
-    const firstSlice = store.getSliceById(f.components[0]?.sliceId);
-    const material = firstSlice ? store.getMaterialById(firstSlice.materialId) : null;
-    return material ? materialToHerb(material) : null;
-  }).filter((h): h is Herb => h !== null);
+  // 比较列表暂时返回空数组，因为Material比较功能未实现
+  const compareList: Herb[] = [];
   
   return {
     // 数据状态
@@ -178,31 +173,14 @@ export const useAppStore = () => {
     
     setSelectedExpert: store.setSelectedExpert,
     
+    // 比较功能暂时移除，因为新架构中Material没有比较功能
+    // TODO: 实现Material的比较功能或者移除相关UI
     addToCompare: (herb: Herb) => {
-      // 暂时使用一个模拟方剂
-      const mockFormula = {
-        id: `compare_${herb.id}`,
-        name: herb.name,
-        pinyin: herb.pinyin,
-        source: '比较视图',
-        category: herb.category,
-        components: [],
-        functions: herb.functions,
-        indications: herb.indications,
-        usage: {
-          preparationMethod: '',
-          dosageForm: '',
-          administration: ''
-        },
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-        version: '1.0.0'
-      };
-      store.addToCompareFormulas(mockFormula as any);
+      console.warn('Material comparison not implemented in new architecture');
     },
     
     removeFromCompare: (herbId: string) => {
-      store.removeFromCompareFormulas(`compare_${herbId}`);
+      console.warn('Material comparison not implemented in new architecture');
     },
     
     clearCompare: store.clearCompareFormulas,

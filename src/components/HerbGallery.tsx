@@ -17,7 +17,7 @@ const HerbGallery: React.FC = () => {
 
   // 排序和过滤逻辑
   const getSortedAndFilteredHerbs = () => {
-    let herbs = [...filteredHerbs];
+    const herbs = [...filteredHerbs];
 
     // 排序
     herbs.sort((a, b) => {
