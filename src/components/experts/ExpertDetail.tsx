@@ -27,7 +27,9 @@ export function ExpertDetail() {
   const recommendedHerbs = expert ? getHerbsByIds(expert.recommendedHerbs) : []
 
   const handleHerbClick = (herbId: string) => {
-    navigate(`/herbs/${herbId}`)
+    // Convert herb ID to material ID format
+    const materialId = herbId.replace('herb_', 'mat_')
+    navigate(`/herb/${materialId}`)
   }
 
   const handleViewGraph = () => {
@@ -108,7 +110,7 @@ export function ExpertDetail() {
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="herbs">
             <Leaf className="mr-2 h-4 w-4" />
-            推荐药材
+            相关药材
           </TabsTrigger>
           <TabsTrigger value="publications">
             <BookOpen className="mr-2 h-4 w-4" />

@@ -16,6 +16,7 @@
 
 - `src/components/HerbCard.tsx:68,94` - 卡片显示标题
 - `src/components/HerbDetail.tsx:81,101` - 详情页标题
+
 - `src/components/HerbCompare.tsx:150,252,273` - 比较视图显示
 - `src/components/ChinaMap.tsx:352,430` - 地图视图显示
 - `src/store/index.ts:126` - 搜索过滤

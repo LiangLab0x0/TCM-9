@@ -4,8 +4,8 @@ import { AnimatePresence } from 'framer-motion'
 import { initializeStore } from './store/useAppStore'
 import { ExpertList } from './components/experts/ExpertList'
 import { ExpertDetail } from './components/experts/ExpertDetail'
-import HerbGallery from './components/HerbGallery'
-import HerbDetail from './components/HerbDetail'
+import HerbsPage from './pages/HerbsPage'
+import HerbDetailPage from './pages/HerbDetailPage'
 import GraphView from './components/GraphView'
 import Navigation from './components/Navigation'
 
@@ -30,8 +30,8 @@ function App() {
               <Route path="/experts/:id" element={<ExpertDetail />} />
 
               {/* Herb Routes */}
-              <Route path="/herbs" element={<HerbGallery />} />
-              {/* <Route path="/herbs/:id" element={<HerbDetail />} /> */}
+              <Route path="/herbs" element={<HerbsPage />} />
+              <Route path="/herb/:id" element={<HerbDetailPage />} />
 
               {/* Graph View */}
               <Route path="/graph" element={<GraphView />} />
