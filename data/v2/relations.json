@@ -1,0 +1,98 @@
+[
+  {
+    "fromId": "sun_baohui",
+    "toId": "herb_1",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药鉴定"
+    }
+  },
+  {
+    "fromId": "sun_baohui",
+    "toId": "herb_2",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药鉴定"
+    }
+  },
+  {
+    "fromId": "sun_baohui",
+    "toId": "herb_3",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药鉴定"
+    }
+  },
+  {
+    "fromId": "niu_xiaolian",
+    "toId": "herb_4",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药检验"
+    }
+  },
+  {
+    "fromId": "niu_xiaolian",
+    "toId": "herb_5",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药检验"
+    }
+  },
+  {
+    "fromId": "niu_xiaolian",
+    "toId": "herb_6",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药检验"
+    }
+  },
+  {
+    "fromId": "niu_xiaolian",
+    "toId": "herb_7",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药检验"
+    }
+  },
+  {
+    "fromId": "duan_jiping",
+    "toId": "herb_7",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药标准研究"
+    }
+  },
+  {
+    "fromId": "duan_jiping",
+    "toId": "herb_8",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药标准研究"
+    }
+  },
+  {
+    "fromId": "duan_jiping",
+    "toId": "herb_9",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药标准研究"
+    }
+  },
+  {
+    "fromId": "duan_jiping",
+    "toId": "herb_10",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药标准研究"
+    }
+  },
+  {
+    "fromId": "duan_jiping",
+    "toId": "herb_11",
+    "type": "EXPERT_RECOMMENDS_HERB",
+    "metadata": {
+      "reason": "中药标准研究"
+    }
+  }
+]

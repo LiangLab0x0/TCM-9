@@ -1,77 +1,77 @@
-import React, { useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { useAppStore, initializeStore } from './store';
-import Navigation from './components/Navigation';
-import HerbGallery from './components/HerbGallery';
-import HerbDetail from './components/HerbDetail';
-import HerbCompare from './components/HerbCompare';
-import ChinaMap from './components/ChinaMap';
-import ExpertsList from './components/ExpertsList';
-import ExpertDetail from './components/ExpertDetail';
-import GraphView from './components/GraphView';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import { initializeStore } from './store/useAppStore'
+import { ExpertList } from './components/experts/ExpertList'
+import { ExpertDetail } from './components/experts/ExpertDetail'
+import HerbGallery from './components/HerbGallery'
+import HerbDetail from './components/HerbDetail'
+import GraphView from './components/GraphView'
+import Navigation from './components/Navigation'
 
 function App() {
-  const { 
-    currentView, 
-    selectedHerb,
-    selectedExpert
-  } = useAppStore();
-
-  // 初始化加载数据
+  // Initialize store on mount
   useEffect(() => {
-    initializeStore();
-  }, []);
-
-  const renderContent = () => {
-    switch (currentView) {
-      case 'detail':
-        return selectedHerb ? <HerbDetail herb={selectedHerb} /> : <HerbGallery />;
-      
-      case 'compare':
-        return <HerbCompare />;
-      
-      case 'map':
-        return <ChinaMap />;
-      
-      case 'experts':
-        return <ExpertsList />;
-      
-      case 'expert-detail':
-        return selectedExpert ? <ExpertDetail expert={selectedExpert} /> : <ExpertsList />;
-      
-      case 'graph':
-        return <GraphView />;
-      
-      case 'gallery':
-      default:
-        return <HerbGallery />;
-    }
-  };
+    initializeStore()
+  }, [])
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navigation />
-      <AnimatePresence mode="wait">
-        {renderContent()}
-      </AnimatePresence>
-      
-      {/* 背景装饰 - 更加专业的设计 */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-green-200 rounded-full opacity-5 animate-pulse" />
-        <div className="absolute top-40 right-20 w-24 h-24 bg-blue-200 rounded-full opacity-5 animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-40 left-20 w-40 h-40 bg-purple-200 rounded-full opacity-5 animate-pulse" style={{ animationDelay: '4s' }} />
-        <div className="absolute bottom-20 right-10 w-28 h-28 bg-indigo-200 rounded-full opacity-5 animate-pulse" style={{ animationDelay: '6s' }} />
-        
-        {/* 中医药元素装饰 */}
-        <div className="absolute top-1/4 right-1/4 w-16 h-16 opacity-3">
-          <div className="w-full h-full border-2 border-green-300 rounded-full animate-spin" style={{ animationDuration: '20s' }}>
-            <div className="absolute inset-2 border border-green-400 rounded-full"></div>
-            <div className="absolute inset-4 bg-green-200 rounded-full"></div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-50">
+        <Navigation />
+        <main className="container mx-auto px-4 py-8">
+          <AnimatePresence mode="wait">
+            <Routes>
+              {/* Home - Expert List */}
+              <Route path="/" element={<ExpertList />} />
+
+              {/* Expert Routes */}
+              <Route path="/experts" element={<Navigate to="/" replace />} />
+              <Route path="/experts/:id" element={<ExpertDetail />} />
+
+              {/* Herb Routes */}
+              <Route path="/herbs" element={<HerbGallery />} />
+              {/* <Route path="/herbs/:id" element={<HerbDetail />} /> */}
+
+              {/* Graph View */}
+              <Route path="/graph" element={<GraphView />} />
+
+              {/* Fallback */}
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </AnimatePresence>
+        </main>
+
+        {/* Background decorations */}
+        <div className="pointer-events-none fixed inset-0 z-0">
+          <div className="absolute left-10 top-20 h-32 w-32 animate-pulse rounded-full bg-green-200 opacity-5" />
+          <div
+            className="absolute right-20 top-40 h-24 w-24 animate-pulse rounded-full bg-blue-200 opacity-5"
+            style={{ animationDelay: '2s' }}
+          />
+          <div
+            className="absolute bottom-40 left-20 h-40 w-40 animate-pulse rounded-full bg-purple-200 opacity-5"
+            style={{ animationDelay: '4s' }}
+          />
+          <div
+            className="absolute bottom-20 right-10 h-28 w-28 animate-pulse rounded-full bg-indigo-200 opacity-5"
+            style={{ animationDelay: '6s' }}
+          />
+
+          {/* TCM decoration elements */}
+          <div className="absolute right-1/4 top-1/4 h-16 w-16 opacity-3">
+            <div
+              className="h-full w-full animate-spin rounded-full border-2 border-green-300"
+              style={{ animationDuration: '20s' }}
+            >
+              <div className="absolute inset-2 rounded-full border border-green-400"></div>
+              <div className="absolute inset-4 rounded-full bg-green-200"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

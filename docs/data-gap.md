@@ -4,25 +4,25 @@
 
 ### Existing Data
 
-| Entity Type | Current Count | Data Location |
-|-------------|---------------|---------------|
-| Material (药材) | 50 | `/public/data/new-schema/materials.json` |
-| Slice (饮片) | 50 | `/public/data/new-schema/slices.json` |
-| Formula (方剂) | 0 | `/public/data/new-schema/formulas.json` (empty) |
-| Granule (颗粒) | 0 | `/public/data/new-schema/granules.json` (empty) |
-| Medicine (成药) | 0 | `/public/data/new-schema/medicines.json` (empty) |
+| Entity Type     | Current Count | Data Location                                    |
+| --------------- | ------------- | ------------------------------------------------ |
+| Material (药材) | 50            | `/public/data/new-schema/materials.json`         |
+| Slice (饮片)    | 50            | `/public/data/new-schema/slices.json`            |
+| Formula (方剂)  | 0             | `/public/data/new-schema/formulas.json` (empty)  |
+| Granule (颗粒)  | 0             | `/public/data/new-schema/granules.json` (empty)  |
+| Medicine (成药) | 0             | `/public/data/new-schema/medicines.json` (empty) |
 
 ### Missing Entities & Minimum Requirements
 
-| Entity Type | Required Min | Suggested Examples | Cross-Chain Relations |
-|-------------|--------------|-------------------|----------------------|
-| **Plant (原植物)** | 2 | 黄芩 (Scutellaria baicalensis), 丹参 (Salvia miltiorrhiza) | → Link to Material |
-| **Material (药材)** | 4 | 黄芩、丹参、甘草、连翘 | → Each has ≥1 Slice |
-| **Slice (饮片)** | 4 | 炒黄芩片、酒黄芩片、生甘草片、炙甘草片 | → Link to GranuleIngredient |
-| **GranuleIngredient (配方颗粒成分)** | 2 | 黄芩配方颗粒、丹参配方颗粒 | → Reference Slice |
-| **GranuleFormula (配方颗粒)** | 2 | 清热解毒颗粒、活血化瘀颗粒 | → Contains GranuleIngredients |
-| **PatentMedicine (中成药)** | 2 | 丹参滴丸, 清热解毒口服液 | → Reference Formula/GranuleFormula |
-| **Formula (方剂)** | 2 | 黄芩汤, 丹参饮 | → Components include Slices |
+| Entity Type                          | Required Min | Suggested Examples                                         | Cross-Chain Relations              |
+| ------------------------------------ | ------------ | ---------------------------------------------------------- | ---------------------------------- |
+| **Plant (原植物)**                   | 2            | 黄芩 (Scutellaria baicalensis), 丹参 (Salvia miltiorrhiza) | → Link to Material                 |
+| **Material (药材)**                  | 4            | 黄芩、丹参、甘草、连翘                                     | → Each has ≥1 Slice                |
+| **Slice (饮片)**                     | 4            | 炒黄芩片、酒黄芩片、生甘草片、炙甘草片                     | → Link to GranuleIngredient        |
+| **GranuleIngredient (配方颗粒成分)** | 2            | 黄芩配方颗粒、丹参配方颗粒                                 | → Reference Slice                  |
+| **GranuleFormula (配方颗粒)**        | 2            | 清热解毒颗粒、活血化瘀颗粒                                 | → Contains GranuleIngredients      |
+| **PatentMedicine (中成药)**          | 2            | 丹参滴丸, 清热解毒口服液                                   | → Reference Formula/GranuleFormula |
+| **Formula (方剂)**                   | 2            | 黄芩汤, 丹参饮                                             | → Components include Slices        |
 
 ### Data Structure Issues
 

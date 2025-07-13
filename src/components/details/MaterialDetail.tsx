@@ -1,23 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, MapPin, Thermometer, Leaf, Clock, Package, AlertCircle } from 'lucide-react';
-import { Material, getQiTheme } from '../../types/tcm-core';
-import { useNewAppStore } from '../../store';
-import { Card } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { Timeline, TimelineItem } from '../ui/timeline';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { ArrowLeft, MapPin, Thermometer, Leaf, Clock, Package, AlertCircle } from 'lucide-react'
+import type { Material } from '../../types/tcm-core'
+import { getQiTheme } from '../../types/tcm-core'
+import { useNewAppStore } from '../../store'
+import { Card } from '../ui/card'
+import { Badge } from '../ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
+import { Timeline, TimelineItem } from '../ui/timeline'
 
 interface MaterialDetailProps {
-  material: Material;
+  material: Material
 }
 
 export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
-  const { setCurrentView, slices } = useNewAppStore();
-  const theme = getQiTheme(material.qi);
-  
+  const { setCurrentView, slices } = useNewAppStore()
+  const theme = getQiTheme(material.qi)
+
   // 获取该药材相关的饮片
-  const relatedSlices = slices.filter(slice => slice.materialId === material.id);
+  const relatedSlices = slices.filter((slice) => slice.materialId === material.id)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -48,10 +49,12 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                   alt={material.names.cn}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    e.currentTarget.src = '/images/placeholder.jpg';
+                    e.currentTarget.src = '/images/placeholder.jpg'
                   }}
                 />
-                <div className={`absolute top-4 right-4 px-4 py-2 rounded-full ${theme.bg} ${theme.text} font-medium`}>
+                <div
+                  className={`absolute top-4 right-4 px-4 py-2 rounded-full ${theme.bg} ${theme.text} font-medium`}
+                >
                   <Thermometer className="w-4 h-4 inline mr-2" />
                   {material.qi}
                 </div>
@@ -64,7 +67,7 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                 {material.names.english && (
                   <p className="text-lg text-gray-500 mb-4">{material.names.english}</p>
                 )}
-                
+
                 <div className="space-y-4 mt-6">
                   {/* 归经 */}
                   <div>
@@ -170,7 +173,7 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                   <Package className="inline w-5 h-5 mr-2" />
                   饮片炮制流程
                 </h3>
-                
+
                 {relatedSlices.length > 0 ? (
                   <div className="space-y-6">
                     {relatedSlices.map((slice, index) => (
@@ -183,18 +186,18 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                       >
                         {/* 时间线节点 */}
                         <div className="absolute left-0 top-0 w-4 h-4 bg-blue-500 rounded-full -translate-x-1/2 border-2 border-white" />
-                        
+
                         {/* 饮片信息卡片 */}
                         <Card className="p-4 shadow-sm hover:shadow-md transition-shadow">
                           <h4 className="font-semibold text-lg mb-2">{slice.processing.method}</h4>
                           <p className="text-gray-600 mb-3">饮片</p>
-                          
+
                           {/* 炮制方法 */}
                           <div className="mb-3">
                             <span className="font-medium text-gray-700">炮制方法：</span>
                             <span className="ml-2 text-gray-600">{slice.processing.method}</span>
                           </div>
-                          
+
                           {/* 炮制说明 */}
                           {slice.processing.note && (
                             <div className="mt-3">
@@ -202,24 +205,29 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                               <p className="mt-1 text-sm text-gray-600">{slice.processing.note}</p>
                             </div>
                           )}
-                          
+
                           {/* 炮制时长 */}
                           {slice.processing.duration && (
                             <div className="mt-3 flex items-center text-sm text-gray-500">
                               <Clock className="w-4 h-4 mr-1" />
-                              炮制时长：{slice.processing.duration.value}{slice.processing.duration.unit}
+                              炮制时长：{slice.processing.duration.value}
+                              {slice.processing.duration.unit}
                             </div>
                           )}
-                          
+
                           {/* 性味变化 */}
                           {slice.propertyChanges && (
                             <div className="mt-3 p-3 bg-blue-50 rounded-lg">
                               <span className="text-sm font-medium text-blue-700">性味变化：</span>
                               {slice.propertyChanges.enhanced && (
-                                <p className="text-sm text-blue-600 mt-1">增强：{slice.propertyChanges.enhanced.join('、')}</p>
+                                <p className="text-sm text-blue-600 mt-1">
+                                  增强：{slice.propertyChanges.enhanced.join('、')}
+                                </p>
                               )}
                               {slice.propertyChanges.reduced && (
-                                <p className="text-sm text-blue-600">减弱：{slice.propertyChanges.reduced.join('、')}</p>
+                                <p className="text-sm text-blue-600">
+                                  减弱：{slice.propertyChanges.reduced.join('、')}
+                                </p>
                               )}
                             </div>
                           )}
@@ -248,12 +256,20 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                           <h4 className="font-medium text-lg">{region.region}</h4>
                           <p className="text-gray-600">{region.province}</p>
                         </div>
-                        <Badge variant={
-                          region.quality === 'excellent' ? 'default' :
-                          region.quality === 'good' ? 'secondary' : 'outline'
-                        }>
-                          {region.quality === 'excellent' ? '优质' :
-                           region.quality === 'good' ? '良好' : '一般'}
+                        <Badge
+                          variant={
+                            region.quality === 'excellent'
+                              ? 'default'
+                              : region.quality === 'good'
+                                ? 'secondary'
+                                : 'outline'
+                          }
+                        >
+                          {region.quality === 'excellent'
+                            ? '优质'
+                            : region.quality === 'good'
+                              ? '良好'
+                              : '一般'}
                         </Badge>
                       </div>
                       {region.annualProduction && (
@@ -266,9 +282,7 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                           最佳采收月份：{region.bestHarvestMonths.join('、')} 月
                         </p>
                       )}
-                      {region.notes && (
-                        <p className="text-sm text-gray-600 mt-2">{region.notes}</p>
-                      )}
+                      {region.notes && <p className="text-sm text-gray-600 mt-2">{region.notes}</p>}
                     </div>
                   ))}
                 </div>
@@ -296,9 +310,7 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                           含量：{comp.content.min}% - {comp.content.max}%
                         </p>
                         {comp.bioactivity && (
-                          <p className="text-sm text-gray-600 mt-1">
-                            生物活性：{comp.bioactivity}
-                          </p>
+                          <p className="text-sm text-gray-600 mt-1">生物活性：{comp.bioactivity}</p>
                         )}
                       </div>
                     ))}
@@ -321,9 +333,7 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
                         <p className="text-sm text-gray-600 mt-1">
                           标准值：{standard.specification}
                         </p>
-                        <p className="text-sm text-gray-500">
-                          检测方法：{standard.method}
-                        </p>
+                        <p className="text-sm text-gray-500">检测方法：{standard.method}</p>
                       </div>
                     ))}
                   </div>
@@ -336,5 +346,5 @@ export const MaterialDetail: React.FC<MaterialDetailProps> = ({ material }) => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+}

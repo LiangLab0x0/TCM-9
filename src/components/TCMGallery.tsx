@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Grid, List, SortAsc, SortDesc, Filter } from 'lucide-react';
-import { useNewAppStore } from '../store';
-import { GalleryGrid } from './GalleryGrid';
-import { MaterialCard } from './cards/MaterialCard';
-import { SliceCard } from './cards/SliceCard';
-import { FormulaCard } from './cards/FormulaCard';
-import { GranuleCard } from './cards/GranuleCard';
-import { MedicineCard } from './cards/MedicineCard';
-import { EntityType } from '../store/slices/ui';
-import SearchAndFilters from './SearchAndFilters';
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { Grid, List, SortAsc, SortDesc, Filter } from 'lucide-react'
+import { useNewAppStore } from '../store'
+import { GalleryGrid } from './GalleryGrid'
+import { MaterialCard } from './cards/MaterialCard'
+import { SliceCard } from './cards/SliceCard'
+import { FormulaCard } from './cards/FormulaCard'
+import { GranuleCard } from './cards/GranuleCard'
+import { MedicineCard } from './cards/MedicineCard'
+import type { EntityType } from '../store/slices/ui'
+import SearchAndFilters from './SearchAndFilters'
 
-type SortOption = 'name' | 'category' | 'created';
-type SortOrder = 'asc' | 'desc';
-type ViewMode = 'grid' | 'list';
+type SortOption = 'name' | 'category' | 'created'
+type SortOrder = 'asc' | 'desc'
+type ViewMode = 'grid' | 'list'
 
 /**
  * 新版画廊组件 - 支持多实体类型切换
@@ -28,120 +28,128 @@ export const TCMGallery: React.FC = () => {
     formulas,
     granules,
     medicines,
-    isLoading
-  } = useNewAppStore();
+    isLoading,
+  } = useNewAppStore()
 
-  const [sortBy, setSortBy] = useState<SortOption>('name');
-  const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
-  const [viewMode, setViewMode] = useState<ViewMode>('grid');
-  const [showFilters, setShowFilters] = useState(false);
-  
+  const [sortBy, setSortBy] = useState<SortOption>('name')
+  const [sortOrder, setSortOrder] = useState<SortOrder>('asc')
+  const [viewMode, setViewMode] = useState<ViewMode>('grid')
+  const [showFilters, setShowFilters] = useState(false)
+
   // 实体类型选项 - 只显示有数据的类型
   const allEntityTypes = [
     { value: 'material' as EntityType, label: '药材', count: materials.length },
     { value: 'slice' as EntityType, label: '饮片', count: slices.length },
     { value: 'formula' as EntityType, label: '方剂', count: formulas.length },
     { value: 'granule' as EntityType, label: '配方颗粒', count: granules.length },
-    { value: 'medicine' as EntityType, label: '中成药', count: medicines.length }
-  ];
-  
+    { value: 'medicine' as EntityType, label: '中成药', count: medicines.length },
+  ]
+
   // 过滤出有数据的实体类型
-  const entityTypes = allEntityTypes.filter(type => type.count > 0);
-  
+  const entityTypes = allEntityTypes.filter((type) => type.count > 0)
+
   // 确保当前选中的类型有数据，否则切换到第一个有数据的类型
   useEffect(() => {
     const currentTypeHasData = allEntityTypes.find(
-      type => type.value === currentEntityType && type.count > 0
-    );
-    
+      (type) => type.value === currentEntityType && type.count > 0
+    )
+
     if (!currentTypeHasData && entityTypes.length > 0) {
-      setCurrentEntityType(entityTypes[0].value);
+      setCurrentEntityType(entityTypes[0].value)
     }
-  }, [materials.length, slices.length, formulas.length, granules.length, medicines.length, currentEntityType, setCurrentEntityType]);
+  }, [
+    materials.length,
+    slices.length,
+    formulas.length,
+    granules.length,
+    medicines.length,
+    currentEntityType,
+    setCurrentEntityType,
+  ])
 
   // 获取当前显示的数据
   const getCurrentItems = () => {
     switch (currentEntityType) {
       case 'material':
-        return sortItems(filteredMaterials);
+        return sortItems(filteredMaterials)
       case 'slice':
-        return sortItems(slices);
+        return sortItems(slices)
       case 'formula':
-        return sortItems(formulas);
+        return sortItems(formulas)
       case 'granule':
-        return sortItems(granules);
+        return sortItems(granules)
       case 'medicine':
-        return sortItems(medicines);
+        return sortItems(medicines)
       default:
-        return [];
+        return []
     }
-  };
+  }
 
   // 排序函数
   const sortItems = <T extends { id: string; createdAt?: string }>(items: T[]): T[] => {
-    const sorted = [...items];
-    
+    const sorted = [...items]
+
     sorted.sort((a, b) => {
-      let comparison = 0;
-      
+      let comparison = 0
+
       switch (sortBy) {
         case 'name': {
           // 根据不同类型获取名称
-          const aName = getName(a);
-          const bName = getName(b);
-          comparison = aName.localeCompare(bName, 'zh-CN');
-          break;
+          const aName = getName(a)
+          const bName = getName(b)
+          comparison = aName.localeCompare(bName, 'zh-CN')
+          break
         }
         case 'category': {
-          const aCat = getCategory(a);
-          const bCat = getCategory(b);
-          comparison = aCat.localeCompare(bCat, 'zh-CN');
-          break;
+          const aCat = getCategory(a)
+          const bCat = getCategory(b)
+          comparison = aCat.localeCompare(bCat, 'zh-CN')
+          break
         }
         case 'created':
-          comparison = (a.createdAt || '').localeCompare(b.createdAt || '');
-          break;
+          comparison = (a.createdAt || '').localeCompare(b.createdAt || '')
+          break
       }
 
-      return sortOrder === 'asc' ? comparison : -comparison;
-    });
+      return sortOrder === 'asc' ? comparison : -comparison
+    })
 
-    return sorted;
-  };
+    return sorted
+  }
 
   // 获取名称的辅助函数
   const getName = (item: any): string => {
-    if ('names' in item) return item.names.cn;
-    if ('name' in item) return item.name;
-    return item.id;
-  };
+    if ('names' in item) return item.names.cn
+    if ('name' in item) return item.name
+    return item.id
+  }
 
   // 获取类别的辅助函数
   const getCategory = (item: any): string => {
-    if ('category' in item) return item.category;
-    if ('processing' in item) return item.processing.category;
-    return '';
-  };
+    if ('category' in item) return item.category
+    if ('processing' in item) return item.processing.category
+    return ''
+  }
 
   // 渲染卡片
   const renderCard = (item: any) => {
     switch (currentEntityType) {
       case 'material':
-        return <MaterialCard material={item} />;
+        return <MaterialCard material={item} />
       case 'slice':
-        return <SliceCard slice={item} />;
+        return <SliceCard slice={item} />
       case 'formula':
-        return <FormulaCard formula={item} />;
+        return <FormulaCard formula={item} />
       case 'granule':
-        return <GranuleCard granule={item} />;
+        return <GranuleCard granule={item} />
       case 'medicine':
-        return <MedicineCard medicine={item} />;
+        return <MedicineCard medicine={item} />
       default:
-        return null;
+        return null
     }
-  };
+  }
 
-  const items = getCurrentItems();
+  const items = getCurrentItems()
 
   return (
     <motion.div
@@ -153,10 +161,10 @@ export const TCMGallery: React.FC = () => {
       {/* 标题和实体类型切换 */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">中医药知识图谱</h1>
-        
+
         {/* 实体类型标签 - 只显示有数据的 */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {entityTypes.map(type => (
+          {entityTypes.map((type) => (
             <button
               key={type.value}
               onClick={() => setCurrentEntityType(type.value)}
@@ -240,8 +248,8 @@ export const TCMGallery: React.FC = () => {
         renderCard={renderCard}
         viewMode={viewMode}
         isLoading={isLoading}
-        emptyMessage={`暂无${entityTypes.find(t => t.value === currentEntityType)?.label}数据`}
+        emptyMessage={`暂无${entityTypes.find((t) => t.value === currentEntityType)?.label}数据`}
       />
     </motion.div>
-  );
-};
+  )
+}

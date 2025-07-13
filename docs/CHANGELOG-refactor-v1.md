@@ -9,14 +9,16 @@
 ### 1. 数据模型重构
 
 #### 新增文件
+
 - `src/types/tcm-core.ts` - 新的标准化数据模型
   - Material（药材）
-  - Slice（饮片）  
+  - Slice（饮片）
   - Formula（方剂）
   - GranuleIngredient（配方颗粒）
   - PatentMedicine（中成药）
 
 #### 数据迁移
+
 - `scripts/convert-herb-to-new-schema.ts` - 数据迁移脚本
 - 生成新数据文件到 `public/data/new-schema/`
   - materials.json (50条)
@@ -27,6 +29,7 @@
 ### 2. 状态管理重构
 
 #### 新的Store结构
+
 ```
 src/store/
 ├── index.ts (主入口，提供向后兼容)
@@ -42,6 +45,7 @@ src/store/
 ```
 
 #### 关键特性
+
 - 多slice架构，便于维护和扩展
 - 完全向后兼容的API
 - 支持并行数据加载
@@ -50,6 +54,7 @@ src/store/
 ### 3. UI组件更新
 
 #### 新增组件
+
 - `GalleryGrid.tsx` - 通用画廊网格组件
 - `TCMGallery.tsx` - 多实体类型画廊（待集成）
 - `cards/MaterialCard.tsx` - 药材卡片
@@ -58,20 +63,21 @@ src/store/
 - `GraphView.tsx` - 知识图谱视图（占位）
 
 #### 更新组件
+
 - Navigation.tsx - 新增"知识图谱"入口
 - App.tsx - 支持graph视图路由
 
 ### 4. 数据映射规则
 
-| 旧字段 (Herb) | 新实体 | 新字段 | 说明 |
-|-------------|--------|--------|------|
-| id, name, pinyin | Material | 同名 | 直接映射 |
-| nature | Material | qi | 转换为标准四气 |
-| taste | Material | flavor | 转换为标准五味 |
-| origin | Material | origin[] | 扩展为AuthenticRegion |
-| processing[] | Slice | processing.method | 每种炮制方法生成独立Slice |
-| functions | Material | functions | 保留在Material |
-| indications | Material/Formula | indications | 根据是否有方剂出处分配 |
+| 旧字段 (Herb)    | 新实体           | 新字段            | 说明                      |
+| ---------------- | ---------------- | ----------------- | ------------------------- |
+| id, name, pinyin | Material         | 同名              | 直接映射                  |
+| nature           | Material         | qi                | 转换为标准四气            |
+| taste            | Material         | flavor            | 转换为标准五味            |
+| origin           | Material         | origin[]          | 扩展为AuthenticRegion     |
+| processing[]     | Slice            | processing.method | 每种炮制方法生成独立Slice |
+| functions        | Material         | functions         | 保留在Material            |
+| indications      | Material/Formula | indications       | 根据是否有方剂出处分配    |
 
 ## Breaking Changes
 
@@ -80,18 +86,21 @@ src/store/
 ## Migration Guide
 
 ### 第一阶段（已完成）
+
 1. ✅ 创建新数据模型
 2. ✅ 实现数据迁移脚本
 3. ✅ 重构状态管理
 4. ✅ 创建适配器保证兼容性
 
 ### 第二阶段（进行中）
+
 1. 🔄 逐步迁移组件使用新API
 2. ⏳ 实现Detail组件的多实体支持
 3. ⏳ 更新Map组件使用authenticRegions
 4. ⏳ 集成react-flow实现Graph视图
 
 ### 第三阶段（计划中）
+
 1. ⏳ 移除适配器层
 2. ⏳ 完全迁移到新数据模型
 3. ⏳ 实现颗粒和中成药功能

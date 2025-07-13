@@ -1,50 +1,49 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ArrowLeft, Star, Heart, Plus, Minus, MapPin, 
-  Zap, Pill, AlertTriangle, BookOpen, Users
-} from 'lucide-react';
-import { Herb, getNatureTheme, getProfessionalLevel } from '../types';
-import { useAppStore } from '../store';
+import React from 'react'
+import { motion } from 'framer-motion'
+import {
+  ArrowLeft,
+  Star,
+  Heart,
+  Plus,
+  Minus,
+  MapPin,
+  Zap,
+  Pill,
+  AlertTriangle,
+  BookOpen,
+  Users,
+} from 'lucide-react'
+import type { Herb } from '../types'
+import { getNatureTheme, getProfessionalLevel } from '../types'
+import { useAppStore } from '../store'
 
 interface HerbDetailProps {
-  herb: Herb;
+  herb: Herb
 }
 
 const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
-  const {
-    compareList,
-    herbs,
-    addToCompare,
-    removeFromCompare,
-    setCurrentView
-  } = useAppStore();
+  const { compareList, herbs, addToCompare, removeFromCompare, setCurrentView } = useAppStore()
 
-  const theme = getNatureTheme(herb.nature);
-  const professional = getProfessionalLevel(herb);
-  const isInCompare = compareList.some(h => h.id === herb.id);
+  const theme = getNatureTheme(herb.nature)
+  const professional = getProfessionalLevel(herb)
+  const isInCompare = compareList.some((h) => h.id === herb.id)
 
   // 相关药材推荐（相同类别或性味）
   const relatedHerbs = herbs
-    .filter(h => 
-      h.id !== herb.id && 
-      (h.category === herb.category || h.nature === herb.nature)
-    )
-    .slice(0, 4);
+    .filter((h) => h.id !== herb.id && (h.category === herb.category || h.nature === herb.nature))
+    .slice(0, 4)
 
   const handleBack = () => {
-    setCurrentView('gallery');
-  };
-
-
+    setCurrentView('gallery')
+  }
 
   const handleToggleCompare = () => {
     if (isInCompare) {
-      removeFromCompare(herb.id);
+      removeFromCompare(herb.id)
     } else {
-      addToCompare(herb);
+      addToCompare(herb)
     }
-  };
+  }
 
   return (
     <motion.div
@@ -81,18 +80,19 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
                   alt={herb.name}
                   className="w-full h-80 object-cover object-center"
                   onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/images/placeholder-herb.jpg';
+                    const target = e.target as HTMLImageElement
+                    target.src = '/images/placeholder-herb.jpg'
                   }}
                 />
-                
+
                 {/* 专业等级角标 */}
-                <div className={`absolute top-4 left-4 px-3 py-2 rounded-lg text-sm font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}>
+                <div
+                  className={`absolute top-4 left-4 px-3 py-2 rounded-lg text-sm font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}
+                >
                   <span>{professional.level}</span>
                 </div>
 
                 {/* 收藏状态 */}
-
               </div>
 
               {/* 基本信息 */}
@@ -122,7 +122,7 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
                   <p className="text-sm text-gray-500 mb-2">药味</p>
                   <div className="flex flex-wrap gap-2">
                     {herb.taste.map((taste, index) => (
-                      <span 
+                      <span
                         key={index}
                         className={`px-3 py-1 rounded-full text-sm font-medium ${theme.secondary} ${theme.accent}`}
                       >
@@ -141,19 +141,23 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
 
                 {/* 操作按钮 */}
                 <div className="space-y-3">
-
                   <div className="flex gap-2">
                     <button
                       onClick={handleToggleCompare}
                       className={`
                         flex-1 py-2 px-4 rounded-lg font-medium transition-colors
-                        ${isInCompare 
-                          ? 'bg-blue-100 text-blue-700 border border-blue-200' 
-                          : 'bg-gray-100 text-gray-700 border border-gray-200'
+                        ${
+                          isInCompare
+                            ? 'bg-blue-100 text-blue-700 border border-blue-200'
+                            : 'bg-gray-100 text-gray-700 border border-gray-200'
                         }
                       `}
                     >
-                      {isInCompare ? <Minus className="w-4 h-4 inline mr-1" /> : <Plus className="w-4 h-4 inline mr-1" />}
+                      {isInCompare ? (
+                        <Minus className="w-4 h-4 inline mr-1" />
+                      ) : (
+                        <Plus className="w-4 h-4 inline mr-1" />
+                      )}
                       {isInCompare ? '移出对比' : '加入对比'}
                     </button>
                   </div>
@@ -231,7 +235,7 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {herb.origin.map((place, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="px-3 py-2 bg-purple-50 text-purple-800 rounded-lg font-medium"
                     >
@@ -256,7 +260,7 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {herb.meridians.map((meridian, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="px-3 py-2 bg-orange-50 text-orange-800 rounded-lg font-medium"
                     >
@@ -312,7 +316,7 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
                   className="p-4 border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all cursor-pointer"
                   onClick={() => {
                     // 这里可以切换到相关药材的详情页
-                    console.log('Navigate to', relatedHerb.name);
+                    console.log('Navigate to', relatedHerb.name)
                   }}
                 >
                   <img
@@ -320,8 +324,8 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
                     alt={relatedHerb.name}
                     className="w-full h-24 object-cover rounded-lg mb-2"
                     onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = '/images/placeholder-herb.jpg';
+                      const target = e.target as HTMLImageElement
+                      target.src = '/images/placeholder-herb.jpg'
                     }}
                   />
                   <h3 className="font-bold text-gray-800 text-sm">{relatedHerb.name}</h3>
@@ -333,7 +337,7 @@ const HerbDetail: React.FC<HerbDetailProps> = ({ herb }) => {
         )}
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default HerbDetail;
+export default HerbDetail

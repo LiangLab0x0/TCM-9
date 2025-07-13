@@ -1,21 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Leaf, MapPin, Thermometer } from 'lucide-react';
-import { Material, getQiTheme } from '../../types/tcm-core';
-import { useNewAppStore } from '../../store';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Leaf, MapPin, Thermometer } from 'lucide-react'
+import type { Material } from '../../types/tcm-core'
+import { getQiTheme } from '../../types/tcm-core'
+import { useNewAppStore } from '../../store'
 
 interface MaterialCardProps {
-  material: Material;
+  material: Material
 }
 
 export const MaterialCard: React.FC<MaterialCardProps> = ({ material }) => {
-  const { setSelectedMaterial, setCurrentView } = useNewAppStore();
-  const theme = getQiTheme(material.qi);
+  const { setSelectedMaterial, setCurrentView } = useNewAppStore()
+  const theme = getQiTheme(material.qi)
 
   const handleClick = () => {
-    setSelectedMaterial(material);
-    setCurrentView('detail');
-  };
+    setSelectedMaterial(material)
+    setCurrentView('detail')
+  }
 
   return (
     <motion.div
@@ -31,7 +32,7 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material }) => {
             alt={material.names.cn}
             className="w-full h-full object-cover"
             onError={(e) => {
-              e.currentTarget.style.display = 'none';
+              e.currentTarget.style.display = 'none'
             }}
           />
         ) : (
@@ -39,9 +40,11 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material }) => {
             <Leaf className="w-16 h-16 text-green-300" />
           </div>
         )}
-        
+
         {/* 四气标签 */}
-        <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium ${theme.bg} ${theme.text}`}>
+        <div
+          className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium ${theme.bg} ${theme.text}`}
+        >
           <Thermometer className="w-3 h-3 inline mr-1" />
           {material.qi}
         </div>
@@ -83,12 +86,15 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material }) => {
           <div className="flex items-center text-xs text-gray-500">
             <MapPin className="w-3 h-3 mr-1" />
             <span>
-              {material.origin.slice(0, 2).map(o => o.region).join('、')}
+              {material.origin
+                .slice(0, 2)
+                .map((o) => o.region)
+                .join('、')}
               {material.origin.length > 2 && `等${material.origin.length}地`}
             </span>
           </div>
         )}
       </div>
     </motion.div>
-  );
-};
+  )
+}

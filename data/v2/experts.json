@@ -1,0 +1,95 @@
+[
+  {
+    "id": "sun_baohui",
+    "createdAt": "2025-07-13T20:41:26.496Z",
+    "updatedAt": "2025-07-13T20:41:26.496Z",
+    "name": "孙宝惠",
+    "title": "国家级中医药传承工作室专家",
+    "institution": "河北化工医药职业技术学院",
+    "bio": "原河北省药品检验所主任中药师 从事中药鉴定工作50余年 建立河北化工医药职业技术学院传承工作室 培养传承人多批次",
+    "specialities": ["中药鉴定", "中药质量控制", "中药标准化研究"],
+    "yearsOfPractice": 61,
+    "publications": [
+      {
+        "id": "pub_1",
+        "title": "中药名称与应用手册",
+        "year": 2015
+      }
+    ],
+    "apprentices": [
+      {
+        "id": "apprentice_1",
+        "name": "牛小莲",
+        "title": "主任药师",
+        "institution": "河北省药品检验检测研究院"
+      },
+      {
+        "id": "apprentice_2",
+        "name": "段吉平",
+        "title": "主任药师、二级教授",
+        "institution": "河北化工医药职业技术学院"
+      },
+      {
+        "id": "apprentice_3",
+        "name": "赵晓春",
+        "title": "主任药师",
+        "institution": "河北省中医院"
+      },
+      {
+        "id": "apprentice_4",
+        "name": "郑玉光",
+        "title": "院长、博士生导师",
+        "institution": "河北化工医药职业技术学院"
+      },
+      {
+        "id": "apprentice_5",
+        "name": "郑倩",
+        "title": "副院长、主任中药师",
+        "institution": "石家庄市中医院"
+      },
+      {
+        "id": "apprentice_6",
+        "name": "相聪坤",
+        "title": "药学部副主任、主任中药师",
+        "institution": "河北省中医院"
+      },
+      {
+        "id": "apprentice_7",
+        "name": "王振江",
+        "title": "质量总监",
+        "institution": "以岭药业饮片公司"
+      }
+    ],
+    "recommendedHerbs": ["herb_1", "herb_2", "herb_3"],
+    "classicalFormulas": []
+  },
+  {
+    "id": "niu_xiaolian",
+    "createdAt": "2025-07-13T20:41:26.496Z",
+    "updatedAt": "2025-07-13T20:41:26.496Z",
+    "name": "牛小莲",
+    "title": "主任药师",
+    "institution": "河北省药品检验检测研究院",
+    "bio": "从事中药检验与研究39年 中药质量控制专家 孙宝惠传承工作室第三批传承人",
+    "specialities": ["中药检验", "质量研究", "检验技术"],
+    "publications": [],
+    "apprentices": [],
+    "recommendedHerbs": ["herb_4", "herb_5", "herb_6", "herb_7"],
+    "classicalFormulas": []
+  },
+  {
+    "id": "duan_jiping",
+    "createdAt": "2025-07-13T20:41:26.496Z",
+    "updatedAt": "2025-07-13T20:41:26.496Z",
+    "name": "段吉平",
+    "title": "主任药师、二级教授",
+    "institution": "河北化工医药职业技术学院",
+    "bio": "起草16个《中国药典》标准 中药标准化领域专家 孙宝惠传承工作室第三批传承人",
+    "specialities": ["中药标准研究", "药典标准制定", "质量控制"],
+    "yearsOfPractice": 42,
+    "publications": [],
+    "apprentices": [],
+    "recommendedHerbs": ["herb_7", "herb_8", "herb_9", "herb_10", "herb_11"],
+    "classicalFormulas": []
+  }
+]

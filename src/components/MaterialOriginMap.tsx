@@ -1,82 +1,81 @@
-import React, { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, MapPin, Info, Package } from 'lucide-react';
-import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from 'react-simple-maps';
-import { useNewAppStore } from '../store';
-import { Material, AuthenticRegion } from '../types/tcm-core';
-import { Card } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
+import React, { useMemo, useState } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowLeft, MapPin, Info, Package } from 'lucide-react'
+import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from 'react-simple-maps'
+import { useNewAppStore } from '../store'
+import type { Material, AuthenticRegion } from '../types/tcm-core'
+import { Card } from './ui/card'
+import { Badge } from './ui/badge'
+import { Button } from './ui/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip'
 
 // 中国地图 GeoJSON URL
-const geoUrl = "https://raw.githubusercontent.com/GoryMoon/StreamEnhancements/master/maps/china.json";
+const geoUrl =
+  'https://raw.githubusercontent.com/GoryMoon/StreamEnhancements/master/maps/china.json'
 
 // 质量等级颜色映射
 const qualityColors = {
   excellent: '#10b981', // green-500
-  good: '#3b82f6',      // blue-500
-  moderate: '#f59e0b'   // amber-500
-};
+  good: '#3b82f6', // blue-500
+  moderate: '#f59e0b', // amber-500
+}
 
 interface RegionInfo {
-  region: AuthenticRegion;
-  materials: Material[];
+  region: AuthenticRegion
+  materials: Material[]
 }
 
 export const MaterialOriginMap: React.FC = () => {
-  const { materials, setCurrentView, setSelectedMaterial } = useNewAppStore();
-  const [selectedRegion, setSelectedRegion] = useState<RegionInfo | null>(null);
-  const [mapCenter, setMapCenter] = useState<[number, number]>([104.1954, 35.8617]); // 中国中心点
-  const [mapZoom, setMapZoom] = useState(1);
+  const { materials, setCurrentView, setSelectedMaterial } = useNewAppStore()
+  const [selectedRegion, setSelectedRegion] = useState<RegionInfo | null>(null)
+  const [mapCenter, setMapCenter] = useState<[number, number]>([104.1954, 35.8617]) // 中国中心点
+  const [mapZoom, setMapZoom] = useState(1)
 
   // 聚合所有产地数据
   const regionData = useMemo(() => {
-    const regionMap = new Map<string, RegionInfo>();
+    const regionMap = new Map<string, RegionInfo>()
 
-    materials.forEach(material => {
-      material.origin.forEach(origin => {
+    materials.forEach((material) => {
+      material.origin.forEach((origin) => {
         if (origin.geoCoordinates) {
-          const key = `${origin.geoCoordinates.lat}-${origin.geoCoordinates.lng}`;
-          
+          const key = `${origin.geoCoordinates.lat}-${origin.geoCoordinates.lng}`
+
           if (!regionMap.has(key)) {
             regionMap.set(key, {
               region: origin,
-              materials: []
-            });
+              materials: [],
+            })
           }
-          
-          regionMap.get(key)!.materials.push(material);
-        }
-      });
-    });
 
-    return Array.from(regionMap.values());
-  }, [materials]);
+          regionMap.get(key)!.materials.push(material)
+        }
+      })
+    })
+
+    return Array.from(regionMap.values())
+  }, [materials])
 
   // 计算产地统计信息
   const stats = useMemo(() => {
-    const provinceCount = new Set(regionData.map(r => r.region.province)).size;
-    const totalProduction = regionData.reduce((sum, r) => 
-      sum + (r.region.annualProduction || 0), 0
-    );
-    const excellentCount = regionData.filter(r => r.region.quality === 'excellent').length;
+    const provinceCount = new Set(regionData.map((r) => r.region.province)).size
+    const totalProduction = regionData.reduce((sum, r) => sum + (r.region.annualProduction || 0), 0)
+    const excellentCount = regionData.filter((r) => r.region.quality === 'excellent').length
 
-    return { provinceCount, totalProduction, excellentCount };
-  }, [regionData]);
+    return { provinceCount, totalProduction, excellentCount }
+  }, [regionData])
 
   const handleMarkerClick = (regionInfo: RegionInfo) => {
-    setSelectedRegion(regionInfo);
+    setSelectedRegion(regionInfo)
     if (regionInfo.region.geoCoordinates) {
-      setMapCenter([regionInfo.region.geoCoordinates.lng, regionInfo.region.geoCoordinates.lat]);
-      setMapZoom(2);
+      setMapCenter([regionInfo.region.geoCoordinates.lng, regionInfo.region.geoCoordinates.lat])
+      setMapZoom(2)
     }
-  };
+  }
 
   const handleMaterialClick = (material: Material) => {
-    setSelectedMaterial(material);
-    setCurrentView('detail');
-  };
+    setSelectedMaterial(material)
+    setCurrentView('detail')
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
@@ -98,9 +97,7 @@ export const MaterialOriginMap: React.FC = () => {
         >
           {/* 标题和统计 */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
-              中药材道地产区分布图
-            </h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">中药材道地产区分布图</h1>
             <div className="flex justify-center gap-8 text-lg">
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-blue-500" />
@@ -111,7 +108,8 @@ export const MaterialOriginMap: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Package className="w-5 h-5 text-green-500" />
                 <span className="text-gray-700">
-                  年产量 <span className="font-semibold">{stats.totalProduction.toLocaleString()}</span> 吨
+                  年产量{' '}
+                  <span className="font-semibold">{stats.totalProduction.toLocaleString()}</span> 吨
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -131,7 +129,7 @@ export const MaterialOriginMap: React.FC = () => {
                   projection="geoMercator"
                   projectionConfig={{
                     center: mapCenter,
-                    scale: 800
+                    scale: 800,
                   }}
                 >
                   <ZoomableGroup zoom={mapZoom} center={mapCenter}>
@@ -147,7 +145,7 @@ export const MaterialOriginMap: React.FC = () => {
                             style={{
                               default: { outline: 'none' },
                               hover: { fill: '#d1d5db', outline: 'none' },
-                              pressed: { outline: 'none' }
+                              pressed: { outline: 'none' },
                             }}
                           />
                         ))
@@ -156,8 +154,8 @@ export const MaterialOriginMap: React.FC = () => {
 
                     {/* 产地标记 */}
                     {regionData.map((regionInfo, index) => {
-                      const { region } = regionInfo;
-                      if (!region.geoCoordinates) return null;
+                      const { region } = regionInfo
+                      if (!region.geoCoordinates) return null
 
                       return (
                         <Marker
@@ -179,10 +177,7 @@ export const MaterialOriginMap: React.FC = () => {
                                     className="animate-pulse"
                                   />
                                   {/* 内圈 */}
-                                  <circle
-                                    r={6}
-                                    fill={qualityColors[region.quality]}
-                                  />
+                                  <circle r={6} fill={qualityColors[region.quality]} />
                                   {/* 药材数量 */}
                                   <text
                                     textAnchor="middle"
@@ -190,7 +185,7 @@ export const MaterialOriginMap: React.FC = () => {
                                     style={{
                                       fontSize: '12px',
                                       fill: '#374151',
-                                      fontWeight: 'bold'
+                                      fontWeight: 'bold',
                                     }}
                                   >
                                     {regionInfo.materials.length}
@@ -210,7 +205,7 @@ export const MaterialOriginMap: React.FC = () => {
                             </Tooltip>
                           </TooltipProvider>
                         </Marker>
-                      );
+                      )
                     })}
                   </ZoomableGroup>
                 </ComposableMap>
@@ -240,7 +235,7 @@ export const MaterialOriginMap: React.FC = () => {
                     size="sm"
                     variant="outline"
                     onClick={() => {
-                      setMapZoom(Math.min(mapZoom * 1.5, 4));
+                      setMapZoom(Math.min(mapZoom * 1.5, 4))
                     }}
                   >
                     +
@@ -249,7 +244,7 @@ export const MaterialOriginMap: React.FC = () => {
                     size="sm"
                     variant="outline"
                     onClick={() => {
-                      setMapZoom(Math.max(mapZoom / 1.5, 0.5));
+                      setMapZoom(Math.max(mapZoom / 1.5, 0.5))
                     }}
                   >
                     -
@@ -258,8 +253,8 @@ export const MaterialOriginMap: React.FC = () => {
                     size="sm"
                     variant="outline"
                     onClick={() => {
-                      setMapCenter([104.1954, 35.8617]);
-                      setMapZoom(1);
+                      setMapCenter([104.1954, 35.8617])
+                      setMapZoom(1)
                     }}
                   >
                     复位
@@ -277,7 +272,7 @@ export const MaterialOriginMap: React.FC = () => {
                     <MapPin className="w-5 h-5 mr-2" />
                     {selectedRegion.region.region}
                   </h3>
-                  
+
                   <div className="space-y-3 mb-4">
                     <div>
                       <span className="text-sm text-gray-600">省份：</span>
@@ -285,12 +280,15 @@ export const MaterialOriginMap: React.FC = () => {
                     </div>
                     <div>
                       <span className="text-sm text-gray-600">质量等级：</span>
-                      <Badge 
-                        className="ml-2" 
+                      <Badge
+                        className="ml-2"
                         style={{ backgroundColor: qualityColors[selectedRegion.region.quality] }}
                       >
-                        {selectedRegion.region.quality === 'excellent' ? '优质' :
-                         selectedRegion.region.quality === 'good' ? '良好' : '一般'}
+                        {selectedRegion.region.quality === 'excellent'
+                          ? '优质'
+                          : selectedRegion.region.quality === 'good'
+                            ? '良好'
+                            : '一般'}
                       </Badge>
                     </div>
                     {selectedRegion.region.annualProduction && (
@@ -312,7 +310,9 @@ export const MaterialOriginMap: React.FC = () => {
                   </div>
 
                   <div className="border-t pt-4">
-                    <h4 className="font-medium mb-3">该产地药材（{selectedRegion.materials.length}种）</h4>
+                    <h4 className="font-medium mb-3">
+                      该产地药材（{selectedRegion.materials.length}种）
+                    </h4>
                     <div className="space-y-2 max-h-[300px] overflow-y-auto">
                       {selectedRegion.materials.map((material) => (
                         <motion.div
@@ -362,5 +362,5 @@ export const MaterialOriginMap: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+}

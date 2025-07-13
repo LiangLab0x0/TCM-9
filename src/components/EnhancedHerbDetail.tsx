@@ -1,33 +1,41 @@
-import React, { useState } from 'react';
-import { ArrowLeft, Plus, Minus, BookOpen, Microscope, Pill, ShieldCheck, Users, TrendingUp, FileText, Star, AlertTriangle } from 'lucide-react';
-import { Herb, getNatureTheme, getProfessionalLevel } from '../types';
-import { useAppStore } from '../store';
+import React, { useState } from 'react'
+import {
+  ArrowLeft,
+  Plus,
+  Minus,
+  BookOpen,
+  Microscope,
+  Pill,
+  ShieldCheck,
+  Users,
+  TrendingUp,
+  FileText,
+  Star,
+  AlertTriangle,
+} from 'lucide-react'
+import type { Herb } from '../types'
+import { getNatureTheme, getProfessionalLevel } from '../types'
+import { useAppStore } from '../store'
 
 interface EnhancedHerbDetailProps {
-  herb: Herb;
+  herb: Herb
 }
 
 const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const {
-    compareList,
-    herbs,
-    addToCompare,
-    removeFromCompare,
-    setCurrentView
-  } = useAppStore();
+  const [activeTab, setActiveTab] = useState('overview')
+  const { compareList, herbs, addToCompare, removeFromCompare, setCurrentView } = useAppStore()
 
-  const theme = getNatureTheme(herb.nature);
-  const professional = getProfessionalLevel(herb);
-  const isInCompare = compareList.some(h => h.id === herb.id);
+  const theme = getNatureTheme(herb.nature)
+  const professional = getProfessionalLevel(herb)
+  const isInCompare = compareList.some((h) => h.id === herb.id)
 
   const handleToggleCompare = () => {
     if (isInCompare) {
-      removeFromCompare(herb.id);
+      removeFromCompare(herb.id)
     } else {
-      addToCompare(herb);
+      addToCompare(herb)
     }
-  };
+  }
 
   const tabs = [
     { id: 'overview', label: '基本信息', icon: BookOpen },
@@ -37,8 +45,8 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
     { id: 'clinical', label: '临床应用', icon: Users },
     { id: 'quality', label: '质量控制', icon: ShieldCheck },
     { id: 'resources', label: '资源信息', icon: TrendingUp },
-    { id: 'research', label: '现代研究', icon: Star }
-  ];
+    { id: 'research', label: '现代研究', icon: Star },
+  ]
 
   const renderOverviewTab = () => (
     <div className="space-y-6">
@@ -53,11 +61,16 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
           <div className="space-y-2">
             <h4 className="font-medium text-gray-700">性味</h4>
             <div className="flex flex-wrap gap-2">
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${theme.secondary} ${theme.accent}`}>
+              <span
+                className={`px-3 py-1 rounded-full text-sm font-medium ${theme.secondary} ${theme.accent}`}
+              >
                 {herb.nature}
               </span>
               {herb.taste.map((taste, index) => (
-                <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                >
                   {taste}
                 </span>
               ))}
@@ -70,7 +83,10 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
               <h4 className="font-medium text-gray-700">归经</h4>
               <div className="flex flex-wrap gap-2">
                 {herb.meridians.map((meridian, index) => (
-                  <span key={index} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm"
+                  >
                     {meridian}
                   </span>
                 ))}
@@ -84,7 +100,10 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
               <h4 className="font-medium text-gray-700">主要产地</h4>
               <div className="flex flex-wrap gap-2">
                 {herb.origin.map((origin, index) => (
-                  <span key={index} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm"
+                  >
                     {origin}
                   </span>
                 ))}
@@ -153,7 +172,7 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
         </div>
       )}
     </div>
-  );
+  )
 
   const renderPharmacopoeiaTab = () => (
     <div className="space-y-6">
@@ -164,7 +183,9 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-600 mb-2">药典编号</label>
-                <p className="text-lg font-mono bg-gray-50 p-2 rounded">{herb.pharmacopoeiaInfo.code}</p>
+                <p className="text-lg font-mono bg-gray-50 p-2 rounded">
+                  {herb.pharmacopoeiaInfo.code}
+                </p>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-600 mb-2">拉丁学名</label>
@@ -172,15 +193,24 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-600 mb-2">药材等级</label>
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                  herb.pharmacopoeiaInfo.grade === 'premium' ? 'bg-purple-100 text-purple-800' :
-                  herb.pharmacopoeiaInfo.grade === 'first' ? 'bg-blue-100 text-blue-800' :
-                  herb.pharmacopoeiaInfo.grade === 'second' ? 'bg-green-100 text-green-800' :
-                  'bg-gray-100 text-gray-800'
-                }`}>
-                  {herb.pharmacopoeiaInfo.grade === 'premium' ? '特级' :
-                   herb.pharmacopoeiaInfo.grade === 'first' ? '一级' :
-                   herb.pharmacopoeiaInfo.grade === 'second' ? '二级' : '三级'}
+                <span
+                  className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                    herb.pharmacopoeiaInfo.grade === 'premium'
+                      ? 'bg-purple-100 text-purple-800'
+                      : herb.pharmacopoeiaInfo.grade === 'first'
+                        ? 'bg-blue-100 text-blue-800'
+                        : herb.pharmacopoeiaInfo.grade === 'second'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-gray-100 text-gray-800'
+                  }`}
+                >
+                  {herb.pharmacopoeiaInfo.grade === 'premium'
+                    ? '特级'
+                    : herb.pharmacopoeiaInfo.grade === 'first'
+                      ? '一级'
+                      : herb.pharmacopoeiaInfo.grade === 'second'
+                        ? '二级'
+                        : '三级'}
                 </span>
               </div>
               <div>
@@ -193,7 +223,10 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
                 <label className="block text-sm font-medium text-gray-600 mb-2">别名</label>
                 <div className="flex flex-wrap gap-2">
                   {herb.pharmacopoeiaInfo.aliases.map((alias, index) => (
-                    <span key={index} className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm"
+                    >
                       {alias}
                     </span>
                   ))}
@@ -209,7 +242,7 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
         </div>
       )}
     </div>
-  );
+  )
 
   const renderChemistryTab = () => (
     <div className="space-y-6">
@@ -221,13 +254,20 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
               <div key={index} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
                   <h4 className="font-medium text-gray-800">{component.name}</h4>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    component.importance === 'primary' ? 'bg-red-100 text-red-800' :
-                    component.importance === 'secondary' ? 'bg-yellow-100 text-yellow-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
-                    {component.importance === 'primary' ? '主要成分' :
-                     component.importance === 'secondary' ? '次要成分' : '微量成分'}
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      component.importance === 'primary'
+                        ? 'bg-red-100 text-red-800'
+                        : component.importance === 'secondary'
+                          ? 'bg-yellow-100 text-yellow-800'
+                          : 'bg-gray-100 text-gray-800'
+                    }`}
+                  >
+                    {component.importance === 'primary'
+                      ? '主要成分'
+                      : component.importance === 'secondary'
+                        ? '次要成分'
+                        : '微量成分'}
                   </span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -255,7 +295,7 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
         </div>
       )}
     </div>
-  );
+  )
 
   const renderPharmacologyTab = () => (
     <div className="space-y-6">
@@ -284,7 +324,9 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
                       <span className="font-medium text-gray-600">相关研究: </span>
                       <ul className="mt-1 space-y-1">
                         {action.studies.map((study, idx) => (
-                          <li key={idx} className="text-gray-600 text-xs">• {study}</li>
+                          <li key={idx} className="text-gray-600 text-xs">
+                            • {study}
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -301,42 +343,50 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
         </div>
       )}
     </div>
-  );
+  )
 
   const renderTab = () => {
     switch (activeTab) {
       case 'overview':
-        return renderOverviewTab();
+        return renderOverviewTab()
       case 'pharmacopoeia':
-        return renderPharmacopoeiaTab();
+        return renderPharmacopoeiaTab()
       case 'chemistry':
-        return renderChemistryTab();
+        return renderChemistryTab()
       case 'pharmacology':
-        return renderPharmacologyTab();
+        return renderPharmacologyTab()
       case 'clinical':
-        return <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-          <Users className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500">临床应用信息开发中...</p>
-        </div>;
+        return (
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <Users className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-500">临床应用信息开发中...</p>
+          </div>
+        )
       case 'quality':
-        return <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-          <ShieldCheck className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500">质量控制信息开发中...</p>
-        </div>;
+        return (
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <ShieldCheck className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-500">质量控制信息开发中...</p>
+          </div>
+        )
       case 'resources':
-        return <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-          <TrendingUp className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500">资源信息开发中...</p>
-        </div>;
+        return (
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <TrendingUp className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-500">资源信息开发中...</p>
+          </div>
+        )
       case 'research':
-        return <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-          <Star className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <p className="text-gray-500">现代研究信息开发中...</p>
-        </div>;
+        return (
+          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <Star className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+            <p className="text-gray-500">现代研究信息开发中...</p>
+          </div>
+        )
       default:
-        return renderOverviewTab();
+        return renderOverviewTab()
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -361,13 +411,15 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
                   alt={herb.name}
                   className="w-full h-full object-cover object-center"
                   onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/images/placeholder-herb.jpg';
+                    const target = e.target as HTMLImageElement
+                    target.src = '/images/placeholder-herb.jpg'
                   }}
                 />
-                
+
                 {/* 专业等级角标 */}
-                <div className={`absolute top-4 left-4 px-3 py-1 rounded-lg text-sm font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}>
+                <div
+                  className={`absolute top-4 left-4 px-3 py-1 rounded-lg text-sm font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}
+                >
                   {professional.level}
                 </div>
               </div>
@@ -395,9 +447,10 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
                     onClick={handleToggleCompare}
                     className={`
                       w-full py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2
-                      ${isInCompare 
-                        ? 'bg-blue-100 text-blue-700 border border-blue-200' 
-                        : 'bg-gray-100 text-gray-700 border border-gray-200'
+                      ${
+                        isInCompare
+                          ? 'bg-blue-100 text-blue-700 border border-blue-200'
+                          : 'bg-gray-100 text-gray-700 border border-gray-200'
                       }
                     `}
                   >
@@ -420,9 +473,10 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
                     onClick={() => setActiveTab(tab.id)}
                     className={`
                       flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors
-                      ${activeTab === tab.id
-                        ? 'border-b-2 border-blue-500 text-blue-600 bg-blue-50'
-                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                      ${
+                        activeTab === tab.id
+                          ? 'border-b-2 border-blue-500 text-blue-600 bg-blue-50'
+                          : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
                       }
                     `}
                   >
@@ -434,14 +488,12 @@ const EnhancedHerbDetail: React.FC<EnhancedHerbDetailProps> = ({ herb }) => {
             </div>
 
             {/* 标签页内容 */}
-            <div className="bg-gray-50 rounded-b-xl p-6">
-              {renderTab()}
-            </div>
+            <div className="bg-gray-50 rounded-b-xl p-6">{renderTab()}</div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EnhancedHerbDetail;
+export default EnhancedHerbDetail

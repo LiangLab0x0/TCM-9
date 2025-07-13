@@ -1,23 +1,23 @@
-import React, { useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, BookOpen, Beaker, Info, BarChart, Users } from 'lucide-react';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import { RadarChart } from 'echarts/charts';
+import React, { useMemo } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowLeft, BookOpen, Beaker, Info, BarChart, Users } from 'lucide-react'
+import ReactEChartsCore from 'echarts-for-react/lib/core'
+import * as echarts from 'echarts/core'
+import { RadarChart } from 'echarts/charts'
 import {
   GridComponent,
   TooltipComponent,
   TitleComponent,
   LegendComponent,
-  RadarComponent
-} from 'echarts/components';
-import { CanvasRenderer } from 'echarts/renderers';
-import { Formula, HerbRole } from '../../types/tcm-core';
-import { useNewAppStore } from '../../store';
-import { Card } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
+  RadarComponent,
+} from 'echarts/components'
+import { CanvasRenderer } from 'echarts/renderers'
+import type { Formula, HerbRole } from '../../types/tcm-core'
+import { useNewAppStore } from '../../store'
+import { Card } from '../ui/card'
+import { Badge } from '../ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table'
 
 // 注册ECharts组件
 echarts.use([
@@ -27,104 +27,121 @@ echarts.use([
   TitleComponent,
   LegendComponent,
   RadarComponent,
-  CanvasRenderer
-]);
+  CanvasRenderer,
+])
 
 interface FormulaDetailProps {
-  formula: Formula;
+  formula: Formula
 }
 
 // 君臣佐使的颜色映射
 const roleColors: Record<HerbRole, string> = {
-  '君': 'bg-red-100 text-red-800 border-red-300',
-  '臣': 'bg-blue-100 text-blue-800 border-blue-300',
-  '佐': 'bg-green-100 text-green-800 border-green-300',
-  '使': 'bg-yellow-100 text-yellow-800 border-yellow-300'
-};
+  君: 'bg-red-100 text-red-800 border-red-300',
+  臣: 'bg-blue-100 text-blue-800 border-blue-300',
+  佐: 'bg-green-100 text-green-800 border-green-300',
+  使: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+}
 
 export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
-  const { setCurrentView, slices, materials } = useNewAppStore();
+  const { setCurrentView, slices, materials } = useNewAppStore()
 
   // 获取方剂的完整组成信息
   const componentsWithDetails = useMemo(() => {
-    return formula.components.map(comp => {
-      const slice = slices.find(s => s.id === comp.sliceId);
-      const material = slice ? materials.find(m => m.id === slice.materialId) : null;
+    return formula.components.map((comp) => {
+      const slice = slices.find((s) => s.id === comp.sliceId)
+      const material = slice ? materials.find((m) => m.id === slice.materialId) : null
       return {
         ...comp,
         slice,
-        material
-      };
-    });
-  }, [formula.components, slices, materials]);
+        material,
+      }
+    })
+  }, [formula.components, slices, materials])
 
   // 计算指纹图数据
   const fingerprintData = useMemo(() => {
     // 统计各类药材的功效分布
     const functionCategories = [
-      '解表', '清热', '泻下', '祛风湿', '化湿', '温里', 
-      '理气', '消食', '止血', '活血化瘀', '化痰止咳', 
-      '安神', '平肝', '开窍', '补虚', '收涩'
-    ];
+      '解表',
+      '清热',
+      '泻下',
+      '祛风湿',
+      '化湿',
+      '温里',
+      '理气',
+      '消食',
+      '止血',
+      '活血化瘀',
+      '化痰止咳',
+      '安神',
+      '平肝',
+      '开窍',
+      '补虚',
+      '收涩',
+    ]
 
-    const functionCounts = functionCategories.map(category => {
-      let count = 0;
-      componentsWithDetails.forEach(comp => {
-        if (comp.material?.functions.some(func => func.includes(category))) {
-          count += 1;
+    const functionCounts = functionCategories.map((category) => {
+      let count = 0
+      componentsWithDetails.forEach((comp) => {
+        if (comp.material?.functions.some((func) => func.includes(category))) {
+          count += 1
         }
-      });
-      return count;
-    });
+      })
+      return count
+    })
 
-    const maxCount = Math.max(...functionCounts, 1);
+    const maxCount = Math.max(...functionCounts, 1)
 
     return {
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
       },
       radar: {
-        indicator: functionCategories.map(name => ({
+        indicator: functionCategories.map((name) => ({
           name,
-          max: maxCount
+          max: maxCount,
         })),
         shape: 'polygon',
         splitNumber: 4,
         axisName: {
           color: '#666',
-          fontSize: 12
+          fontSize: 12,
         },
         splitLine: {
           lineStyle: {
-            color: '#ddd'
-          }
+            color: '#ddd',
+          },
         },
         splitArea: {
           areaStyle: {
-            color: ['#fff', '#f7f7f7']
-          }
-        }
+            color: ['#fff', '#f7f7f7'],
+          },
+        },
       },
-      series: [{
-        name: '功效分布',
-        type: 'radar',
-        data: [{
-          value: functionCounts,
-          name: formula.name,
-          areaStyle: {
-            color: 'rgba(34, 197, 94, 0.2)'
-          },
-          lineStyle: {
-            color: 'rgb(34, 197, 94)',
-            width: 2
-          },
-          itemStyle: {
-            color: 'rgb(34, 197, 94)'
-          }
-        }]
-      }]
-    };
-  }, [componentsWithDetails, formula.name]);
+      series: [
+        {
+          name: '功效分布',
+          type: 'radar',
+          data: [
+            {
+              value: functionCounts,
+              name: formula.name,
+              areaStyle: {
+                color: 'rgba(34, 197, 94, 0.2)',
+              },
+              lineStyle: {
+                color: 'rgb(34, 197, 94)',
+                width: 2,
+              },
+              itemStyle: {
+                color: 'rgb(34, 197, 94)',
+              },
+            },
+          ],
+        },
+      ],
+    }
+  }, [componentsWithDetails, formula.name])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -155,7 +172,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                   <p className="text-xl text-gray-600">{formula.pinyin}</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-3 gap-6 mt-6">
                 <div>
                   <span className="font-medium text-gray-700">出处：</span>
@@ -192,7 +209,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                   <Beaker className="w-5 h-5 mr-2" />
                   方剂组成
                 </h3>
-                
+
                 <div className="overflow-x-auto">
                   <Table>
                     <TableHeader>
@@ -209,10 +226,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                       {componentsWithDetails.map((comp, index) => (
                         <TableRow key={index}>
                           <TableCell>
-                            <Badge 
-                              className={`${roleColors[comp.role]} border`}
-                              variant="outline"
-                            >
+                            <Badge className={`${roleColors[comp.role]} border`} variant="outline">
                               {comp.role}
                             </Badge>
                           </TableCell>
@@ -222,9 +236,12 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                               {comp.material?.names.pinyin}
                             </span>
                           </TableCell>
-                          <TableCell>{comp.slice?.name || comp.material?.names.cn || '-'}</TableCell>
+                          <TableCell>
+                            {comp.slice?.name || comp.material?.names.cn || '-'}
+                          </TableCell>
                           <TableCell className="text-right">
-                            {comp.weight.value}{comp.weight.unit}
+                            {comp.weight.value}
+                            {comp.weight.unit}
                           </TableCell>
                           <TableCell>{comp.slice?.processing.method || '-'}</TableCell>
                           <TableCell className="max-w-xs">
@@ -242,19 +259,27 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                 {/* 君臣佐使说明 */}
                 <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="flex items-center gap-2">
-                    <Badge className={`${roleColors['君']} border`} variant="outline">君</Badge>
+                    <Badge className={`${roleColors['君']} border`} variant="outline">
+                      君
+                    </Badge>
                     <span className="text-sm text-gray-600">针对主病主证起主要治疗作用</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge className={`${roleColors['臣']} border`} variant="outline">臣</Badge>
+                    <Badge className={`${roleColors['臣']} border`} variant="outline">
+                      臣
+                    </Badge>
                     <span className="text-sm text-gray-600">辅助君药加强治疗主病主证</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge className={`${roleColors['佐']} border`} variant="outline">佐</Badge>
+                    <Badge className={`${roleColors['佐']} border`} variant="outline">
+                      佐
+                    </Badge>
                     <span className="text-sm text-gray-600">治疗兼证或制约君臣药毒性</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge className={`${roleColors['使']} border`} variant="outline">使</Badge>
+                    <Badge className={`${roleColors['使']} border`} variant="outline">
+                      使
+                    </Badge>
                     <span className="text-sm text-gray-600">引药归经或调和诸药</span>
                   </div>
                 </div>
@@ -302,19 +327,20 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                     </div>
                   )}
 
-                  {formula.modernApplications?.contraindications && formula.modernApplications.contraindications.length > 0 && (
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4 text-red-600">禁忌症</h3>
-                      <ul className="space-y-2">
-                        {formula.modernApplications.contraindications.map((contra, index) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-red-500 mr-2">•</span>
-                            <span className="text-gray-700">{contra}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  {formula.modernApplications?.contraindications &&
+                    formula.modernApplications.contraindications.length > 0 && (
+                      <div>
+                        <h3 className="text-xl font-semibold mb-4 text-red-600">禁忌症</h3>
+                        <ul className="space-y-2">
+                          {formula.modernApplications.contraindications.map((contra, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="text-red-500 mr-2">•</span>
+                              <span className="text-gray-700">{contra}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                 </div>
               </Card>
             </TabsContent>
@@ -326,7 +352,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                   <BarChart className="w-5 h-5 mr-2" />
                   功效指纹图谱
                 </h3>
-                
+
                 <div className="bg-gray-50 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-600">
                     <Info className="w-4 h-4 inline mr-1" />
@@ -349,7 +375,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
             <TabsContent value="usage" className="mt-6">
               <Card className="p-6">
                 <h3 className="text-xl font-semibold mb-6">用法用量</h3>
-                
+
                 <div className="grid gap-6">
                   <div>
                     <h4 className="font-medium text-gray-700 mb-2">制备方法</h4>
@@ -381,19 +407,20 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                     </div>
                   )}
 
-                  {formula.modernApplications?.diseases && formula.modernApplications.diseases.length > 0 && (
-                    <div>
-                      <h4 className="font-medium text-gray-700 mb-2">现代应用</h4>
-                      <ul className="space-y-2">
-                        {formula.modernApplications.diseases.map((disease, index) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-purple-500 mr-2">•</span>
-                            <span className="text-gray-700">{disease}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  {formula.modernApplications?.diseases &&
+                    formula.modernApplications.diseases.length > 0 && (
+                      <div>
+                        <h4 className="font-medium text-gray-700 mb-2">现代应用</h4>
+                        <ul className="space-y-2">
+                          {formula.modernApplications.diseases.map((disease, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="text-purple-500 mr-2">•</span>
+                              <span className="text-gray-700">{disease}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                 </div>
               </Card>
             </TabsContent>
@@ -405,7 +432,7 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                   <Users className="w-5 h-5 mr-2" />
                   方剂解析
                 </h3>
-                
+
                 {formula.explanation ? (
                   <div className="space-y-6">
                     <div>
@@ -429,28 +456,32 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
                       </div>
                     )}
 
-                    {formula.explanation.modifications && formula.explanation.modifications.length > 0 && (
-                      <div>
-                        <h4 className="font-medium text-gray-700 mb-3">加减变化</h4>
-                        <div className="space-y-3">
-                          {formula.explanation.modifications.map((mod, index) => (
-                            <div key={index} className="border-l-2 border-gray-300 pl-4">
-                              <p className="font-medium text-gray-700">{mod.condition}</p>
-                              {mod.additions && mod.additions.length > 0 && (
-                                <p className="text-sm text-gray-600 mt-1">
-                                  加：{mod.additions.map(add => `${add.sliceId} ${add.weight}g`).join('、')}
-                                </p>
-                              )}
-                              {mod.removals && mod.removals.length > 0 && (
-                                <p className="text-sm text-gray-600 mt-1">
-                                  减：{mod.removals.map(rem => rem.sliceId).join('、')}
-                                </p>
-                              )}
-                            </div>
-                          ))}
+                    {formula.explanation.modifications &&
+                      formula.explanation.modifications.length > 0 && (
+                        <div>
+                          <h4 className="font-medium text-gray-700 mb-3">加减变化</h4>
+                          <div className="space-y-3">
+                            {formula.explanation.modifications.map((mod, index) => (
+                              <div key={index} className="border-l-2 border-gray-300 pl-4">
+                                <p className="font-medium text-gray-700">{mod.condition}</p>
+                                {mod.additions && mod.additions.length > 0 && (
+                                  <p className="text-sm text-gray-600 mt-1">
+                                    加：
+                                    {mod.additions
+                                      .map((add) => `${add.sliceId} ${add.weight}g`)
+                                      .join('、')}
+                                  </p>
+                                )}
+                                {mod.removals && mod.removals.length > 0 && (
+                                  <p className="text-sm text-gray-600 mt-1">
+                                    减：{mod.removals.map((rem) => rem.sliceId).join('、')}
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
                   </div>
                 ) : (
                   <p className="text-gray-500 text-center py-8">暂无方解信息</p>
@@ -461,5 +492,5 @@ export const FormulaDetail: React.FC<FormulaDetailProps> = ({ formula }) => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+}

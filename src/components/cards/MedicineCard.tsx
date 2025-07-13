@@ -1,21 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Pill, Heart, Shield, Package } from 'lucide-react';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Pill, Heart, Shield, Package } from 'lucide-react'
 
 interface MedicineCardProps {
   medicine: {
-    id: string;
+    id: string
     names: {
-      cn: string;
-      pinyin: string;
-      tradeName?: string;
-    };
-    dosageForm?: string;
-    mainFunction?: string;
-    manufacturer?: string;
-    specification?: string;
-    thumbnail?: string;
-  };
+      cn: string
+      pinyin: string
+      tradeName?: string
+    }
+    dosageForm?: string
+    mainFunction?: string
+    manufacturer?: string
+    specification?: string
+    thumbnail?: string
+  }
 }
 
 export const MedicineCard: React.FC<MedicineCardProps> = ({ medicine }) => {
@@ -37,20 +37,14 @@ export const MedicineCard: React.FC<MedicineCardProps> = ({ medicine }) => {
           </div>
         )}
       </div>
-      
+
       <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800 mb-1">
-          {medicine.names.cn}
-        </h3>
+        <h3 className="text-lg font-semibold text-gray-800 mb-1">{medicine.names.cn}</h3>
         {medicine.names.tradeName && (
-          <p className="text-sm text-gray-600 mb-1">
-            {medicine.names.tradeName}
-          </p>
+          <p className="text-sm text-gray-600 mb-1">{medicine.names.tradeName}</p>
         )}
-        <p className="text-sm text-gray-500 mb-3">
-          {medicine.names.pinyin}
-        </p>
-        
+        <p className="text-sm text-gray-500 mb-3">{medicine.names.pinyin}</p>
+
         <div className="space-y-2 text-sm">
           {medicine.dosageForm && (
             <div className="flex items-center gap-2 text-gray-600">
@@ -58,14 +52,14 @@ export const MedicineCard: React.FC<MedicineCardProps> = ({ medicine }) => {
               <span>{medicine.dosageForm}</span>
             </div>
           )}
-          
+
           {medicine.mainFunction && (
             <div className="flex items-center gap-2 text-gray-600">
               <Heart className="w-4 h-4 text-red-500" />
               <span className="line-clamp-1">{medicine.mainFunction}</span>
             </div>
           )}
-          
+
           {medicine.manufacturer && (
             <div className="flex items-center gap-2 text-gray-600">
               <Shield className="w-4 h-4 text-blue-500" />
@@ -75,5 +69,5 @@ export const MedicineCard: React.FC<MedicineCardProps> = ({ medicine }) => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}

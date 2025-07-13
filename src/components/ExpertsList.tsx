@@ -1,23 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { User, Award, BookOpen, Users, Calendar, MapPin } from 'lucide-react';
-import { useAppStore } from '../store';
-import { TCMExpert } from '../types';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { User, Award, BookOpen, Users, Calendar, MapPin } from 'lucide-react'
+import { useAppStore } from '../store'
+import type { TCMExpert } from '../types'
 
 const ExpertCard: React.FC<{ expert: TCMExpert; index: number }> = ({ expert, index }) => {
-  const { setSelectedExpert, setCurrentView } = useAppStore();
+  const { setSelectedExpert, setCurrentView } = useAppStore()
 
   const handleExpertClick = () => {
-    setSelectedExpert(expert);
-    setCurrentView('expert-detail');
-  };
+    setSelectedExpert(expert)
+    setCurrentView('expert-detail')
+  }
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+      whileHover={{ scale: 1.02, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
       whileTap={{ scale: 0.98 }}
       onClick={handleExpertClick}
       className="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer border-2 border-gray-100 hover:border-blue-200 transition-all duration-300"
@@ -98,7 +98,10 @@ const ExpertCard: React.FC<{ expert: TCMExpert; index: number }> = ({ expert, in
               </span>
             </div>
             <div className="text-xs text-gray-600">
-              {expert.students.slice(0, 3).map(s => s.name).join('、')}
+              {expert.students
+                .slice(0, 3)
+                .map((s) => s.name)
+                .join('、')}
               {expert.students.length > 3 && ` 等 ${expert.students.length} 位传承人`}
             </div>
           </div>
@@ -115,11 +118,11 @@ const ExpertCard: React.FC<{ expert: TCMExpert; index: number }> = ({ expert, in
         </motion.button>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
 const ExpertsList: React.FC = () => {
-  const { experts, isLoading } = useAppStore();
+  const { experts, isLoading } = useAppStore()
 
   if (isLoading) {
     return (
@@ -127,13 +130,13 @@ const ExpertsList: React.FC = () => {
         <div className="text-center">
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
             className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
           />
           <span className="text-xl font-medium text-gray-700">正在加载专家信息...</span>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -180,7 +183,7 @@ const ExpertsList: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
@@ -194,7 +197,7 @@ const ExpertsList: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
@@ -202,13 +205,16 @@ const ExpertsList: React.FC = () => {
               </div>
               <div>
                 <p className="text-2xl font-bold text-gray-800">
-                  {Math.round(experts.reduce((sum, expert) => sum + (expert.clinicalExperience || 0), 0) / experts.length)}
+                  {Math.round(
+                    experts.reduce((sum, expert) => sum + (expert.clinicalExperience || 0), 0) /
+                      experts.length
+                  )}
                 </p>
                 <p className="text-sm text-gray-600">平均从业年限</p>
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -290,7 +296,7 @@ const ExpertsList: React.FC = () => {
         </motion.div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default ExpertsList;
+export default ExpertsList

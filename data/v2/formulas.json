@@ -1,0 +1,62 @@
+[
+  {
+    "id": "formula_1",
+    "createdAt": "2025-07-13T20:41:26.498Z",
+    "updatedAt": "2025-07-13T20:41:26.498Z",
+    "name": {
+      "cn": "黄芩汤",
+      "pinyin": "Huangqin Tang"
+    },
+    "source": "《伤寒论》",
+    "description": "清热止痢，和中止痛",
+    "ingredients": [
+      {
+        "herbId": "herb_15",
+        "amount": 12,
+        "unit": "g",
+        "role": "monarch"
+      },
+      {
+        "herbId": "herb_7",
+        "amount": 6,
+        "unit": "g",
+        "role": "minister"
+      }
+    ],
+    "preparation": "水煎",
+    "dosage": "每日1剂，分2次服用",
+    "indications": ["热痢腹痛", "口苦心烦", "舌红苔黄", "脉数"],
+    "contraindications": ["虚寒泄泻者忌用"],
+    "modernApplications": []
+  },
+  {
+    "id": "formula_2",
+    "createdAt": "2025-07-13T20:41:26.498Z",
+    "updatedAt": "2025-07-13T20:41:26.498Z",
+    "name": {
+      "cn": "丹参饮",
+      "pinyin": "Danshen Yin"
+    },
+    "source": "《时方歌括》",
+    "description": "活血化瘀，行气止痛",
+    "ingredients": [
+      {
+        "herbId": "herb_14",
+        "amount": 30,
+        "unit": "g",
+        "role": "monarch"
+      },
+      {
+        "herbId": "herb_11",
+        "amount": 6,
+        "unit": "g",
+        "role": "minister"
+      }
+    ],
+    "preparation": "水煎",
+    "dosage": "每日1剂，分2-3次服用",
+    "indications": ["心胃诸痛", "胸闷刺痛", "痛有定处", "舌质紫暗"],
+    "contraindications": ["孕妇慎用", "出血证慎用"],
+    "modernApplications": []
+  }
+]

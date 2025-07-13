@@ -1,21 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Package, Leaf, Factory } from 'lucide-react';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Package, Leaf, Factory } from 'lucide-react'
 
 interface GranuleCardProps {
   granule: {
-    id: string;
+    id: string
     names: {
-      cn: string;
-      pinyin: string;
-      latin?: string;
-    };
-    baseMaterial?: string;
-    concentration?: string;
-    manufacturer?: string;
-    specification?: string;
-    thumbnail?: string;
-  };
+      cn: string
+      pinyin: string
+      latin?: string
+    }
+    baseMaterial?: string
+    concentration?: string
+    manufacturer?: string
+    specification?: string
+    thumbnail?: string
+  }
 }
 
 export const GranuleCard: React.FC<GranuleCardProps> = ({ granule }) => {
@@ -37,15 +37,11 @@ export const GranuleCard: React.FC<GranuleCardProps> = ({ granule }) => {
           </div>
         )}
       </div>
-      
+
       <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800 mb-1">
-          {granule.names.cn}
-        </h3>
-        <p className="text-sm text-gray-600 mb-3">
-          {granule.names.pinyin}
-        </p>
-        
+        <h3 className="text-lg font-semibold text-gray-800 mb-1">{granule.names.cn}</h3>
+        <p className="text-sm text-gray-600 mb-3">{granule.names.pinyin}</p>
+
         <div className="space-y-2 text-sm">
           {granule.baseMaterial && (
             <div className="flex items-center gap-2 text-gray-600">
@@ -53,14 +49,14 @@ export const GranuleCard: React.FC<GranuleCardProps> = ({ granule }) => {
               <span>原药材: {granule.baseMaterial}</span>
             </div>
           )}
-          
+
           {granule.concentration && (
             <div className="flex items-center gap-2 text-gray-600">
               <Package className="w-4 h-4 text-amber-500" />
               <span>浓缩比: {granule.concentration}</span>
             </div>
           )}
-          
+
           {granule.manufacturer && (
             <div className="flex items-center gap-2 text-gray-600">
               <Factory className="w-4 h-4 text-blue-500" />
@@ -70,5 +66,5 @@ export const GranuleCard: React.FC<GranuleCardProps> = ({ granule }) => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}

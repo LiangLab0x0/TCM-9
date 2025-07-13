@@ -1,23 +1,23 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, X, Star, Zap, Pill, MapPin, Users } from 'lucide-react';
-import { Herb, getNatureTheme, getProfessionalLevel } from '../types';
-import { useAppStore } from '../store';
+import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft, X, Star, Zap, Pill, MapPin, Users } from 'lucide-react'
+import { Herb, getNatureTheme, getProfessionalLevel } from '../types'
+import { useAppStore } from '../store'
 
 const HerbCompare: React.FC = () => {
-  const { compareList, removeFromCompare, clearCompare, setCurrentView } = useAppStore();
+  const { compareList, removeFromCompare, clearCompare, setCurrentView } = useAppStore()
 
   const handleBack = () => {
-    setCurrentView('gallery');
-  };
+    setCurrentView('gallery')
+  }
 
   const handleRemoveHerb = (herbId: string) => {
-    removeFromCompare(herbId);
-  };
+    removeFromCompare(herbId)
+  }
 
   const handleClearAll = () => {
-    clearCompare();
-  };
+    clearCompare()
+  }
 
   if (compareList.length === 0) {
     return (
@@ -40,24 +40,24 @@ const HerbCompare: React.FC = () => {
           </motion.button>
         </motion.div>
       </div>
-    );
+    )
   }
 
   const getCommonProperties = () => {
     const properties = {
-      categories: [...new Set(compareList.map(h => h.category))],
-      natures: [...new Set(compareList.map(h => h.nature))],
-      tastes: [...new Set(compareList.flatMap(h => h.taste))],
-      origins: [...new Set(compareList.flatMap(h => h.origin || []))],
-      meridians: [...new Set(compareList.flatMap(h => h.meridians || []))],
-      functions: [...new Set(compareList.flatMap(h => h.functions))],
-      indications: [...new Set(compareList.flatMap(h => h.indications))]
-    };
+      categories: [...new Set(compareList.map((h) => h.category))],
+      natures: [...new Set(compareList.map((h) => h.nature))],
+      tastes: [...new Set(compareList.flatMap((h) => h.taste))],
+      origins: [...new Set(compareList.flatMap((h) => h.origin || []))],
+      meridians: [...new Set(compareList.flatMap((h) => h.meridians || []))],
+      functions: [...new Set(compareList.flatMap((h) => h.functions))],
+      indications: [...new Set(compareList.flatMap((h) => h.indications))],
+    }
 
-    return properties;
-  };
+    return properties
+  }
 
-  const commonProps = getCommonProperties();
+  const commonProps = getCommonProperties()
 
   return (
     <motion.div
@@ -102,8 +102,8 @@ const HerbCompare: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
           <AnimatePresence>
             {compareList.map((herb, index) => {
-              const theme = getNatureTheme(herb.nature);
-              const professional = getProfessionalLevel(herb);
+              const theme = getNatureTheme(herb.nature)
+              const professional = getProfessionalLevel(herb)
 
               return (
                 <motion.div
@@ -127,19 +127,23 @@ const HerbCompare: React.FC = () => {
 
                   {/* 药材图片 */}
                   <div className="relative h-48">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${theme.primary} opacity-20`} />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${theme.primary} opacity-20`}
+                    />
                     <img
                       src={`/images/herbs/${herb.primaryImage}`}
                       alt={herb.name}
                       className="w-full h-full object-cover object-center"
                       onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = '/images/placeholder-herb.jpg';
+                        const target = e.target as HTMLImageElement
+                        target.src = '/images/placeholder-herb.jpg'
                       }}
                     />
-                    
+
                     {/* 专业等级角标 */}
-                    <div className={`absolute top-3 left-3 px-2 py-1 rounded-lg text-xs font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}>
+                    <div
+                      className={`absolute top-3 left-3 px-2 py-1 rounded-lg text-xs font-bold ${professional.color} bg-white bg-opacity-95 shadow-sm`}
+                    >
                       <span>{professional.level}</span>
                     </div>
                   </div>
@@ -168,7 +172,10 @@ const HerbCompare: React.FC = () => {
                       <p className="text-xs text-gray-500 mb-1">药味</p>
                       <div className="flex flex-wrap gap-1">
                         {herb.taste.map((taste, i) => (
-                          <span key={i} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+                          <span
+                            key={i}
+                            className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                          >
                             {taste}
                           </span>
                         ))}
@@ -186,13 +193,15 @@ const HerbCompare: React.FC = () => {
                           </div>
                         ))}
                         {herb.functions.length > 3 && (
-                          <p className="text-xs text-gray-500">+{herb.functions.length - 3} 更多...</p>
+                          <p className="text-xs text-gray-500">
+                            +{herb.functions.length - 3} 更多...
+                          </p>
                         )}
                       </div>
                     </div>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </AnimatePresence>
         </div>
@@ -212,8 +221,11 @@ const HerbCompare: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-gray-700 mb-2">药材类别</p>
                   <div className="space-y-1">
-                    {commonProps.categories.map(category => (
-                      <span key={category} className="block px-2 py-1 bg-blue-50 text-blue-800 text-sm rounded">
+                    {commonProps.categories.map((category) => (
+                      <span
+                        key={category}
+                        className="block px-2 py-1 bg-blue-50 text-blue-800 text-sm rounded"
+                      >
                         {category}
                       </span>
                     ))}
@@ -223,8 +235,11 @@ const HerbCompare: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-gray-700 mb-2">药性</p>
                   <div className="space-y-1">
-                    {commonProps.natures.map(nature => (
-                      <span key={nature} className="block px-2 py-1 bg-green-50 text-green-800 text-sm rounded">
+                    {commonProps.natures.map((nature) => (
+                      <span
+                        key={nature}
+                        className="block px-2 py-1 bg-green-50 text-green-800 text-sm rounded"
+                      >
                         {nature}
                       </span>
                     ))}
@@ -234,8 +249,11 @@ const HerbCompare: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-gray-700 mb-2">药味</p>
                   <div className="flex flex-wrap gap-1">
-                    {commonProps.tastes.map(taste => (
-                      <span key={taste} className="px-2 py-1 bg-purple-50 text-purple-800 text-xs rounded">
+                    {commonProps.tastes.map((taste) => (
+                      <span
+                        key={taste}
+                        className="px-2 py-1 bg-purple-50 text-purple-800 text-xs rounded"
+                      >
                         {taste}
                       </span>
                     ))}
@@ -245,14 +263,16 @@ const HerbCompare: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-gray-700 mb-2">专业等级</p>
                   <div className="space-y-1">
-                    {compareList.map(herb => {
-                      const professional = getProfessionalLevel(herb);
+                    {compareList.map((herb) => {
+                      const professional = getProfessionalLevel(herb)
                       return (
                         <div key={herb.id} className="flex items-center gap-2">
                           <span className="text-xs text-gray-600">{herb.name}:</span>
-                          <span className={`text-xs font-bold ${professional.color}`}>{professional.level}</span>
+                          <span className={`text-xs font-bold ${professional.color}`}>
+                            {professional.level}
+                          </span>
                         </div>
-                      );
+                      )
                     })}
                   </div>
                 </div>
@@ -266,11 +286,15 @@ const HerbCompare: React.FC = () => {
                 <h2 className="text-xl font-bold text-gray-800">功效对比</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {commonProps.functions.map(func => (
+                {commonProps.functions.map((func) => (
                   <div key={func} className="p-3 bg-blue-50 rounded-lg">
                     <p className="font-medium text-blue-900 mb-1">{func}</p>
                     <div className="text-xs text-blue-700">
-                      具有此功效：{compareList.filter(h => h.functions.includes(func)).map(h => h.name).join('、')}
+                      具有此功效：
+                      {compareList
+                        .filter((h) => h.functions.includes(func))
+                        .map((h) => h.name)
+                        .join('、')}
                     </div>
                   </div>
                 ))}
@@ -284,8 +308,11 @@ const HerbCompare: React.FC = () => {
                 <h2 className="text-xl font-bold text-gray-800">主治病症对比</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-                {commonProps.indications.slice(0, 20).map(indication => (
-                  <div key={indication} className="p-2 bg-green-50 rounded text-green-800 text-sm text-center">
+                {commonProps.indications.slice(0, 20).map((indication) => (
+                  <div
+                    key={indication}
+                    className="p-2 bg-green-50 rounded text-green-800 text-sm text-center"
+                  >
                     {indication}
                   </div>
                 ))}
@@ -307,8 +334,11 @@ const HerbCompare: React.FC = () => {
                     <h2 className="text-xl font-bold text-gray-800">产地分布</h2>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {commonProps.origins.map(origin => (
-                      <span key={origin} className="px-3 py-2 bg-purple-50 text-purple-800 rounded-lg font-medium">
+                    {commonProps.origins.map((origin) => (
+                      <span
+                        key={origin}
+                        className="px-3 py-2 bg-purple-50 text-purple-800 rounded-lg font-medium"
+                      >
                         {origin}
                       </span>
                     ))}
@@ -324,8 +354,11 @@ const HerbCompare: React.FC = () => {
                     <h2 className="text-xl font-bold text-gray-800">归经分布</h2>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {commonProps.meridians.map(meridian => (
-                      <span key={meridian} className="px-3 py-2 bg-orange-50 text-orange-800 rounded-lg font-medium">
+                    {commonProps.meridians.map((meridian) => (
+                      <span
+                        key={meridian}
+                        className="px-3 py-2 bg-orange-50 text-orange-800 rounded-lg font-medium"
+                      >
                         {meridian}
                       </span>
                     ))}
@@ -337,7 +370,7 @@ const HerbCompare: React.FC = () => {
         )}
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default HerbCompare;
+export default HerbCompare

@@ -1,27 +1,25 @@
-import React, { useCallback, useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Network, Leaf, Beaker, BookOpen, Package, Pill } from 'lucide-react';
+import React, { useCallback, useMemo, useState } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowLeft, Network, Leaf, Beaker, BookOpen, Package, Pill } from 'lucide-react'
+import type { Node, Edge, Connection, NodeProps } from '@xyflow/react'
 import {
   ReactFlow,
-  Node,
-  Edge,
   Controls,
   Background,
   MiniMap,
   useNodesState,
   useEdgesState,
   addEdge,
-  Connection,
   Handle,
   Position,
-  NodeProps,
-  Panel
-} from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
-import { useNewAppStore } from '../store';
-import { Card } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
+  Panel,
+} from '@xyflow/react'
+import '@xyflow/react/dist/style.css'
+import { useNewAppStore } from '../store'
+import { Card } from './ui/card'
+import { Badge } from './ui/badge'
+import { Button } from './ui/button'
+import type { Material, Formula } from '../types/tcm-core'
 
 // 节点颜色配置
 const nodeColors = {
@@ -30,11 +28,11 @@ const nodeColors = {
   formula: { bg: '#fef3c7', border: '#fcd34d', icon: '#f59e0b' },
   granule: { bg: '#ede9fe', border: '#c7d2fe', icon: '#8b5cf6' },
   medicine: { bg: '#fee2e2', border: '#fca5a5', icon: '#ef4444' },
-};
+}
 
 // 材料节点组件
 function MaterialNode({ data }: NodeProps<any>) {
-  const colors = nodeColors.material;
+  const colors = nodeColors.material
   return (
     <div
       className={`px-4 py-3 rounded-lg border-2 bg-opacity-90 min-w-[150px]`}
@@ -50,12 +48,12 @@ function MaterialNode({ data }: NodeProps<any>) {
       </div>
       <Handle type="source" position={Position.Right} />
     </div>
-  );
+  )
 }
 
 // 饮片节点组件
 function SliceNode({ data }: NodeProps<any>) {
-  const colors = nodeColors.slice;
+  const colors = nodeColors.slice
   return (
     <div
       className={`px-4 py-3 rounded-lg border-2 bg-opacity-90 min-w-[150px]`}
@@ -71,12 +69,12 @@ function SliceNode({ data }: NodeProps<any>) {
       </div>
       <Handle type="source" position={Position.Right} />
     </div>
-  );
+  )
 }
 
 // 方剂节点组件
 function FormulaNode({ data }: NodeProps<any>) {
-  const colors = nodeColors.formula;
+  const colors = nodeColors.formula
   return (
     <div
       className={`px-4 py-3 rounded-lg border-2 bg-opacity-90 min-w-[180px]`}
@@ -92,12 +90,12 @@ function FormulaNode({ data }: NodeProps<any>) {
       </div>
       <Handle type="source" position={Position.Right} />
     </div>
-  );
+  )
 }
 
 // 颗粒节点组件
 function GranuleNode({ data }: NodeProps<any>) {
-  const colors = nodeColors.granule;
+  const colors = nodeColors.granule
   return (
     <div
       className={`px-4 py-3 rounded-lg border-2 bg-opacity-90 min-w-[150px]`}
@@ -113,12 +111,12 @@ function GranuleNode({ data }: NodeProps<any>) {
       </div>
       <Handle type="source" position={Position.Right} />
     </div>
-  );
+  )
 }
 
 // 成药节点组件
 function MedicineNode({ data }: NodeProps<any>) {
-  const colors = nodeColors.medicine;
+  const colors = nodeColors.medicine
   return (
     <div
       className={`px-4 py-3 rounded-lg border-2 bg-opacity-90 min-w-[150px]`}
@@ -134,7 +132,7 @@ function MedicineNode({ data }: NodeProps<any>) {
       </div>
       <Handle type="source" position={Position.Right} />
     </div>
-  );
+  )
 }
 
 // 节点类型定义
@@ -144,36 +142,36 @@ const nodeTypes = {
   formula: FormulaNode,
   granule: GranuleNode,
   medicine: MedicineNode,
-};
+}
 
 export const GraphView: React.FC = () => {
-  const { 
-    materials, 
-    slices, 
-    formulas, 
+  const {
+    materials,
+    slices,
+    formulas,
     setCurrentView,
     setSelectedMaterial,
     setSelectedFormula,
-    setCurrentEntityType
-  } = useNewAppStore();
-  
-  const [showMaterials, setShowMaterials] = useState(true);
-  const [showSlices, setShowSlices] = useState(true);
-  const [showFormulas, setShowFormulas] = useState(true);
-  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
+    setCurrentEntityType,
+  } = useNewAppStore()
+
+  const [showMaterials, setShowMaterials] = useState(true)
+  const [showSlices, setShowSlices] = useState(true)
+  const [showFormulas, setShowFormulas] = useState(true)
+  const [selectedNode, setSelectedNode] = useState<Node | null>(null)
 
   // 生成节点和边
   const { initialNodes, initialEdges } = useMemo(() => {
-    const nodes: Node[] = [];
-    const edges: Edge[] = [];
-    const nodeY = 0;
+    const nodes: Node[] = []
+    const edges: Edge[] = []
+    const nodeY = 0
     const xOffsets = {
       material: 0,
       slice: 300,
       formula: 600,
       granule: 900,
-      medicine: 1200
-    };
+      medicine: 1200,
+    }
 
     // 材料节点
     if (showMaterials) {
@@ -182,30 +180,32 @@ export const GraphView: React.FC = () => {
           id: `material-${material.id}`,
           type: 'material',
           position: { x: xOffsets.material, y: i * 100 },
-          data: { 
+          data: {
             label: material.names.cn,
             qi: material.qi,
-            entity: material
-          }
-        });
-      });
+            entity: material,
+          },
+        })
+      })
     }
 
     // 饮片节点
     if (showSlices) {
       slices.slice(0, 15).forEach((slice, i) => {
         // 获取对应的材料名称
-        const material = materials.find(m => m.id === slice.materialId);
+        const material = materials.find((m) => m.id === slice.materialId)
         nodes.push({
           id: `slice-${slice.id}`,
           type: 'slice',
           position: { x: xOffsets.slice, y: i * 80 },
-          data: { 
-            label: material ? `${material.names.cn}（${slice.processing.method}）` : slice.processing.method,
+          data: {
+            label: material
+              ? `${material.names.cn}（${slice.processing.method}）`
+              : slice.processing.method,
             method: slice.processing.method,
-            entity: slice
-          }
-        });
+            entity: slice,
+          },
+        })
 
         // 材料到饮片的边
         if (showMaterials) {
@@ -215,10 +215,10 @@ export const GraphView: React.FC = () => {
             target: `slice-${slice.id}`,
             type: 'smoothstep',
             animated: true,
-            style: { stroke: '#86efac' }
-          });
+            style: { stroke: '#86efac' },
+          })
         }
-      });
+      })
     }
 
     // 方剂节点
@@ -228,16 +228,16 @@ export const GraphView: React.FC = () => {
           id: `formula-${formula.id}`,
           type: 'formula',
           position: { x: xOffsets.formula, y: i * 120 },
-          data: { 
+          data: {
             label: formula.name,
             category: formula.category,
-            entity: formula
-          }
-        });
+            entity: formula,
+          },
+        })
 
         // 饮片到方剂的边
         if (showSlices) {
-          formula.components.forEach(comp => {
+          formula.components.forEach((comp) => {
             edges.push({
               id: `slice-${comp.sliceId}-to-formula-${formula.id}`,
               source: `slice-${comp.sliceId}`,
@@ -246,11 +246,11 @@ export const GraphView: React.FC = () => {
               animated: true,
               style: { stroke: '#93c5fd' },
               label: `${comp.weight.value}${comp.weight.unit}`,
-              labelStyle: { fontSize: 10 }
-            });
-          });
+              labelStyle: { fontSize: 10 },
+            })
+          })
         }
-      });
+      })
     }
 
     // 示例：添加一些颗粒和成药节点
@@ -258,44 +258,47 @@ export const GraphView: React.FC = () => {
       id: 'granule-1',
       type: 'granule',
       position: { x: xOffsets.granule, y: 100 },
-      data: { label: '配方颗粒示例' }
-    });
+      data: { label: '配方颗粒示例' },
+    })
 
     nodes.push({
       id: 'medicine-1',
       type: 'medicine',
       position: { x: xOffsets.medicine, y: 100 },
-      data: { label: '中成药示例', form: '片剂' }
-    });
+      data: { label: '中成药示例', form: '片剂' },
+    })
 
-    return { initialNodes: nodes, initialEdges: edges };
-  }, [materials, slices, formulas, showMaterials, showSlices, showFormulas]);
+    return { initialNodes: nodes, initialEdges: edges }
+  }, [materials, slices, formulas, showMaterials, showSlices, showFormulas])
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes)
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
 
   const onConnect = useCallback(
     (params: Edge | Connection) => setEdges((eds) => addEdge(params, eds)),
     [setEdges]
-  );
+  )
 
-  const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {
-    setSelectedNode(node);
-    
-    // 根据节点类型导航到详情页
-    if (node.data.entity) {
-      if (node.type === 'material') {
-        setSelectedMaterial(node.data.entity);
-        setCurrentEntityType('material');
-        setCurrentView('detail');
-      } else if (node.type === 'formula') {
-        setSelectedFormula(node.data.entity);
-        setCurrentEntityType('formula');
-        setCurrentView('detail');
+  const onNodeClick = useCallback(
+    (event: React.MouseEvent, node: Node) => {
+      setSelectedNode(node)
+
+      // 根据节点类型导航到详情页
+      if (node.data.entity) {
+        if (node.type === 'material') {
+          setSelectedMaterial(node.data.entity as Material)
+          setCurrentEntityType('material')
+          setCurrentView('detail')
+        } else if (node.type === 'formula') {
+          setSelectedFormula(node.data.entity as Formula)
+          setCurrentEntityType('formula')
+          setCurrentView('detail')
+        }
+        // 可以继续添加其他类型的处理
       }
-      // 可以继续添加其他类型的处理
-    }
-  }, [setSelectedMaterial, setSelectedFormula, setCurrentEntityType, setCurrentView]);
+    },
+    [setSelectedMaterial, setSelectedFormula, setCurrentEntityType, setCurrentView]
+  )
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -331,14 +334,14 @@ export const GraphView: React.FC = () => {
           className="bg-gray-50"
         >
           <Controls />
-          <MiniMap 
+          <MiniMap
             nodeColor={(node) => {
-              const type = node.type as keyof typeof nodeColors;
-              return nodeColors[type]?.bg || '#e5e7eb';
+              const type = node.type as keyof typeof nodeColors
+              return nodeColors[type]?.bg || '#e5e7eb'
             }}
           />
           <Background />
-          
+
           {/* 控制面板 */}
           <Panel position="top-right" className="bg-white p-4 rounded-lg shadow-lg">
             <h3 className="font-semibold mb-3">显示层级</h3>
@@ -381,7 +384,10 @@ export const GraphView: React.FC = () => {
             <h3 className="font-semibold mb-3">图例</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded" style={{ backgroundColor: nodeColors.material.bg }} />
+                <div
+                  className="w-4 h-4 rounded"
+                  style={{ backgroundColor: nodeColors.material.bg }}
+                />
                 <span>药材（原材料）</span>
               </div>
               <div className="flex items-center gap-2">
@@ -389,15 +395,24 @@ export const GraphView: React.FC = () => {
                 <span>饮片（炮制品）</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded" style={{ backgroundColor: nodeColors.formula.bg }} />
+                <div
+                  className="w-4 h-4 rounded"
+                  style={{ backgroundColor: nodeColors.formula.bg }}
+                />
                 <span>方剂（配方）</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded" style={{ backgroundColor: nodeColors.granule.bg }} />
+                <div
+                  className="w-4 h-4 rounded"
+                  style={{ backgroundColor: nodeColors.granule.bg }}
+                />
                 <span>配方颗粒</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-4 h-4 rounded" style={{ backgroundColor: nodeColors.medicine.bg }} />
+                <div
+                  className="w-4 h-4 rounded"
+                  style={{ backgroundColor: nodeColors.medicine.bg }}
+                />
                 <span>中成药</span>
               </div>
             </div>
@@ -407,12 +422,11 @@ export const GraphView: React.FC = () => {
           {selectedNode && (
             <Panel position="bottom-right" className="bg-white p-4 rounded-lg shadow-lg max-w-xs">
               <h3 className="font-semibold mb-2">节点信息</h3>
-              <p className="text-sm text-gray-600 mb-2">{selectedNode.data.label}</p>
+              <p className="text-sm text-gray-600 mb-2">
+                {selectedNode.data.label as React.ReactNode}
+              </p>
               {selectedNode.data.entity && (
-                <Button 
-                  size="sm" 
-                  onClick={() => onNodeClick(null as any, selectedNode)}
-                >
+                <Button size="sm" onClick={() => onNodeClick(null as any, selectedNode)}>
                   查看详情
                 </Button>
               )}
@@ -421,7 +435,7 @@ export const GraphView: React.FC = () => {
         </ReactFlow>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GraphView;
+export default GraphView
